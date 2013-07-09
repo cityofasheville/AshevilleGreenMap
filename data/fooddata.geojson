@@ -1,0 +1,170 @@
+var fooddata ={
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "name": "Asheville City Market", "address": "161 South Charlotte Stree", "zipcode": 28801, "type": "Tailgate Market", "notes": "http:\/\/www.asapconnections.org\/citymarket.html" }, "geometry": { "type": "Point", "coordinates": [ -82.54874061379742, 35.592992509096582 ] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "name": "Asheville City Market (South)", "address": "31 Schenck Pkwy", "zipcode": 28803, "type": "Tailgate Market", "notes": "http:\/\/www.asapconnections.org\/citymarket.html" }, "geometry": { "type": "Point", "coordinates": [ -82.553813459027353, 35.485644611579154 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "name": "Big Ivy Tailgate Market", "address": "1679 Barnardsville Highwa", "zipcode": 28709, "type": "Tailgate Market", "notes": "http:\/\/www.buyappalachian.org\/search\/tailgate_markets" }, "geometry": { "type": "Point", "coordinates": [ -82.455176279401044, 35.777658739025917 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "name": "Black Mountain Tailgate Market", "address": "130 Montreat Road", "zipcode": 28711, "type": "Tailgate Market", "notes": "http:\/\/www.blackmountaintailgatemarket.org\/" }, "geometry": { "type": "Point", "coordinates": [ -82.321553218816618, 35.620285370930475 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "name": "Downtown Farmers Market", "address": "45 South French Broad", "zipcode": 28806, "type": "Tailgate Market", "notes": "http:\/\/www.downtownmarketasheville.com\/" }, "geometry": { "type": "Point", "coordinates": [ -82.559212847525885, 35.592113840893632 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "name": "Greenlife Sunday Market", "address": "70 Merrimon Ave", "zipcode": 28801, "type": "Tailgate Market", "notes": "http:\/\/www.greenevillefarmersmarket.com\/index.html" }, "geometry": { "type": "Point", "coordinates": [ -82.554610738413629, 35.601878307210725 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "name": "North Asheville Tailgate Market", "address": "1 University Heights", "zipcode": 28804, "type": "Tailgate Market", "notes": "http:\/\/www.northashevilletailgatemarket.org\/" }, "geometry": { "type": "Point", "coordinates": [ -82.563076359443585, 35.618447375500324 ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "name": "Riceville Tailgate Market", "address": "2251 Riceville Road", "zipcode": 28805, "type": "Tailgate Market", "notes": "http:\/\/www.buyappalachian.org\/search\/tailgate_markets" }, "geometry": { "type": "Point", "coordinates": [ -82.472075393308955, 35.630776526246422 ] } }
+,
+{ "type": "Feature", "id": 8, "properties": { "name": "Victory Tailgate Market", "address": "1329 Tunnel Road", "zipcode": 28805, "type": "Tailgate Market", "notes": "http:\/\/www.buyappalachian.org\/search\/tailgate_markets" }, "geometry": { "type": "Point", "coordinates": [ -82.467344780158143, 35.583263294555586 ] } }
+,
+{ "type": "Feature", "id": 9, "properties": { "name": "Weaverville Tailgate Market", "address": "60 Lakeshore Drive", "zipcode": 28787, "type": "Tailgate Market", "notes": "http:\/\/weavervilletailgate.org\/" }, "geometry": { "type": "Point", "coordinates": [ -82.569010125783137, 35.690658506780061 ] } }
+,
+{ "type": "Feature", "id": 10, "properties": { "name": "West Asheville Tailgate Market", "address": "718 Haywood Road", "zipcode": 28806, "type": "Tailgate Market", "notes": "http:\/\/www.buyappalachian.org\/search\/tailgate_markets" }, "geometry": { "type": "Point", "coordinates": [ -82.592328767590502, 35.577179818342756 ] } }
+,
+{ "type": "Feature", "id": 11, "properties": { "name": "WNC Farmers Market", "address": "570 Brevard Road", "zipcode": 28806, "type": "Tailgate Market", "notes": "http:\/\/www.ncfarmfresh.com\/FarmMarketDisplay.asp?FarmID=742" }, "geometry": { "type": "Point", "coordinates": [ -82.598496066287836, 35.555495192916261 ] } }
+,
+{ "type": "Feature", "id": 12, "properties": { "name": "ARDEN MISSIONARY BAPTIST CHURCH", "address": "2566 HENDERSONVILLE ROAD", "zipcode": 28732, "type": "Manna Agencies", "notes": "stephenisrael@ya" }, "geometry": { "type": "Point", "coordinates": [ -82.509588243341966, 35.453041547821101 ] } }
+,
+{ "type": "Feature", "id": 13, "properties": { "name": "ABCCM - SOUTH MINISTRY", "address": "10 BUCK SHOALS ROAD", "zipcode": 28704, "type": "Manna Agencies", "notes": "bbrown@abccm.org" }, "geometry": { "type": "Point", "coordinates": [ -82.512789874805193, 35.46248062136987 ] } }
+,
+{ "type": "Feature", "id": 14, "properties": { "name": "BETHEL SEVENTH DAY ADVENTIST CH", "address": "238 S. FRENCH BROAD AVE.", "zipcode": 28805, "type": "Manna Agencies", "notes": "jvlaw111@aol.com" }, "geometry": { "type": "Point", "coordinates": [ -82.559018316978239, 35.5853658154331 ] } }
+,
+{ "type": "Feature", "id": 15, "properties": { "name": "BILTMORE CHURCH OF CHRIST", "address": "823 FAIRVIEW ST.", "zipcode": 28803, "type": "Manna Agencies", "notes": "grannygumdrop@ho" }, "geometry": { "type": "Point", "coordinates": [ -82.533975119968332, 35.551520847022253 ] } }
+,
+{ "type": "Feature", "id": 16, "properties": { "name": "IRENE WORTHAM CENTER, INC.", "address": "916 WEST CHAPEL ROAD", "zipcode": 28803, "type": "Manna Agencies", "notes": "jcaldwell@iwcnc." }, "geometry": { "type": "Point", "coordinates": [ -82.53412954374862, 35.549434414135085 ] } }
+,
+{ "type": "Feature", "id": 17, "properties": { "name": "MOUNT SHEBA BAPTIST CHURCH", "address": "1008 NEW STOCK RD.", "zipcode": 28787, "type": "Manna Agencies", "notes": "wendy_proffitt@y" }, "geometry": { "type": "Point", "coordinates": [ -82.594609724206279, 35.712407611288072 ] } }
+,
+{ "type": "Feature", "id": 18, "properties": { "name": "SALVATION ARMY OF ASHEVILLE", "address": "204 HAYWOOD STREET", "zipcode": 28802, "type": "Manna Agencies", "notes": "jill.carter@uss." }, "geometry": { "type": "Point", "coordinates": [ -82.560240481194242, 35.595489787465162 ] } }
+,
+{ "type": "Feature", "id": 19, "properties": { "name": "FOSTER SEVENTH DAY ADVENTIST CH", "address": "375 HENDERSONVILLE ROAD", "zipcode": 28803, "type": "Manna Agencies", "notes": "fosterchurch@cs." }, "geometry": { "type": "Point", "coordinates": [ -82.538241787975295, 35.556735520390504 ] } }
+,
+{ "type": "Feature", "id": 20, "properties": { "name": "SWANNANOA VALLEY CHRISTIAN MINI", "address": "101 N. RIDGEWAY AVENUE", "zipcode": 28711, "type": "Manna Agencies", "notes": "svcministry@yaho" }, "geometry": { "type": "Point", "coordinates": [ -82.318887173257878, 35.619955826599771 ] } }
+,
+{ "type": "Feature", "id": 21, "properties": { "name": "WESTERN CAROLINA RESCUE MINISTR", "address": "225 PATTON AVE.", "zipcode": 28802, "type": "Manna Agencies", "notes": "craig.wcrm@gmail" }, "geometry": { "type": "Point", "coordinates": [ -82.561352156234392, 35.593378808040441 ] } }
+,
+{ "type": "Feature", "id": 22, "properties": { "name": "ABCCM - CRISIS MINISTRY", "address": "24 CUMBERLAND AVE.", "zipcode": 28801, "type": "Manna Agencies", "notes": "sheryl.olsen@abc" }, "geometry": { "type": "Point", "coordinates": [ -82.559036918443454, 35.598263415943059 ] } }
+,
+{ "type": "Feature", "id": 23, "properties": { "name": "ABCCM - VETERANS RESTORATION QU", "address": "1329 TUNNEL ROAD EAST", "zipcode": 28805, "type": "Manna Agencies", "notes": "mreich@abccm.org" }, "geometry": { "type": "Point", "coordinates": [ -82.467344779655093, 35.583263294597408 ] } }
+,
+{ "type": "Feature", "id": 24, "properties": { "name": "FREEDOM IN CHRIST CHURCH OF GOD", "address": "1808 PISGAH HIGHWAY", "zipcode": 28715, "type": "Manna Agencies", "notes": "ckeffer@bellsout" }, "geometry": { "type": "Point", "coordinates": [ -82.741135502027831, 35.483204932010558 ] } }
+,
+{ "type": "Feature", "id": 25, "properties": { "name": "CHILDREN FIRST - EMMA RESOURCE", "address": "50 S. FRENCH BROAD AVE., SUITE 246", "zipcode": 28806, "type": "Manna Agencies", "notes": "lisab@childrenfi" }, "geometry": { "type": "Point", "coordinates": [ -82.558575374302606, 35.591734233932335 ] } }
+,
+{ "type": "Feature", "id": 26, "properties": { "name": "CALVARY CHAPEL OF ASHEVILLE, IN", "address": "2 IRIS ST.", "zipcode": 28815, "type": "Manna Agencies", "notes": "robneecll@charte" }, "geometry": { "type": "Point", "coordinates": [ -82.537357499443999, 35.562620180383192 ] } }
+,
+{ "type": "Feature", "id": 27, "properties": { "name": "ABCCM - HOMINY VALLEY", "address": "155 CANDLER SCHOOL RD", "zipcode": 28715, "type": "Manna Agencies", "notes": "joffenburger@abc" }, "geometry": { "type": "Point", "coordinates": [ -82.703817458678898, 35.539324037444302 ] } }
+,
+{ "type": "Feature", "id": 28, "properties": { "name": "RAYS CHAPEL BAPTIST CHURCH", "address": "24 WOOTEN COVE RD", "zipcode": 28787, "type": "Manna Agencies", "notes": "blankship27@yaho" }, "geometry": { "type": "Point", "coordinates": [ -82.550164494315254, 35.717293076207525 ] } }
+,
+{ "type": "Feature", "id": 29, "properties": { "name": "LEICESTER COMMUNITY CENTER PROD", "address": "2979 New Leicester Hwy.", "zipcode": 28748, "type": "Manna Agencies", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.713763571656798, 35.657344720917997 ] } }
+,
+{ "type": "Feature", "id": 30, "properties": { "name": "BLUE RIDGE CHURCH OF CHRIST", "address": "8 OLD LAKEY GAP ROAD", "zipcode": 28711, "type": "Manna Agencies", "notes": "NCJHunter@gmail." }, "geometry": { "type": "Point", "coordinates": [ -82.334169412643703, 35.603183073128498 ] } }
+,
+{ "type": "Feature", "id": 31, "properties": { "name": "BIG IVY COMMUNITY CLUB", "address": "111 POVERTY BRANCH RD.", "zipcode": 28709, "type": "Manna Agencies", "notes": "bicc@barnardsvil" }, "geometry": { "type": "Point", "coordinates": [ -82.450210509246617, 35.786742622388893 ] } }
+,
+{ "type": "Feature", "id": 32, "properties": { "name": "FAMILY OF FAITH FELLOWSHIP", "address": "213 LONG SHOALS RD.", "zipcode": 28776, "type": "Manna Agencies", "notes": "familyoffaith@be" }, "geometry": { "type": "Point", "coordinates": [ -82.539625358146239, 35.482419483960001 ] } }
+,
+{ "type": "Feature", "id": 33, "properties": { "name": "GOD'S FILLING STATION-MUSTARD S", "address": "503 JOHNSTON SCHOOL RD.", "zipcode": 28806, "type": "Manna Agencies", "notes": "brockwelld@yahoo" }, "geometry": { "type": "Point", "coordinates": [ -82.625666880886982, 35.591594569772347 ] } }
+,
+{ "type": "Feature", "id": 34, "properties": { "name": "THE WELCOME TABLE - SWANNANOA", "address": "216 WHITSON AVE.", "zipcode": 28778, "type": "Manna Agencies", "notes": "ploch@charter.ne" }, "geometry": { "type": "Point", "coordinates": [ -82.397032207220363, 35.59997426005684 ] } }
+,
+{ "type": "Feature", "id": 35, "properties": { "name": "FIRST BAPTIST CHURCH - HOMELESS", "address": "5 OAK ST.", "zipcode": 28801, "type": "Manna Agencies", "notes": "emorgan@fbca.net" }, "geometry": { "type": "Point", "coordinates": [ -82.547791616810841, 35.599013433807677 ] } }
+,
+{ "type": "Feature", "id": 36, "properties": { "name": "LEAST OF THESE MINISTRIES", "address": "396 GENEVA PLACE", "zipcode": 28778, "type": "Manna Agencies", "notes": "burton.salthouse" }, "geometry": { "type": "Point", "coordinates": [ -82.296704124992644, 35.64638255641497 ] } }
+,
+{ "type": "Feature", "id": 37, "properties": { "name": "ZEPHYR HILLS FREEWILL BAPTIST C", "address": "283 SHELBURNE RD", "zipcode": 28806, "type": "Manna Agencies", "notes": "zephyrhillsfreew" }, "geometry": { "type": "Point", "coordinates": [ -82.601876504742151, 35.570840908449213 ] } }
+,
+{ "type": "Feature", "id": 38, "properties": { "name": "GOSPEL TABERNACLE", "address": "202 BRICKYARD ROAD", "zipcode": 28806, "type": "Manna Agencies", "notes": "glorredmon@aol.c" }, "geometry": { "type": "Point", "coordinates": [ -82.597628912288641, 35.603737726827191 ] } }
+,
+{ "type": "Feature", "id": 39, "properties": { "name": "CHANNEL OF GRACE (FIRST CONGREG", "address": "20 OAK ST", "zipcode": 28805, "type": "Manna Agencies", "notes": "w.burgess@yahoo." }, "geometry": { "type": "Point", "coordinates": [ -82.548026012253061, 35.597799321722746 ] } }
+,
+{ "type": "Feature", "id": 40, "properties": { "name": "OAKLEY BAPTIST CHURCH", "address": "70 FAIRVIEW AVE.", "zipcode": 28803, "type": "Manna Agencies", "notes": "lddotson@bellsou" }, "geometry": { "type": "Point", "coordinates": [ -82.514604949334156, 35.566254553074273 ] } }
+,
+{ "type": "Feature", "id": 41, "properties": { "name": "TABERNACLE MISSIONARY BAPTIST C", "address": "56 WALTON ST.", "zipcode": 28801, "type": "Manna Agencies", "notes": "pflowers1963@gma" }, "geometry": { "type": "Point", "coordinates": [ -82.560775855955441, 35.575430120597652 ] } }
+,
+{ "type": "Feature", "id": 42, "properties": { "name": "CALVARY BAPTIST CHURCH - BRIAN'", "address": "531 HAYWOOD ROAD", "zipcode": 28806, "type": "Manna Agencies", "notes": "atat2d4life@aol." }, "geometry": { "type": "Point", "coordinates": [ -82.585176178254045, 35.579021339870621 ] } }
+,
+{ "type": "Feature", "id": 43, "properties": { "name": "BEVERLY HILLS BAPTIST - FAMILY", "address": "777 TUNNEL ROAD", "zipcode": 28805, "type": "Manna Agencies", "notes": "bhbcoffice@bhbca" }, "geometry": { "type": "Point", "coordinates": [ -82.507442614695904, 35.586224577126657 ] } }
+,
+{ "type": "Feature", "id": 44, "properties": { "name": "HOMINY VALLEY WELCOME TABLE (AS", "address": "725 ASBURY ROAD", "zipcode": 28715, "type": "Manna Agencies", "notes": "faumc1@bellsouth" }, "geometry": { "type": "Point", "coordinates": [ -82.673562169112714, 35.556546285795712 ] } }
+,
+{ "type": "Feature", "id": 45, "properties": { "name": "CATHOLIC SOCIAL SERVICES - FOOD", "address": "50 ORANGE STREET", "zipcode": 28801, "type": "Manna Agencies", "notes": "mmsheppard@charl" }, "geometry": { "type": "Point", "coordinates": [ -82.551248504440295, 35.601850255590399 ] } }
+,
+{ "type": "Feature", "id": 46, "properties": { "name": "RIVERSIDE BAPTIST CHURCH", "address": "871 RIVERSIDE DR", "zipcode": 28804, "type": "Manna Agencies", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.574872156314967, 35.619228846381034 ] } }
+,
+{ "type": "Feature", "id": 47, "properties": { "name": "THE DOWNTOWN WELCOME TABLE", "address": "297 HAYWOOD ST, CENTRAL UMC", "zipcode": 28801, "type": "Manna Agencies", "notes": "rev.briancombs@g" }, "geometry": { "type": "Point", "coordinates": [ -82.563149214602205, 35.593241866205993 ] } }
+,
+{ "type": "Feature", "id": 48, "properties": { "name": "BILTMORE CHURCH OF GOD - JUST A", "address": "1390 SWEETEN CREEK ROAD", "zipcode": 28803, "type": "Manna Agencies", "notes": "kathysfilosophy@" }, "geometry": { "type": "Point", "coordinates": [ -82.518019031549471, 35.53446244185735 ] } }
+,
+{ "type": "Feature", "id": 49, "properties": { "name": "EAST ASHEVILLE WELCOME TABLE", "address": "954 TUNNEL ROAD", "zipcode": 28805, "type": "Manna Agencies", "notes": "geraldd@groceumc" }, "geometry": { "type": "Point", "coordinates": [ -82.500478857514153, 35.589840321993471 ] } }
+,
+{ "type": "Feature", "id": 50, "properties": { "name": "Black Mountain Community PRODUC", "address": "101 Carver Avenue", "zipcode": 28711, "type": "Manna Agencies", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.340214420598414, 35.614857146793952 ] } }
+,
+{ "type": "Feature", "id": 51, "properties": { "name": "LOVING FOOD RESOURCES", "address": "123 KENILWORTH ROAD", "zipcode": 28813, "type": "Manna Agencies", "notes": "LovingFoodResour" }, "geometry": { "type": "Point", "coordinates": [ -82.538723485860061, 35.576613745080962 ] } }
+,
+{ "type": "Feature", "id": 52, "properties": { "name": "ABCCM - NORTH BUNCOMBE SAMARITA", "address": "403 WEAVERVILLE HWY.", "zipcode": 28787, "type": "Manna Agencies", "notes": "mickey.black@abc" }, "geometry": { "type": "Point", "coordinates": [ -82.583022717144658, 35.664697224954153 ] } }
+,
+{ "type": "Feature", "id": 53, "properties": { "name": "VICTORY FELLOWSHIP WORSHIP CENT", "address": "450 AIKEN DRIVE", "zipcode": 28787, "type": "Manna Agencies", "notes": "sdburleson@juno." }, "geometry": { "type": "Point", "coordinates": [ -82.582055992093672, 35.683271747328462 ] } }
+,
+{ "type": "Feature", "id": 54, "properties": { "name": "FOOD FOR FAIRVIEW, INC.", "address": "1357 CHARLOTTE HWY, COMMUNITY CTR", "zipcode": 28730, "type": "Manna Agencies", "notes": "wansong@bellsout" }, "geometry": { "type": "Point", "coordinates": [ -82.410117179165454, 35.523510607577194 ] } }
+,
+{ "type": "Feature", "id": 55, "properties": { "name": "GEORGETOWN MISSIONARY BAPTIST", "address": "DIX CREEK ROAD #1", "zipcode": 28748, "type": "Manna Agencies", "notes": "swbigmamaw18@gma" }, "geometry": { "type": "Point", "coordinates": [ -82.678648645753, 35.606380477390772 ] } }
+,
+{ "type": "Feature", "id": 56, "properties": { "name": "LEICESTER COMMUNITY WELCOME TAB", "address": "17 MAYNARD ROAD", "zipcode": 28748, "type": "Manna Agencies", "notes": "efmears@bellsout" }, "geometry": { "type": "Point", "coordinates": [ -82.651105768259399, 35.515009340355597 ] } }
+,
+{ "type": "Feature", "id": 57, "properties": { "name": "Ingles", "address": "1141 Tunnel Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.488171944913702, 35.585737047755295 ] } }
+,
+{ "type": "Feature", "id": 58, "properties": { "name": "Ingles", "address": "29 Tunnel Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.535473276073787, 35.595395066861933 ] } }
+,
+{ "type": "Feature", "id": 59, "properties": { "name": "Ingles", "address": "863 Brevard Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.607363040480308, 35.530555124770714 ] } }
+,
+{ "type": "Feature", "id": 60, "properties": { "name": "Ingles", "address": "669 Haywood Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.590871218656119, 35.578760675930077 ] } }
+,
+{ "type": "Feature", "id": 61, "properties": { "name": "Ingles", "address": "153 Smokey Park Highway", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.628521320055711, 35.564369126273682 ] } }
+,
+{ "type": "Feature", "id": 62, "properties": { "name": "Ingles", "address": "575 New Leicester Highway", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.631622317771559, 35.614546337955488 ] } }
+,
+{ "type": "Feature", "id": 63, "properties": { "name": "Ingles", "address": "1865 Hendersonville Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.523948262030402, 35.500232760315761 ] } }
+,
+{ "type": "Feature", "id": 64, "properties": { "name": "Ingles", "address": "780 Hendersonville Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.531569168486214, 35.544746878307762 ] } }
+,
+{ "type": "Feature", "id": 65, "properties": { "name": "Wal-Mart", "address": "60 Airport Road", "zipcode": 0, "type": "Grocery", "notes": "Arden" }, "geometry": { "type": "Point", "coordinates": [ -82.522976286260928, 35.456344921178633 ] } }
+,
+{ "type": "Feature", "id": 66, "properties": { "name": "Food Lion", "address": "1350 Charlotte Highway", "zipcode": 0, "type": "Grocery", "notes": "Fairview" }, "geometry": { "type": "Point", "coordinates": [ -82.411095216620367, 35.524620005801957 ] } }
+,
+{ "type": "Feature", "id": 67, "properties": { "name": "Wal-Mart", "address": "146 Monticello Road", "zipcode": 0, "type": "Grocery", "notes": "Weavervil" }, "geometry": { "type": "Point", "coordinates": [ -82.581417833747253, 35.706014791994789 ] } }
+,
+{ "type": "Feature", "id": 68, "properties": { "name": "Bi-Lo", "address": "801 Fairview Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.503034123784829, 35.570908145963784 ] } }
+,
+{ "type": "Feature", "id": 69, "properties": { "name": "Food Lion", "address": "1856 Hendersonville Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.521264991338725, 35.5011489320013 ] } }
+,
+{ "type": "Feature", "id": 70, "properties": { "name": "Harris Teeter", "address": "1378 Hendersonville Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.529084629690345, 35.52211757060244 ] } }
+,
+{ "type": "Feature", "id": 71, "properties": { "name": "Wal-Mart", "address": "437 Swannanoa River Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.513429730655346, 35.57904041971036 ] } }
+,
+{ "type": "Feature", "id": 72, "properties": { "name": "Aldi", "address": "470 Swannanoa River Rd", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.511014428182904, 35.57801493540687 ] } }
+,
+{ "type": "Feature", "id": 73, "properties": { "name": "Aldi", "address": "1344 Patton Ave", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.604502695639894, 35.583071972147685 ] } }
+,
+{ "type": "Feature", "id": 74, "properties": { "name": "Amazing Savings", "address": "45 S French Broad Ave", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.559212847476729, 35.59211384130743 ] } }
+,
+{ "type": "Feature", "id": 75, "properties": { "name": "Amazing Savings", "address": "121 Sweeten Creek Road", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.527753240249012, 35.562780231539449 ] } }
+,
+{ "type": "Feature", "id": 76, "properties": { "name": "Amazing Savings", "address": "3018 US-70, Suite 1", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.35063481910025, 35.608673768987835 ] } }
+,
+{ "type": "Feature", "id": 77, "properties": { "name": "Go Grocery Outlet", "address": "121 New Leicester Hwy", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.605901273378223, 35.592829622344667 ] } }
+,
+{ "type": "Feature", "id": 78, "properties": { "name": "Go Grocery Outlet", "address": "1804 Hendersonville Rd", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.522577418334492, 35.505239542992889 ] } }
+,
+{ "type": "Feature", "id": 79, "properties": { "name": "Go Grocery Outlet", "address": "1380 Tunnel Rd", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.467636036629983, 35.58423453695724 ] } }
+,
+{ "type": "Feature", "id": 80, "properties": { "name": "Sav-Mor", "address": "891 Patton Ave", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.587964265093376, 35.588097691663769 ] } }
+,
+{ "type": "Feature", "id": 81, "properties": { "name": "Sav-Mor", "address": "842 Merrimon Ave", "zipcode": 0, "type": "Grocery", "notes": null }, "geometry": { "type": "Point", "coordinates": [ -82.553797703393329, 35.628370752431728 ] } }
+
+]
+}
