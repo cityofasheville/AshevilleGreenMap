@@ -2,20 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>GreenMap</title>
+    <title>AshevilleGreenMap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="../GreenMap/css/bootstrap.css" rel="stylesheet">
-    <link href="../GreenMap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../AshevilleGreenMap/css/bootstrap.css" rel="stylesheet">
+    <link href="../AshevilleGreenMap/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="SHORTCUT ICON" href="http://ashevillenc.gov/Portals/0/favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="../GreenMap/css/stylesheet.css"/>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+    <link type="text/css" rel="stylesheet" href="../AshevilleGreenMap/css/stylesheet.css"/>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.css" />
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" /> 
-    <link rel="stylesheet" href="../GreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="../GreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="../dist/MarkerCluster.Default.ie.css" /><![endif]-->
     <!--<script src="../new/leafletajax/dist/leaflet.ajax.js"></script>-->
 
@@ -26,11 +26,11 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../GreenMap/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../GreenMap/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../GreenMap/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../GreenMap/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../GreenMap/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../AshevilleGreenMap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../AshevilleGreenMap/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../AshevilleGreenMap/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../AshevilleGreenMap/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../AshevilleGreenMap/ico/favicon.png">
   </head>
 
   <body>
@@ -50,7 +50,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-            <a class="brand" href="../GreenMap/index.html#">GreenMap</a>
+            <a class="brand" href="../AshevilleGreenMap/index.html#">AshevilleGreenMap</a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
@@ -74,7 +74,7 @@
                     <li class="nav-header">Downloads</li>
                     <li><a href="http://www.ashevillenc.gov/Portals/0/city-documents/parks/parks_docs/riverside/riversidewalkingtour2012[1].pdf">Download Walking Tour PDF</a></li>
                     <li><a href="http://www.ashevillenc.gov/Portals/0/city-documents/parks/parks_docs/riverside/walkingtourmap2012c[1].pdf">Download Walking Map PDF</a></li>
-					          <li><a href="../GreenMap/img/RiversideFees.pdf">Download Riverside Prices & Fees PDF</a></li>
+					          <li><a href="../AshevilleGreenMap/img/RiversideFees.pdf">Download Riverside Prices & Fees PDF</a></li>
                   </ul>
                 </li>
             </div><!--/.nav-collapse -->
@@ -86,7 +86,7 @@
       </div>
       <div class="span5">
         <div id="intro">
-          <h1 class="text-success">Welcome to Asheville GreenMap!</h1>
+          <h1 class="text-success">Welcome to Asheville AshevilleGreenMap!</h1>
           <ul class="unstyled">
             <li>Explore all the <strong class="text-success">Green</strong> infastructure Asheville has to offer.</li>
           </ul> 
@@ -124,32 +124,32 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
-<script src="../GreenMap/js/Leaflet.markercluster-master/dist/leaflet.markercluster-src.js"></script>
-<script src="../GreenMap/js/leaflet-hash.js"></script>
-<script src="../GreenMap/js/azgs-leaflet-master/js/azgs-leaflet/TileLayer.ESRI.js"></script>
-<script src="../GreenMap/data/parks.js"></script>
-<script src="../GreenMap/data/PublicEV.geojson"></script>
-<script src="../GreenMap/data/greenwaydata.js"></script>
-<script src="../GreenMap/data/sidewalkdata.geojson"></script>
-<script src="../GreenMap/data/bikedata.js"></script>
-<script src="../GreenMap/data/bikeRackdata.geojson"></script>
-<script src="../GreenMap/data/fooddata.geojson"></script>
-<script src="../GreenMap/js/jquery.js"></script>
-<script src="../GreenMap/js/bootstrap-transition.js"></script>
-<script src="../GreenMap/js/bootstrap-alert.js"></script>
-<script src="../GreenMap/js/bootstrap-modal.js"></script>
-<script src="../GreenMap/js/bootstrap-dropdown.js"></script>
-<script src="../GreenMap/js/bootstrap-scrollspy.js"></script>
-<script src="../GreenMap/js/bootstrap-tab.js"></script>
-<script src="../GreenMap/js/bootstrap-tooltip.js"></script>
-<script src="../GreenMap/js/bootstrap-popover.js"></script>
-<script src="../GreenMap/js/bootstrap-button.js"></script>
-<script src="../GreenMap/js/bootstrap-collapse.js"></script>
-<script src="../GreenMap/js/bootstrap-carousel.js"></script>
-<script src="../GreenMap/js/bootstrap-typeahead.js"></script>
-<script src="../GreenMap/js/jquery.dataTables.js"></script>
-<script src="../GreenMap/js/datatable.bootstrap.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.js"></script>
+<script src="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/leaflet.markercluster-src.js"></script>
+<script src="../AshevilleGreenMap/js/leaflet-hash.js"></script>
+<script src="../AshevilleGreenMap/js/azgs-leaflet-master/js/azgs-leaflet/TileLayer.ESRI.js"></script>
+<script src="../AshevilleGreenMap/data/parks.js"></script>
+<script src="../AshevilleGreenMap/data/PublicEV.geojson"></script>
+<script src="../AshevilleGreenMap/data/greenwaydata.js"></script>
+<script src="../AshevilleGreenMap/data/sidewalkdata.geojson"></script>
+<script src="../AshevilleGreenMap/data/bikedata.js"></script>
+<script src="../AshevilleGreenMap/data/bikeRackdata.geojson"></script>
+<script src="../AshevilleGreenMap/data/fooddata.geojson"></script>
+<script src="../AshevilleGreenMap/js/jquery.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-transition.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-alert.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-modal.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-dropdown.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-scrollspy.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-tab.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-tooltip.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-popover.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-button.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-collapse.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-carousel.js"></script>
+<script src="../AshevilleGreenMap/js/bootstrap-typeahead.js"></script>
+<script src="../AshevilleGreenMap/js/jquery.dataTables.js"></script>
+<script src="../AshevilleGreenMap/js/datatable.bootstrap.js"></script>
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>	
 <script type="text/javascript">
@@ -158,11 +158,8 @@
 var map = L.map('map', {
   center: [35.600251, -82.570848],
   zoom: 17.5,
-  zoomControl: false 
+  zoomControl: true 
 });
-//moves zoom control to top right of map          
-var zoom = new L.control.zoom();
-  zoom.setPosition('topright').addTo(map);
 
 //Adds hash to url          
 var hash = new L.Hash(map); 
@@ -289,22 +286,42 @@ var bikeRack = L.geoJson(bikeRackdata, {pointToLayer:bikeRackpoint, onEachFeatur
 var food = L.geoJson(fooddata, {pointToLayer:foodpoint, onEachFeature:foodPopUp});
 
 //Layer Groups
-OverviewGroup = L.layerGroup([parks, EV, bikes, greenway, sidewalk, bikeRack, food]);
-TransGroup = L.layerGroup([sidewalk, greenway, bikes, bikeRack, EV]);
-FoodGroup = L.layerGroup([food]);
-EnergyGroup = L.layerGroup([EV]);
+//OverviewGroup = L.layerGroup([parks, EV, bikes, greenway, sidewalk, bikeRack, food]);
+//TransGroup = L.layerGroup([sidewalk, greenway, bikes, bikeRack, EV]);
+//FoodGroup = L.layerGroup([food]);
+//EnergyGroup = L.layerGroup([EV]);
 
-//Side Panel Replacment function
-function introReplace(){
-var ele = $('#intro'); 
-var dat = $('#datatable');
- if(ele === ele){
-    $('#intro').replaceWith('<table id="datatable" class="table table-striped"></table>');
-  }
-  else if(dat === dat){
-    $('#datatable').remove();
-  }
-}      
+//Control Layers
+  var baseMaps = {
+    "Grey": cloudmade
+  };
+
+  var OverviewGroup = {
+    "Parks": parks,
+    "Electic Vehical": EV,
+    "Bikes Routes": bikes,
+    "Sidewalks": sidewalk,
+    "Greenways": greenway,
+    "Bike Racks": bikeRack,
+    "Food": food
+  };
+
+  var TransGroup = {
+    "Sidewalks": sidewalk,
+    "Greenways": greenway,
+    "Bikes Routes": bikes,
+    "Bike Racks": bikeRack,
+    "Electic Vehical": EV
+  };
+
+  var FoodGroup = {
+    "Food": food
+  };
+
+  var EnergyGroup = {
+    "Electic Vehical": EV
+  };
+
 //zoom function for the datatables
 function zoomPop(zlayer){
   for(each in zlayer._layers){
@@ -332,7 +349,7 @@ var foodTableData = [];
   }
 
     $(document).ready(function(){
-      $('#datatable').dataTable({
+      $('#datatableFood').dataTable({
         "sPaginationType": "bootstrap",
           "aaData": foodTableData,
           "bProcessing":true,
@@ -362,7 +379,7 @@ var EnergyTableData = [];
     EnergyTableData.push([name,  desc, '<button class="btn btn-link" onclick="zoomPop(EV);">zoom</button>']);
   }
     $(document).ready(function(){
-      $('#datatable').dataTable({
+      $('#datatableEnergy').dataTable({
         "sPaginationType": "bootstrap",
           "aaData": EnergyTableData,
           "bProcessing":true,
@@ -380,78 +397,7 @@ var EnergyTableData = [];
    
 }
 
-//LayerGroup Filter
- function Overview(){ 
-  map.fitBounds(sidewalk.getBounds());
-  OverviewGroup.addTo(map);
-  legendOverview.addTo(map);
-  legendFood.removeFrom(map);
-}
 
-function Transportation(){ 
-  map.fitBounds(sidewalk.getBounds());
-  OverviewGroup.clearLayers();
-  FoodGroup.clearLayers();
-  EnergyGroup.clearLayers(); 
-  TransGroup.addTo(map);
-}
-
-function Energy(){
-  map.fitBounds(EV.getBounds());
-  TransGroup.clearLayers();
-  FoodGroup.clearLayers();
-  EnergyGroup.addTo(map); 
-}
-
-function Food(){
-  map.fitBounds(food.getBounds());
-  OverviewGroup.clearLayers();
-  FoodGroup.addTo(map);
-  //legendFood.addTo(map);  
-  //legendOverview.removeFrom(map);
-}
-
-//Switch Control 
-function bswitch(value){
-  introReplace();
-  switch(value){
-    case "0": 
-      Overview();
-    
-    break;
-
-    case "1":
-      Transportation();
-          
-    break;
-
-    case "2":
-      etd(); 
-      Energy();
-      
-    break;
-
-    case "3":
-      Energy();
-                     
-    break;
-
-    case "4":
-      Energy();
-                    
-    break;
-
-    case "5":
-      ftd();
-      Food();
-      
-         
-    break;
-               
-      default:
-        alert("Oops;)");
-  }
-}
 
 //Legends
 var legendOverview = L.control({position: 'bottomleft'});
@@ -468,10 +414,122 @@ var legendFood = L.control({position: 'bottomleft'});
     return div;
   }
 
+//LayerGroup Filter
+ //function Overview(){ 
+  //map.fitBounds(sidewalk.getBounds());
+  //var control = L.control.layers(null, OverviewGroup).addTo(map);
+ // legendOverview.addTo(map);
+ // legendFood.removeFrom(map);
+//}
+
+function Transportation(){ 
+  map.fitBounds(sidewalk.getBounds());
+  var control = L.control.layers(null, TransGroup).addTo(map);
+   
+}
+
+function Energy(){
+  map.fitBounds(EV.getBounds());
+  var control = L.control.layers(null, EnergyGroup).addTo(map)
+  map.addControl(control);
+   
+}
+
+//function Food(){
+  //map.fitBounds(food.getBounds());
+  //var control = L.control.layers(null, FoodGroup).addTo(map);
+  //legendFood.addTo(map);  
+  //removeControl(legendOverview);
+//}
+
+//Master Control Functoin
+//The logic behind adding and removing all elements from the map
+function MS(layer, group, legend){
+  map.fitBounds(layer.getBounds());
+  //list of all legend names
+  var legend_list = ['legendOverview', 'legendFood'];
+  //Finds the index of the legend
+  var lg = legend_list.indexOf(legend);
+  //Loop that checks to see which legend to add and which legend to remove
+  for(i in legend_list){
+    if(i != lg){
+      map.removeControl(legend_list[i]);
+      alert(legend_list[i]);
+     } 
+    else if(i === lg){
+      map.addControl(new legend_list[i] + '()');
+    }
+    else{
+      return "Error with legend control";
+    }
+  }
+  //List of all layer control names
+  var layer_list = ['OverviewGroup', 'TransGroup', 'EnergyGroup', 'FoodGroup']; 
+  var g = layer_list.indexOf(group);
+  //Loop that checks to see which layer control to add and which layer control to remove
+  for(l in layer_list){
+    if(l === g){
+     var control = L.control.layers(null, layer_list[l]);
+     map.addControl(control);
+    }
+    else if(l != g){
+      map.removeControl(layer_list[l]);
+    }
+    else{
+      return "Error with layer control";
+    }
+  } 
+  
+}
+
+//Switch Control 
+function bswitch(value){
+  switch(value){
+    case "0": 
+      document.getElementById('intro').innerHTML = '<h1>Welcom to the grand Overview!</h1><br /><p>Hope you enjoy</p>';
+      MS(sidewalk, OverviewGroup, legendOverview);
+    
+    break;
+
+    case "1":
+      Transportation();
+          
+    break;
+
+    case "2":
+      document.getElementById('intro').innerHTML = '<table id="datatableEnergy" class="table table-striped"></table>';
+      etd(); 
+      
+    break;
+
+    case "3":
+      Energy();
+                     
+    break;
+
+    case "4":
+      Energy();
+                    
+    break;
+
+    case "5":
+      document.getElementById('intro').innerHTML = '<table id="datatableFood" class="table table-striped"></table>';
+      ftd();
+      MS(food, FoodGroup, legendFood);
+       
+    break;
+               
+      default:
+        alert("Oops;)");
+  }
+}
+
+
+
 
 	
 
    </script>
-   <script src="../GreenMap/js/holder.js"></script>
+   <script src="../AshevilleGreenMap/js/holder.js"></script>
   </body>
 </html>
