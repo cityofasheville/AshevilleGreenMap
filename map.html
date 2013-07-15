@@ -326,7 +326,6 @@ var food = L.geoJson(fooddata, {pointToLayer:foodpoint, onEachFeature:foodPopUp}
 function zoomPop(zlayer){
   for(each in zlayer._layers){
      map.fitBounds(zlayer._layers[each].getBounds());
-     map.openPopup(zlayer._layers[each]._popup);
   }
 }
 
@@ -341,7 +340,7 @@ var foodTableData = [];
     var notes = food._layers[each].feature.properties.notes;
     var type = food._layers[each].feature.properties.type;
     var zipcode = food._layers[each].feature.properties.zipcode;
-    var zoom = food._layers[each]._latlng;
+    var zoom = food._layers[each].getBounds()
     var popUp = food._layers[each]._popup;
     
     foodTableData.push([name, type, address, zipcode, '<a href="' + notes + '">notes</a>', '<button class="btn btn-link" onclick="zoomPop(food);">zoom</button>']);
@@ -374,9 +373,9 @@ function etd(){
 var EnergyTableData = [];
   for(each in EV._layers){
     var name = EV._layers[each].feature.properties.Name;
-    var desc = EV._layers[each].feature.properties.description;
+    var desc = EV._layers[each].feature.properties.description; 
     
-    EnergyTableData.push([name,  desc, '<button class="btn btn-link" onclick="zoomPop(EV);">zoom</button>']);
+    EnergyTableData.push([name,  desc, '<button class="btn btn-link" onclick="map.fitBounds(' + EV._layers[each].getBounds() + ');">zoom</button>']);
   }
     $(document).ready(function(){
       $('#datatableEnergy').dataTable({
@@ -415,14 +414,7 @@ var legendFood = L.control({position: 'bottomleft'});
   }
 
 //LayerGroup Filter
- //function Overview(){ 
-  //map.fitBounds(sidewalk.getBounds());
-  //var control = L.control.layers(null, OverviewGroup).addTo(map);
- // legendOverview.addTo(map);
- // legendFood.removeFrom(map);
-//}
-
-function Transportation(){ 
+ function Transportation(){ 
   map.fitBounds(sidewalk.getBounds());
   var control = L.control.layers(null, TransGroup).addTo(map);
    
@@ -435,60 +427,57 @@ function Energy(){
    
 }
 
-//function Food(){
-  //map.fitBounds(food.getBounds());
-  //var control = L.control.layers(null, FoodGroup).addTo(map);
-  //legendFood.addTo(map);  
-  //removeControl(legendOverview);
-//}
-
 //Master Control Functoin
 //The logic behind adding and removing all elements from the map
-function MS(layer, group, legend){
+//function MS(layer, group, legend){
+ function setZoom(layer){
   map.fitBounds(layer.getBounds());
-  //list of all legend names
-  var legend_list = ['legendOverview', 'legendFood'];
-  //Finds the index of the legend
-  var lg = legend_list.indexOf(legend);
-  //Loop that checks to see which legend to add and which legend to remove
-  for(i in legend_list){
-    if(i != lg){
-      map.removeControl(legend_list[i]);
-      alert(legend_list[i]);
-     } 
-    else if(i === lg){
-      map.addControl(new legend_list[i] + '()');
-    }
-    else{
-      return "Error with legend control";
+  }
+
+//Method for changing legends
+function getLegend(legend){
+    //list of all legend names
+    var legend_list = [legendOverview, legendFood];
+    //Finds the index of the legend
+    var lg = legend_list.indexOf(legend);
+    //Loop that checks to see which legend to add and which legend to remove
+    for(var i = 0; i <= legend_list.length; i++){
+      if(i === lg){
+        legend_list[i].addTo(map);
+      }
+      else{
+        legend_list[i].removeFrom(map);
+      }
     }
   }
-  //List of all layer control names
-  var layer_list = ['OverviewGroup', 'TransGroup', 'EnergyGroup', 'FoodGroup']; 
-  var g = layer_list.indexOf(group);
-  //Loop that checks to see which layer control to add and which layer control to remove
-  for(l in layer_list){
-    if(l === g){
-     var control = L.control.layers(null, layer_list[l]);
-     map.addControl(control);
-    }
-    else if(l != g){
-      map.removeControl(layer_list[l]);
-    }
-    else{
-      return "Error with layer control";
-    }
-  } 
-  
-}
+
+//Method to switch Layer control
+function getLayerControl(group){
+    //List of all layer control names
+    var layer_list = [OverviewGroup, TransGroup, EnergyGroup, FoodGroup];
+    //Sets variable of the group index
+    var g = layer_list.indexOf(group);
+    // //Loop that checks to see which layer control to add and which layer control to remove
+    for(var i = 0; i <= layer_list.length; i++){
+      if(i === g){
+        L.control.layers(null, layer_list[i]).addTo(map);
+      }
+      else{
+        L.control.layers(null, layer_list[i]).removeFrom(map);
+      }
+    } 
+  }
+
 
 //Switch Control 
 function bswitch(value){
   switch(value){
     case "0": 
       document.getElementById('intro').innerHTML = '<h1>Welcom to the grand Overview!</h1><br /><p>Hope you enjoy</p>';
-      MS(sidewalk, OverviewGroup, legendOverview);
-    
+      //MS(sidewalk, OverviewGroup, legendOverview);
+      setZoom(sidewalk);
+      getLegend(legendOverview);
+      getLayerControl(OverviewGroup);
     break;
 
     case "1":
@@ -515,8 +504,11 @@ function bswitch(value){
     case "5":
       document.getElementById('intro').innerHTML = '<table id="datatableFood" class="table table-striped"></table>';
       ftd();
-      MS(food, FoodGroup, legendFood);
-       
+      //MS(food, FoodGroup, legendFood);
+      setZoom(food);
+      getLegend(legendFood);
+      getLayerControl(FoodGroup); 
+
     break;
                
       default:
