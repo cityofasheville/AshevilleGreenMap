@@ -322,6 +322,9 @@ var food = L.geoJson(fooddata, {pointToLayer:foodpoint, onEachFeature:foodPopUp}
     "Electic Vehical": EV
   };
 
+//Temp add layer control
+L.control.layers(null, OverviewGroup).addTo(map);
+
 //zoom function for the datatables
 function zoomPop(zlayer){
   for(each in zlayer._layers){
@@ -340,10 +343,12 @@ var foodTableData = [];
     var notes = food._layers[each].feature.properties.notes;
     var type = food._layers[each].feature.properties.type;
     var zipcode = food._layers[each].feature.properties.zipcode;
-    var zoom = food._layers[each].getBounds()
     var popUp = food._layers[each]._popup;
+    var lat = food._layers[each]._latlng.lat;
+    var lng = food._layers[each]._latlng.lng;
     
-    foodTableData.push([name, type, address, zipcode, '<a href="' + notes + '">notes</a>', '<button class="btn btn-link" onclick="zoomPop(food);">zoom</button>']);
+  
+    foodTableData.push([name, type, address, zipcode, '<a href="' + notes + '">notes</a>', '<a href="../AshevilleGreenMap/map.html#18/' + lat + '/' + lng + '">Zoom to Map</a>']);
 
   }
 
@@ -374,8 +379,10 @@ var EnergyTableData = [];
   for(each in EV._layers){
     var name = EV._layers[each].feature.properties.Name;
     var desc = EV._layers[each].feature.properties.description; 
+    var lat = EV._layers[each]._latlng.lat;
+    var lng = EV._layers[each]._latlng.lng;
     
-    EnergyTableData.push([name,  desc, '<button class="btn btn-link" onclick="map.fitBounds(' + EV._layers[each].getBounds() + ');">zoom</button>']);
+    EnergyTableData.push([name,  desc, '<a href="../AshevilleGreenMap/map.html#18/' + lat + '/' + lng + '">Zoom to Map</a>']);
   }
     $(document).ready(function(){
       $('#datatableEnergy').dataTable({
@@ -452,21 +459,21 @@ function getLegend(legend){
   }
 
 //Method to switch Layer control
-function getLayerControl(group){
-    //List of all layer control names
-    var layer_list = [OverviewGroup, TransGroup, EnergyGroup, FoodGroup];
-    //Sets variable of the group index
-    var g = layer_list.indexOf(group);
-    // //Loop that checks to see which layer control to add and which layer control to remove
-    for(var i = 0; i <= layer_list.length; i++){
-      if(i === g){
-        L.control.layers(null, layer_list[i]).addTo(map);
-      }
-      else{
-        L.control.layers(null, layer_list[i]).removeFrom(map);
-      }
-    } 
-  }
+// function getLayerControl(group){
+//     //List of all layer control names
+//     var layer_list = [OverviewGroup, TransGroup, EnergyGroup, FoodGroup];
+//     //Sets variable of the group index
+//     var g = layer_list.indexOf(group);
+//     // //Loop that checks to see which layer control to add and which layer control to remove
+//     for(var i = 0; i <= layer_list.length; i++){
+//       if(i === g){
+//         L.control.layers(null, layer_list[i]).addTo(map);
+//       }
+//       else{
+//         L.control.layers(null, layer_list[i]).removeFrom(map);
+//       }
+//     } 
+//   }
 
 
 //Switch Control 
@@ -477,7 +484,7 @@ function bswitch(value){
       //MS(sidewalk, OverviewGroup, legendOverview);
       setZoom(sidewalk);
       getLegend(legendOverview);
-      getLayerControl(OverviewGroup);
+      //getLayerControl(OverviewGroup);
     break;
 
     case "1":
@@ -488,6 +495,7 @@ function bswitch(value){
     case "2":
       document.getElementById('intro').innerHTML = '<table id="datatableEnergy" class="table table-striped"></table>';
       etd(); 
+      //getLayerControl(EnergyGroup);
       
     break;
 
@@ -507,7 +515,7 @@ function bswitch(value){
       //MS(food, FoodGroup, legendFood);
       setZoom(food);
       getLegend(legendFood);
-      getLayerControl(FoodGroup); 
+      //getLayerControl(FoodGroup); 
 
     break;
                
