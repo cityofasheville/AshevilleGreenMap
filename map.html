@@ -146,6 +146,7 @@
 <script src="../AshevilleGreenMap/data/bikedata.js"></script>
 <script src="../AshevilleGreenMap/data/bikeRackdata.geojson"></script>
 <script src="../AshevilleGreenMap/data/fooddata.geojson"></script>
+<script src="../AshevilleGreenMap/data/locations.geojson"></script>
 <script src="../AshevilleGreenMap/js/jquery.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-transition.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-alert.js"></script>
@@ -468,6 +469,12 @@ var legendFood = L.control({position: 'bottomleft'});
     return div;
   }
 
+var legendCookingOil = L.control({position: 'bottomleft'});
+  legendCookingOil.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML = '<i class="icon-tint icon-white" style="background: #67A126; outline-color: #ff9f40; border-radius:50px "></i>' + '     ' + 'Cooking Oil<br />';
+    return div;
+  }
 //Master Control Functoin
 //The logic behind adding and removing all elements from the map
 //function MS(layer, group, legend){
@@ -477,20 +484,20 @@ var legendFood = L.control({position: 'bottomleft'});
 
 //Function for changing legends
 function getLegend(legend){
-    //list of all legend names
-    var legend_list = [legendOverview, legendFood];
-    //Finds the index of the legend
-    var lg = legend_list.indexOf(legend);
-    //Loop that checks to see which legend to add and which legend to remove
-    for(var i = 0; i <= legend_list.length; i++){
-      if(i === lg){
-        legend_list[i].addTo(map);
-      }
-      else{
-        map.removeControl(legend_list[i]);
-      }
+  //list of all legend names
+  var legend_list = [legendOverview, legendFood, legendCookingOil];
+  //Finds the index of the legend
+  var lg = legend_list.indexOf(legend);
+  //Loop that checks to see which legend to add and which legend to remove
+  for(var i = 0; i <= legend_list.length; i++){
+    if(i === lg){
+      legend_list[i].addTo(map);
+    }
+    else{
+      map.removeControl(legend_list[i]);
     }
   }
+}
 
 //Layer Control
 var food1 = [food];
@@ -543,6 +550,7 @@ function bswitch(value){
       setZoom(cookingoil);
       //layerControl(cookingoil);
       layerControl.apply(null, recycling);
+      getLegend(cookingoil);
       
                      
     break;
