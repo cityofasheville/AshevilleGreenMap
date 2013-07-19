@@ -43,7 +43,7 @@
 <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
   <div class="container">
     <div class="container-fluid">
-    <div class="navbar navbar-inverse">
+    <div class="navbar">
       <div class="navbar-inner">
       <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -51,7 +51,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-            <a class="brand" href="../AshevilleGreenMap/index.html#">AshevilleGreenMap</a>
+            <a class="brand" href="../AshevilleGreenMap/index.html#"><img src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" /></a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
@@ -82,45 +82,37 @@
       </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
      <div class="row-fluid">
-      <div class="span7">   
+      <div class="span9">   
         <div id="map"></div>
       </div>
-      <div class="span5">
-        <ul class="nav">
-                <li class="pos-button"><div class='btn-group'>
-                <button class="btn btn-success" id="Overview" value="0" onclick="bswitch(this.value);">Overview</button>
-                <button class="btn btn-success" id="Transportation" value="1" onclick="bswitch(this.value);">Transportation</button>
-                <button class="btn btn-success" id="Energy" value="2" onclick="bswitch(this.value);">Energy</button>
-                <button class="btn btn-success" value="3" onclick="bswitch(this.value);"><i class="icon-tint icon-white"></i> Recycling</button>
-                <button class="btn btn-success" value="4" onclick="bswitch(this.value);">Water</button>
-                <button class="btn btn-success" id="Food" value="5" onclick="bswitch(this.value);">Food</button>
-              </div></li>
+      <div class="span3">
+       
         <div id="intro">
-          <h1 class="text-success">Welcome to Asheville AshevilleGreenMap!</h1>
-          <ul class="unstyled">
-            <li>Explore all the <strong class="text-success">Green</strong> infastructure Asheville has to offer.</li>
-          </ul> 
+          <img src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" />
           <dl>
-            <dt>Transportation</dt>
-            <dd>This view provides an in depth look into all the <strong class="text-success">Green</strong> methods to get around town!</dd>
-            <dd><button class="btn btn-success" id="Transportation" value="1" onclick="bswitch(this.value);">Transportation</button></dd>
+            <dt class="text-success">Transportation</dt>
+            <dd>Biodiesel</dd>
+            <dd>Greenway</dd>
          </dl> 
          <dl>
-            <dt>Energy</dt>
-            <dd>Checkout what Asheville is using to keep energy <strong class="text-success">Green</strong>!</dd>
-            <dd><button class="btn btn-success" id="Energy" value="2" onclick="bswitch(this.value);">Energy</button></dd>
-         </dl>  
-         <dt>Recycling</dt>
-            <dd>Look at how Asheville keeps trash to a minimum keeping our city <strong class="text-success">Green</strong> and beautiful!</dd>
-            <dd><button class="btn btn-success" value="3" onclick="bswitch(this.value);">Recycling</button></dd>
-         </dl>  
-         <dt>Water</dt>
-            <dd>Clean <strong class="text-success">Green</strong> water flows through Asheville!</dd>
-            <dd><button class="btn btn-success" value="4" onclick="bswitch(this.value);">Water</button></dd>
+            <dt class="text-success">Energy</dt>
+            <dd>Solar Thermal</dd>
+            <dd>Energy Feature</dd>
+            <dd>LEED Certification</dd>
          </dl> 
-         <dt>Food</dt>
-            <dd>Checkout how Asheville stays <strong class="text-success">Green</strong> with food!</dd>
-            <dd><button class="btn btn-success" id="Food" value="5" onclick="bswitch(this.value);">Food</button></dd>
+         <dl>
+         <dt class="text-success">Recycling</dt>
+            <dd>Recycle</dd>
+         </dl>  
+         <dl>
+         <dt class="text-success">Water</dt>
+            <dd>Stormwater</dd>
+            <dd>Feature</dd>
+         </dl> 
+         <dl>
+         <dt class="text-success">Food</dt>
+            <dd>Green Certified</dd>
+            <dd>Community Garden</dd>
          </dl>           
         </div>
       </div>
@@ -178,13 +170,10 @@ var map = L.map('map', {
 var hash = new L.Hash(map); 
             
 //base map from cloudmade   
-var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
-	attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
-	key: 'BC9A493B41014CAABB98F0471D759707',
-  styleId: 22677,
-	zIndex: 2
-	
-}).addTo(map);
+var cloudmade = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+	  zIndex: 2
+	}).addTo(map);
 		
 //point to layer for Geojson layers           
 function evPoint (feature, latlng) {
@@ -209,6 +198,16 @@ function bikeRackpoint (feature, latlng) {
 
 function foodpoint (feature, latlng) {
   return L.circleMarker(latlng, {
+    fillColor: '#bf5b30',
+    radius: 4,
+    color: '#a63100',
+    weight: 1,
+    fillOpacity: 1
+  });
+}
+
+function locationPoints (feature, latlng) {
+   return L.circleMarker(latlng, {
     fillColor: '#bf5b30',
     radius: 4,
     color: '#a63100',
@@ -249,7 +248,11 @@ function bikeroutePopUp(feature, layer) {
 }
 
 function cookingoilPopUp(feature, layer) {
-  layer.bindPopup('<h4>Cooking Oil Recycling</h4>Name: </stong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.description);
+  layer.bindPopup('<h4>Cooking Oil Recycling</h4><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.description);
+}
+
+function LocationPopUp(feature, layer){
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<img src="' + feature.properties.Thumb_URL + '"/>');
 }
 
 //Filters for GeoJson Layers
@@ -299,13 +302,36 @@ function sidewalkStyle(feature) {
     }
 }
 
-//Set New Icon
+function locationsStyle(feature){
+  switch (feature.properties["Big Group"]) {
+    case 'Food': return {fillColor: '#D8DFBD', color: '#a63100', weight: 1, fillOpacity: 1 };
+    case 'Water': return {fillColor: '#37869E', color: "#92ed6b", weight: 2, fillOpacity: 1};
+    case 'Transportation': return {fillColor: '#38A498', color: "#92ed6b", weight: 2, fillOpacity: 1};
+    case 'Waste': return {fillColor: '#76A438', color: "#92ed6b", weight: 2, fillOpacity: 1};
+    case 'Energy': return {fillColor: '#245D01', color: "#92ed6b", weight: 2, fillOpacity: 1};
+  }
+}
 
+//Set New Icon
 var OilMarker = L.AwesomeMarkers.icon({
   icon: 'icon-tint', 
   color: 'green',
   iconColor: 'white'
   
+});
+
+//Ajax Call for geojson data
+$.ajax({
+    type: "POST",
+    url: "../AshevilleGreenMap/data/locations.geojson",
+    dataType: 'json',
+    success: function (response) {
+        locations = L.geoJson(response, {
+          pointToLayer: locationPoints,
+          style: locationsStyle,
+          onEachFeature:LocationPopUp
+        }).addTo(map);
+    }
 });
    
 //GeoJson set Up
