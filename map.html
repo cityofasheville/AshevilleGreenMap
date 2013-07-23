@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/js/L.GeoSearch-master/src/css/l.geosearch.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="../dist/MarkerCluster.Default.ie.css" /><![endif]-->
     <!--<script src="../new/leafletajax/dist/leaflet.ajax.js"></script>-->
 
@@ -34,7 +35,7 @@
                                    <link rel="shortcut icon" href="../AshevilleGreenMap/ico/favicon.png">
   </head>
 
-  <body>
+  <body style="background: url('../AshevilleGreenMap/img/grey.png');">
 
 
 <!-- NAVBAR
@@ -51,7 +52,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-            <a class="brand" href="../AshevilleGreenMap/index.html#"><img src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" /></a>
+            <a class="brand" href="../AshevilleGreenMap/index.html#"><img style="width:auto; height:auto; border:0px;" src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" /></a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
@@ -82,38 +83,40 @@
       </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
      <div class="row-fluid">
-      <div class="span9">   
+      <div class="span10">   
         <div id="map"></div>
       </div>
-      <div class="span3">
+      <div class="span2">
        
         <div id="intro">
-          <img src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" />
-          <dl>
-            <dt class="text-success">Transportation</dt>
-            <dd>Biodiesel</dd>
-            <dd>Greenway</dd>
-         </dl> 
-         <dl>
-            <dt class="text-success">Energy</dt>
-            <dd>Solar Thermal</dd>
-            <dd>Energy Feature</dd>
-            <dd>LEED Certification</dd>
-         </dl> 
-         <dl>
-         <dt class="text-success">Recycling</dt>
-            <dd>Recycle</dd>
-         </dl>  
-         <dl>
-         <dt class="text-success">Water</dt>
-            <dd>Stormwater</dd>
-            <dd>Feature</dd>
-         </dl> 
-         <dl>
-         <dt class="text-success">Food</dt>
-            <dd>Green Certified</dd>
-            <dd>Community Garden</dd>
-         </dl>           
+          <!--<img src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Vertical_logos/HowLow_298-1_vert_white.jpg" />-->
+          <div class="btn-group">
+  <a class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown">Push Me!
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <!-- dropdown menu links -->
+    <li class="nav-header"><p class="text-success">Transportation</p></li>
+    <li><button class="btn btn-link">Biodiesel</button></li>
+    <li><button class="btn btn-link">Greenway</button></li>
+    <li class="divider"></li>
+    <li class="nav-header"><p class="text-success">Energy</p></li>
+    <li><button class="btn btn-link">Solar Thermal</button></li>
+    <li><button class="btn btn-link">Energy Feature</button></li>
+    <li><button class="btn btn-link">LEED Certification</button></li>
+    <li class="divider"></li>
+    <li class="nav-header"><p class="text-success">Recycling</p></li>
+    <li><button class="btn btn-link">Recycle</button></li>
+    <li class="divider"></li>
+    <li class="nav-header"><p class="text-success">Water</p></li>
+    <li><button class="btn btn-link">Stormwater</button></li>
+    <li><button class="btn btn-link">Feature</button></li>
+    <li class="divider"></li>
+    <li class="nav-header"><p class="text-success">Food</p></li>
+    <li><button class="btn btn-link">Green Certified</button></li>
+    <li><button class="btn btn-link">Community Garden</button></li>
+  </ul>
+</div>
         </div>
       </div>
     </div>
@@ -155,6 +158,9 @@
 <script src="../AshevilleGreenMap/js/jquery.dataTables.js"></script>
 <script src="../AshevilleGreenMap/js/datatable.bootstrap.js"></script>
 <script src="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.js"></script>
+<script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.control.geosearch.js"></script>
+<script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.geosearch.provider.openstreetmap.js"></script>
+<script src="../AshevilleGreenMap/js/bouncemarker.js"></script>
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>	
 <script type="text/javascript">
@@ -167,7 +173,13 @@ var map = L.map('map', {
 });
 
 //Adds hash to url          
-var hash = new L.Hash(map); 
+var hash = new L.Hash(map);
+
+//Adds OpenStreetMap search option
+//Added in custom bouncing option
+new L.Control.GeoSearch({
+    provider: new L.GeoSearch.Provider.OpenStreetMap()
+}).addTo(map); 
             
 //base map from cloudmade   
 var cloudmade = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -216,11 +228,19 @@ function locationPoints (feature, latlng) {
   });
 }
 
+
 function cookingoilpoint (feature, latlng) {
   return L.marker(latlng, {
     icon: OilMarker
   });
 }
+
+//Set New Icon
+var OilMarker = L.AwesomeMarkers.icon({
+  icon: 'icon-tint', 
+  color: 'green',
+  iconColor: 'white'
+});
 
 //popups for GeoJson layers   
 function sidewalkPopUp(feature, layer) {
@@ -266,7 +286,7 @@ function sidewalkFilter(feature, layer){
   if(feature.properties.SEGMENTTYP !== "GREENWAY" && feature.properties.SEGMENTTYP !== "PROPOSED GREENWAY" && feature.properties.SEGMENTTYP !== "PROPOSED 2005 PED PLAN" && feature.properties.SEGMENTTYP !== "NEEDED LINKAGE" ){
     return feature.properties.SEGMENTTYP;
   }
-}         
+}
 
 //Styles for Geojson layers
 var parkstyle = {
@@ -312,13 +332,37 @@ function locationsStyle(feature){
   }
 }
 
-//Set New Icon
-var OilMarker = L.AwesomeMarkers.icon({
-  icon: 'icon-tint', 
-  color: 'green',
-  iconColor: 'white'
-  
-});
+//Event Handleer set ups
+//Color toggle setup
+function locationsSelection(e){
+  var layer = e.target;
+  layer.setStyle({
+    fillColor: '#5FDCFA',
+    color: '#5FDCFA', 
+    weight: 2, 
+    fillOpacity: 1 
+  });
+}
+
+var locations;
+
+function resetHighlight(e) {
+      locations.resetStyle(e.target);
+    }
+
+//Zoom to feature setup
+function zoomToFeature(e) {
+      map.fitBounds(e.target.getBounds());
+    }
+
+function onEachFeature(feature, layer) {
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<img src="' + feature.properties.Thumb_URL + '"/>');
+      layer.on({
+        mouseover: locationsSelection,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+      });
+    }
 
 //Ajax Call for geojson data
 $.ajax({
@@ -329,7 +373,7 @@ $.ajax({
         locations = L.geoJson(response, {
           pointToLayer: locationPoints,
           style: locationsStyle,
-          onEachFeature:LocationPopUp
+          onEachFeature:onEachFeature
         }).addTo(map);
     }
 });
@@ -482,7 +526,7 @@ var CookingOilTableData = [];
 var legendOverview = L.control({position: 'bottomleft'});
   legendOverview.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<i style="background: #ff9400">    </i>' + '     ' + 'Bike Routes<br /><i style="background: #41db00"></i>' + '     ' + 'Greenways<br /><i style="background: #008F3E "></i>' + '     ' + 'Parks<br /><i style="background: #bf5b30; outline-color: #a63100; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #60b9ce; outline-color: #ff9f40; border-radius:50px "></i>' + '     ' + 'Bike Racks<br /><i style="background: #fdaf6b; outline-color: #f95897; border-radius:50px  "></i>' + '     ' + 'EV Charging Station<br /><i class="icon-tint icon-white" style="background: #67A126; outline-color: #ff9f40; border-radius:50px "></i>' + '     ' + 'Cooking Oil<br />';
+      div.innerHTML = '<i style="background: #ff9400"></i>' + '     ' + 'Bike Routes<br /><i style="background: #41db00"></i>' + '     ' + 'Greenways<br /><i style="background: #008F3E "></i>' + '     ' + 'Parks<br /><i style="background: #bf5b30; outline-color: #a63100; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #60b9ce; outline-color: #ff9f40; border-radius:50px "></i>' + '     ' + 'Bike Racks<br /><i style="background: #fdaf6b; outline-color: #f95897; border-radius:50px  "></i>' + '     ' + 'EV Charging Station<br /><i style="background: #67A126; outline-color: #ff9f40; border-radius:50px "></i>' + '     ' + 'Cooking Oil<br /><i style="background: #37869E; outline-color: #92ed6b; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #38A498; outline-color: #92ed6b; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #76A438; outline-color: #92ed6b; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #245D01; outline-color: #92ed6b; border-radius:50px "></i>' + '     ' + 'Energy<br />';
     return div;
   }
 
