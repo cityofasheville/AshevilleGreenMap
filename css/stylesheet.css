@@ -6,8 +6,9 @@ body {
 
 #map {
  height: 750px;
- width: 600px;
+ width: auto;
 }
+
 
 
     /* CUSTOMIZE THE NAVBAR
