@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>AshevilleGreenMap</title>
+    <title>HowLowCanAvlGo?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -117,6 +117,7 @@
     <li><button class="btn btn-link">Community Garden</button></li>
   </ul>
 </div>
+
         </div>
       </div>
     </div>
@@ -130,8 +131,10 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/leaflet.markercluster-src.js"></script>
 <script src="../AshevilleGreenMap/js/leaflet-hash.js"></script>
+<!--<script src="../AshevilleGreenMap/js/barchart.js"></script>-->
 <script src="../AshevilleGreenMap/js/azgs-leaflet-master/js/azgs-leaflet/TileLayer.ESRI.js"></script>
 <script src="../AshevilleGreenMap/data/parks.js"></script>
 <script src="../AshevilleGreenMap/data/PublicEV.geojson"></script>
@@ -167,8 +170,8 @@
  
 //map set up
 var map = L.map('map', {
-  center: [35.600251, -82.570848],
-  zoom: 17.5,
+  center: [35.583427, -82.554519],
+  zoom: 12,
   zoomControl: true 
 });
 
