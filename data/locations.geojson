@@ -1,0 +1,82 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 1, "properties": { "Big Group": "Energy", "Sub Category": "Solar Thermal", "Name": "Fire Station 8", "Description": "Solar hot water is used in this fire station housed by 5 Asheville Firefighters.", "Address": "904 Tunnel Road Asheville NC 28805", "Long": "-82.502725", "Lat": "35.587625", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.502725, 35.587625 ] } }
+,
+{ "type": "Feature", "id": 2, "properties": { "Big Group": "Energy", "Sub Category": "Solar Thermal", "Name": "Fire Station 6", "Description": "Solar hot water is used in this fire station housed by 5 Asheville Firefighters.", "Address": "970 Haywood Rd Asheville  NC 28806", "Long": "-82.602036", "Lat": "35.580911", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.602036, 35.580911 ] } }
+,
+{ "type": "Feature", "id": 3, "properties": { "Big Group": "Energy", "Sub Category": "Energy Feature", "Name": "Dr. Wesley Grant Sr. Southside Center (Living Roof)", "Description": "Living roof installed on Center bioswale on sight as well. LEED Platinum", "Address": "", "Long": "-82.561756", "Lat": "35.577692", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.561756, 35.577692 ] } }
+,
+{ "type": "Feature", "id": 4, "properties": { "Big Group": "Energy", "Sub Category": "Energy Feature", "Name": "NC Arboretum", "Description": "Hosts sustainable gardening events Gardener’s Green Shed demonstrates methods to save water for later irrigation capture sunlight to create electricity and ways to make your gardening chores easier ", "Address": "", "Long": "-82.609892", "Lat": "35.498939", "URL": "http:\/\/www.ncarboretum.org\/", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.609892, 35.498939 ] } }
+,
+{ "type": "Feature", "id": 5, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Blue Ridge Visitor Center", "Description": "LEED Gold interpretive center", "Address": "", "Long": "-82.486468", "Lat": "35.565371", "URL": "http:\/\/greenbuildingwire.com\/LEED-certified-building-NC", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.486468, 35.565371 ] } }
+,
+{ "type": "Feature", "id": 6, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Bent Creek Conference Center", "Description": "LEED Silver", "Address": "", "Long": "-82.596464", "Lat": "35.504425", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.596464, 35.504425 ] } }
+,
+{ "type": "Feature", "id": 7, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Biltmore Park Town Square Hilton Hotel", "Description": "LEED Silver Hotel", "Address": "", "Long": "-82.557189", "Lat": "35.484667", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.557189, 35.484667 ] } }
+,
+{ "type": "Feature", "id": 8, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Mission Outpatient Cancer Center", "Description": "LEED Gold", "Address": "", "Long": "-82.552236", "Lat": "35.579469", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552236, 35.579469 ] } }
+,
+{ "type": "Feature", "id": 9, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "The Glen Rock Apartments", "Description": "LEED Gold and affordable housing", "Address": "", "Long": "-82.564228", "Lat": "35.580631", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.564228, 35.580631 ] } }
+,
+{ "type": "Feature", "id": 10, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Biltmore Park Town Square Building 2B", "Description": "LEED Gold commercial office", "Address": "", "Long": "-82.554278", "Lat": "35.486194", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.554278, 35.486194 ] } }
+,
+{ "type": "Feature", "id": 11, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Dr. Wesley Grant Sr. Southside Center", "Description": "LEED Platinum", "Address": "", "Long": "-82.561756", "Lat": "35.577692", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.561756, 35.577692 ] } }
+,
+{ "type": "Feature", "id": 12, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Corner Kitchen", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.541256", "Lat": "35.56625", "URL": "http:\/\/www.dinegreenasheville.com\/", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.541256, 35.56625 ] } }
+,
+{ "type": "Feature", "id": 13, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "French Broad Chocolate Lounge", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.552451", "Lat": "35.594524", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552451, 35.594524 ] } }
+,
+{ "type": "Feature", "id": 14, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Laughing Seed Café", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.555797", "Lat": "35.594556", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.555797, 35.594556 ] } }
+,
+{ "type": "Feature", "id": 15, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Luella’s Barbecue", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.554767", "Lat": "35.615265", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.554767, 35.615265 ] } }
+,
+{ "type": "Feature", "id": 16, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Neo Cantina", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.542278", "Lat": "35.566954", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.542278, 35.566954 ] } }
+,
+{ "type": "Feature", "id": 17, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Plant", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.552836", "Lat": "35.604731", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552836, 35.604731 ] } }
+,
+{ "type": "Feature", "id": 18, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Posana Café", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.551714", "Lat": "35.594573", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.551714, 35.594573 ] } }
+,
+{ "type": "Feature", "id": 19, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Rosetta’s Kitchen", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.553858", "Lat": "35.59825", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.553858, 35.59825 ] } }
+,
+{ "type": "Feature", "id": 20, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Strada", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.552211", "Lat": "35.596203", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552211, 35.596203 ] } }
+,
+{ "type": "Feature", "id": 21, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Bouchon Restaurant", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.553172", "Lat": "35.596933", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.553172, 35.596933 ] } }
+,
+{ "type": "Feature", "id": 22, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Homegrown", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.554922", "Lat": "35.611722", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.554922, 35.611722 ] } }
+,
+{ "type": "Feature", "id": 23, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Green Sage (Broadway)", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.552081", "Lat": "35.595597", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552081, 35.595597 ] } }
+,
+{ "type": "Feature", "id": 24, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Green Sage(South Asheville)", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.524847", "Lat": "35.50595", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.524847, 35.50595 ] } }
+,
+{ "type": "Feature", "id": 25, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Tupelo Honey (College st)", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.554841", "Lat": "35.594733", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.554841, 35.594733 ] } }
+,
+{ "type": "Feature", "id": 26, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Tupelo Honey (Hendersonville rd)", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.525528", "Lat": "35.503028", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.525528, 35.503028 ] } }
+,
+{ "type": "Feature", "id": 27, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Cedric's Tavern on the Biltmore Estate", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.580136", "Lat": "35.555314", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.580136, 35.555314 ] } }
+,
+{ "type": "Feature", "id": 28, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Claxton Community Garden", "Description": "Community garden located on the grounds of Merrimon Baptist.", "Address": "", "Long": "-82.552933", "Lat": "35.609736", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552933, 35.609736 ] } }
+,
+{ "type": "Feature", "id": 29, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Dr. George Washington Carver Edible Park", "Description": "Edible community garden at Stephens-Lee Community Center.", "Address": "", "Long": "-82.54716", "Lat": "35.594045", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.54716, 35.594045 ] } }
+,
+{ "type": "Feature", "id": 30, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Joyner Garden", "Description": "A community garden run by bountiful cities.", "Address": "", "Long": "-82.566347", "Lat": "35.569131", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.566347, 35.569131 ] } }
+,
+{ "type": "Feature", "id": 31, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Eblen Short Stop #2 (217 Amboy Rd)", "Description": "Biodeisel fueling station. Blends: B20 on road", "Address": "", "Long": "-82.580025", "Lat": "35.578103", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.580025, 35.578103 ] } }
+,
+{ "type": "Feature", "id": 32, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Stanley's Citgo(479 Weaverville Hwy.)", "Description": "Biodeisel fueling station Blends: B20 on road", "Address": "", "Long": "-82.581833", "Lat": "35.672008", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.581833, 35.672008 ] } }
+,
+{ "type": "Feature", "id": 33, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Eblen Short Stop #6 (425 Broadway)", "Description": "Biodeisel fueling station Blends: B20 on road", "Address": "", "Long": "-82.562075", "Lat": "35.606275", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.562075, 35.606275 ] } }
+,
+{ "type": "Feature", "id": 34, "properties": { "Big Group": "Transportation", "Sub Category": "Greenway", "Name": "Town Branch Greenway", "Description": "Town Branch takes the form of wide sidewalks and bike lanes and totals 0.2 miles.  The Town Branch corridor will eventually connect the new Livingston Recreation Center to McDowell Street", "Address": "", "Long": "-82.557825", "Lat": "35.580708", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.557825, 35.580708 ] } }
+,
+{ "type": "Feature", "id": 35, "properties": { "Big Group": "Waste", "Sub Category": "Recycle", "Name": "Recycling Drop Off Center- Asheville Pizza and Brewing Company", "Description": "This recycling drop off center is open to the public and prepared to accept household recyclables from residents in Asheville. ", "Address": "", "Long": "-82.553608", "Lat": "35.622134", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.553608, 35.622134 ] } }
+,
+{ "type": "Feature", "id": 36, "properties": { "Big Group": "Water", "Sub Category": "Stormwater", "Name": "Carrier Park", "Description": "Carrier Park offers a wetland interpretive and education area. The wetland helps mitigate negative impacts from the river flooding. Carrier park also offers river overlooks and a boat landing.", "Address": "", "Long": "-82.579103", "Lat": "35.565922", "URL": "http:\/\/www.ashevillenc.gov\/Departments\/ParksRecreation\/ParksOverview\/Greenways.aspx", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.579103, 35.565922 ] } }
+,
+{ "type": "Feature", "id": 37, "properties": { "Big Group": "Water", "Sub Category": "Stormwater", "Name": "Reed Creek Greenway", "Description": "Greenway containing bioinfiltration and wetlands systems that help slow and clean stormwater to reduce flooding.", "Address": "", "Long": "-82.562858", "Lat": "35.606106", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.562858, 35.606106 ] } }
+,
+{ "type": "Feature", "id": 38, "properties": { "Big Group": "Water", "Sub Category": "Feature", "Name": "Splashville", "Description": "The recreational water fountains in front of city hall recycle and clean the water before circulating to be used again.  ", "Address": "", "Long": "-82.549439", "Lat": "35.595487", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.549439, 35.595487 ] } }
+
+]
+}

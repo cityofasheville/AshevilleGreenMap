@@ -6,10 +6,22 @@ body {
 
 #map {
  height: 750px;
- width: 600px;
+ width: auto;
 }
 
+.chart div {
+   font: 10px sans-serif;
+   background-color: steelblue;
+   text-align: right;
+   padding: 3px;
+   margin: 1px;
+   color: white;
+ }
 
+ .chart rect {
+   stroke: white;
+   fill: steelblue;
+ }
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
 
