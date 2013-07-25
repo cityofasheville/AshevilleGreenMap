@@ -368,18 +368,18 @@ function onEachFeature(feature, layer) {
     }
 
 //Ajax Call for geojson data
-$.ajax({
-    type: "POST",
-    url: "../AshevilleGreenMap/data/locations.geojson",
-    dataType: 'json',
-    success: function (response) {
-        locations = L.geoJson(response, {
-          pointToLayer: locationPoints,
-          style: locationsStyle,
-          onEachFeature:onEachFeature
-        }).addTo(map);
-    }
-});
+// $.ajax({
+//     type: "POST",
+//     url: "../AshevilleGreenMap/data/locations.geojson",
+//     dataType: 'json',
+//     success: function (response) {
+//         locations = L.geoJson(response, {
+//           pointToLayer: locationPoints,
+//           style: locationsStyle,
+//           onEachFeature:onEachFeature
+//         }).addTo(map);
+//     }
+// });
    
 //GeoJson set Up
 var parks = L.geoJson(parks, {style:parkstyle, onEachFeature:parkPopUp});
@@ -390,6 +390,7 @@ var sidewalk = L.geoJson(sidewalkdata, {style:sidewalkStyle, filter:sidewalkFilt
 var bikeRack = L.geoJson(bikeRackdata, {pointToLayer:bikeRackpoint, onEachFeature:bikerackPopUp});
 var food = L.geoJson(fooddata, {pointToLayer:foodpoint, onEachFeature:foodPopUp});
 var cookingoil = L.geoJson(cookingoildata, {pointToLayer:cookingoilpoint, onEachFeature:cookingoilPopUp});
+var locations = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:locationsStyle}).addTo(map);
 
 //Layer Groups
 //OverviewGroup = L.layerGroup([parks, EV, bikes, greenway, sidewalk, bikeRack, food]);
