@@ -52,20 +52,26 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-            <a class="brand" href="../AshevilleGreenMap/index.html#"><img style="width:auto; height:auto; border:0px;" src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" /></a>
+            <a class="brand" href="#"><img style="width:auto; height:auto; border:0px;" src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" /></a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            
             <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="pos-button"><div class='btn-group'>
+              <ul class="nav pull-right">
+                <li><p class="pos-search"><select  id="zoom" onchange="zoomToRA(this.options[this.selectedIndex].text, this.value)"></select></p></li>
+                <li><form class="form-search pos-search">
+                <input type="text" class="input-medium search-query">
+                <button type="submit" class="btn" onclick="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.geosearch.provider.openstreetmap.js">Search</button>
+            </form></li>
+                <!--<li class="pos-button"><div class='btn-group'>
                 <button class="btn btn-success" id="Overview" value="0" onclick="bswitch(this.value);">Overview</button>
                 <button class="btn btn-success" id="Transportation" value="1" onclick="bswitch(this.value);">Transportation</button>
                 <button class="btn btn-success" id="Energy" value="2" onclick="bswitch(this.value);">Energy</button>
                 <button class="btn btn-success" value="3" onclick="bswitch(this.value);">Recycling</button>
                 <button class="btn btn-success" value="4" onclick="bswitch(this.value);">Water</button>
                 <button class="btn btn-success" id="Food" value="5" onclick="bswitch(this.value);">Food</button>
-              </div></li>
+              </div></li>-->
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Info <b class="caret"></b></a>
+                <li class="dropdow"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Info <b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a href="http://www.ashevillenc.gov/">City of Asheville</a></li>
                     <li><a href="http://opendatacatalog.ashevillenc.gov/">Open Data Asheville</a></li>
@@ -90,31 +96,33 @@
        
         <div id="intro">
           <!--<img src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Vertical_logos/HowLow_298-1_vert_white.jpg" />-->
-          <div class="btn-group">
-  <a class="btn btn-large btn-success dropdown-toggle" data-toggle="dropdown">Push Me!
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
+  <ul class="info unstyled">
     <!-- dropdown menu links -->
     <li class="nav-header"><p class="text-success">Transportation</p></li>
-    <li><button class="btn btn-link">Biodiesel</button></li>
-    <li><button class="btn btn-link">Greenway</button></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Biodiesel</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Greenway</p></label></li>
     <li class="divider"></li>
     <li class="nav-header"><p class="text-success">Energy</p></li>
-    <li><button class="btn btn-link">Solar Thermal</button></li>
-    <li><button class="btn btn-link">Energy Feature</button></li>
-    <li><button class="btn btn-link">LEED Certification</button></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Solar Thermal</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Energy Feature</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">LEED Certification</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">EV Charging Station</p></label></li>
     <li class="divider"></li>
-    <li class="nav-header"><p class="text-success">Recycling</p></li>
-    <li><button class="btn btn-link">Recycle</button></li>
+    <li class="nav-header"><p class="text-success">Waste</p></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Recycle</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Cooking Oil Drop-Off</p></label></li>
     <li class="divider"></li>
     <li class="nav-header"><p class="text-success">Water</p></li>
-    <li><button class="btn btn-link">Stormwater</button></li>
-    <li><button class="btn btn-link">Feature</button></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Stormwater</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Feature</p></label></li>
     <li class="divider"></li>
     <li class="nav-header"><p class="text-success">Food</p></li>
-    <li><button class="btn btn-link">Green Certified</button></li>
-    <li><button class="btn btn-link">Community Garden</button></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Green Certified</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Community Garden</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Manna Agencies</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value="Tailgate Market" onclick="check(this.value)"><p class="text-info">Tailgate Market</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Grocery</p></label></li>
+  </ul>
   </ul>
 </div>
 
@@ -137,13 +145,10 @@
 <!--<script src="../AshevilleGreenMap/js/barchart.js"></script>-->
 <script src="../AshevilleGreenMap/js/azgs-leaflet-master/js/azgs-leaflet/TileLayer.ESRI.js"></script>
 <script src="../AshevilleGreenMap/data/parks.js"></script>
-<script src="../AshevilleGreenMap/data/PublicEV.geojson"></script>
+<script src="../AshevilleGreenMap/data/ReportingData.geojson"></script>
 <script src="../AshevilleGreenMap/data/greenwaydata.js"></script>
 <script src="../AshevilleGreenMap/data/sidewalkdata.geojson"></script>
-<script src="../AshevilleGreenMap/data/cookingoildata.geojson"></script>
 <script src="../AshevilleGreenMap/data/bikedata.js"></script>
-<script src="../AshevilleGreenMap/data/bikeRackdata.geojson"></script>
-<script src="../AshevilleGreenMap/data/fooddata.geojson"></script>
 <script src="../AshevilleGreenMap/data/locations.geojson"></script>
 <script src="../AshevilleGreenMap/js/jquery.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-transition.js"></script>
@@ -172,9 +177,11 @@
 var map = L.map('map', {
   center: [35.583427, -82.554519],
   zoom: 12,
-  zoomControl: true 
+  zoomControl: false 
 });
 
+var zoom = new L.control.zoom();
+          zoom.setPosition('topright').addTo(map);
 //Adds hash to url          
 var hash = new L.Hash(map);
 
@@ -191,36 +198,6 @@ var cloudmade = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	}).addTo(map);
 		
 //point to layer for Geojson layers           
-function evPoint (feature, latlng) {
-  return L.circleMarker(latlng, {
-    fillColor: '#fdaf6b',
-    radius: 4,
-    color: '#f95897',
-    weight: 1,
-    fillOpacity: 1
-  });
-}
-
-function bikeRackpoint (feature, latlng) {
-  return L.circleMarker(latlng, {
-    fillColor: '#60b9ce',
-    radius: 4,
-    color: '#ff9f40',
-    weight: 1,
-    fillOpacity: 1
-  });
-}
-
-function foodpoint (feature, latlng) {
-  return L.circleMarker(latlng, {
-    fillColor: '#bf5b30',
-    radius: 4,
-    color: '#a63100',
-    weight: 1,
-    fillOpacity: 1
-  });
-}
-
 function locationPoints (feature, latlng) {
    return L.circleMarker(latlng, {
     fillColor: '#bf5b30',
@@ -254,25 +231,13 @@ function parkPopUp(feature, layer) {
   layer.bindPopup('<h4>Park</h4><strong>Park: </strong>' + feature.properties.parkname + '<br />' + '<strong>Acres: </strong>' + feature.properties.acres);
 }
 
-function foodPopUp(feature, layer) {
-  layer.bindPopup('<h4>Food</h4><strong>Name: </strong>' + feature.properties.name + '<br />' + '<strong>Address: </strong>' + feature.properties.address + '<br />' + '<strong>Zip Code: </strong>' + feature.properties.zipcode + '<br />' + '<strong>type: </strong>' + feature.properties.type);
-}
 
-function evPopUp(feature, layer) {
-  layer.bindPopup('<h4>EV Charging Station</h4><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.description);
-}
-
-function bikerackPopUp(feature, layer) {
-  layer.bindPopup('<h4>Bike Rack</h4><strong># of spaces: </stong>' + feature.properties.BIKE_RACK_ + '<br />' + '<strong>Description: </strong>' + feature.properties.LOCATIONS);
-}
 
 function bikeroutePopUp(feature, layer) {
   layer.bindPopup('<h4>Bike Infrastructure</h4><strong>Type: </stong>' + feature.properties.fac_rec + '<br />' + '<strong>Safety: </strong>' + feature.properties.suitability);
 }
 
-function cookingoilPopUp(feature, layer) {
-  layer.bindPopup('<h4>Cooking Oil Recycling</h4><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.description);
-}
+
 
 function LocationPopUp(feature, layer){
   layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<img src="' + feature.properties.Thumb_URL + '"/>');
@@ -297,6 +262,12 @@ var parkstyle = {
   "weight": 1,
   "opacity": 0.65
   };
+
+var reportstyle = {
+  "color": '#FFFFFF',
+  "weight": 2,
+  "opacity": 1
+}
 
 var bikestyle = {
   "color": "#ff9400",
@@ -327,14 +298,43 @@ function sidewalkStyle(feature) {
 
 function locationsStyle(feature){
   switch (feature.properties["Big Group"]) {
-    case 'Food': return {fillColor: '#D8DFBD', color: '#a63100', weight: 1, fillOpacity: 1 };
-    case 'Water': return {fillColor: '#37869E', color: "#92ed6b", weight: 2, fillOpacity: 1};
-    case 'Transportation': return {fillColor: '#38A498', color: "#92ed6b", weight: 2, fillOpacity: 1};
-    case 'Waste': return {fillColor: '#76A438', color: "#92ed6b", weight: 2, fillOpacity: 1};
-    case 'Energy': return {fillColor: '#245D01', color: "#92ed6b", weight: 2, fillOpacity: 1};
+    case 'Food': return {fillColor: '#DD502A', color: '#DD502A', weight: 1, fillOpacity: 1 };
+    case 'Water': return {fillColor: '#0099CC', color: "#0099CC", weight: 2, fillOpacity: 1};
+    case 'Transportation': return {fillColor: '#D79D21', color: "#D79D21", weight: 2, fillOpacity: 1};
+    case 'Waste': return {fillColor: '#63B355', color: "#63B355", weight: 2, fillOpacity: 1};
+    case 'Energy': return {fillColor: '#EAC13A', color: "#EAC13A", weight: 2, fillOpacity: 1};
   }
 }
 
+//TEST ZONE
+// function check(value, geojson){
+//   for (i in geojson._layers) {
+//     alert(value);
+//       if(geojson._layers[i].feature.properties["Sub Category"].value === value){
+//         alert('TRUE');
+//       }
+//       else{
+//         alert('FALSE');
+//         break;
+//       }
+//   }
+// }
+
+function check(value){
+  switch (value) {
+    case 'Tailgate Market':
+      for(i in locations._layers){
+        name = locations._layers[i].feature.properties["Sub Category"];
+        alert(name);
+        if (name === value){
+          alert('TRUE');
+        }
+      }
+
+    default:
+      alert("NO");
+  }
+}
 //Event Handleer set ups
 //Color toggle setup
 function locationsSelection(e){
@@ -347,8 +347,7 @@ function locationsSelection(e){
   });
 }
 
-var locations;
-
+//Resets item to original style
 function resetHighlight(e) {
       locations.resetStyle(e.target);
     }
@@ -358,6 +357,7 @@ function zoomToFeature(e) {
       map.fitBounds(e.target.getBounds());
     }
 
+//Set up for all options uses in geojson setup
 function onEachFeature(feature, layer) {
   layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<img src="' + feature.properties.Thumb_URL + '"/>');
       layer.on({
@@ -366,6 +366,7 @@ function onEachFeature(feature, layer) {
         click: zoomToFeature
       });
     }
+
 
 //Ajax Call for geojson data
 // $.ajax({
@@ -383,279 +384,48 @@ function onEachFeature(feature, layer) {
    
 //GeoJson set Up
 var parks = L.geoJson(parks, {style:parkstyle, onEachFeature:parkPopUp});
-var EV = L.geoJson(publicEV, {pointToLayer:evPoint, onEachFeature: evPopUp});
 var bikes = L.geoJson(bikedata, {style:bikestyle, onEachFeature:bikeroutePopUp});
 var greenway = L.geoJson(greenwaydata, {style:greenwayStyle, filter:greenwayFilter});
 var sidewalk = L.geoJson(sidewalkdata, {style:sidewalkStyle, filter:sidewalkFilter, onEachFeature: sidewalkPopUp});
-var bikeRack = L.geoJson(bikeRackdata, {pointToLayer:bikeRackpoint, onEachFeature:bikerackPopUp});
-var food = L.geoJson(fooddata, {pointToLayer:foodpoint, onEachFeature:foodPopUp});
-var cookingoil = L.geoJson(cookingoildata, {pointToLayer:cookingoilpoint, onEachFeature:cookingoilPopUp});
 var locations = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:locationsStyle}).addTo(map);
-
-//Layer Groups
-//OverviewGroup = L.layerGroup([parks, EV, bikes, greenway, sidewalk, bikeRack, food]);
-//TransGroup = L.layerGroup([sidewalk, greenway, bikes, bikeRack, EV]);
-//FoodGroup = L.layerGroup([food]);
-//EnergyGroup = L.layerGroup([EV]);
-
-//Control Layers
-  var baseMaps = {
-    "Grey": cloudmade
-  };
-
-  var OverviewGroup = {
-    "Parks": parks,
-    "Electic Vehical": EV,
-    "Bikes Routes": bikes,
-    "Sidewalks": sidewalk,
-    "Greenways": greenway,
-    "Bike Racks": bikeRack,
-    "Food": food,
-    "Cooking Oil": cookingoil
-  };
-
-//Temp add layer control
-L.control.layers(null, OverviewGroup).addTo(map);
-
-//zoom function for the datatables
-function zoomPop(zlayer){
-  for(each in zlayer._layers){
-     map.fitBounds(zlayer._layers[each].getBounds());
-  }
-}
-
-//Tables
-//Setup Datatables
-//Setup Food Table
-function ftd(){
-var foodTableData = [];
-  for(each in food._layers){
-    var address = food._layers[each].feature.properties.address;
-    var name = food._layers[each].feature.properties.name;
-    var notes = food._layers[each].feature.properties.notes;
-    var type = food._layers[each].feature.properties.type;
-    var zipcode = food._layers[each].feature.properties.zipcode;
-    var popUp = food._layers[each]._popup;
-    var lat = food._layers[each]._latlng.lat;
-    var lng = food._layers[each]._latlng.lng;
-    
-  
-    foodTableData.push([name, type, address, zipcode, '<a href="' + notes + '">notes</a>', '<a href="../AshevilleGreenMap/map.html#18/' + lat + '/' + lng + '">Zoom to Map</a>']);
-
-  }
-
-    $(document).ready(function(){
-      $('#datatableFood').dataTable({
-        "sPaginationType": "bootstrap",
-          "aaData": foodTableData,
-          "bProcessing":true,
-          "bDeferRender": true,
-          "bRetrieve": true,
-          "iDisplayLength": 5,
-          "aLengthMenu": [5, 10, 15],
-          "aoColumns": [
-            { "sTitle": "Name"},
-            { "sTitle": "Type" },
-            { "sTitle": "Address" },
-            { "sTitle": "Zip Code", "sClass": "center" },
-            { "sTitle": "Notes"},
-            { "sTitle": "Zoom"}
-          ]
-      });
-    });
-}   
-
-//Setup Energy Table
-function etd(){
-var EnergyTableData = [];
-  for(each in EV._layers){
-    var name = EV._layers[each].feature.properties.Name;
-    var desc = EV._layers[each].feature.properties.description; 
-    var lat = EV._layers[each]._latlng.lat;
-    var lng = EV._layers[each]._latlng.lng;
-    
-    EnergyTableData.push([name,  desc, '<a href="../AshevilleGreenMap/map.html#18/' + lat + '/' + lng + '">Zoom to Map</a>']);
-  }
-    $(document).ready(function(){
-      $('#datatableEnergy').dataTable({
-        "sPaginationType": "bootstrap",
-          "aaData": EnergyTableData,
-          "bProcessing":true,
-          "bDeferRender": true,
-          "bRetrieve": true,
-          "iDisplayLength": 5,
-          "aLengthMenu": [5, 10, 15],
-          "aoColumns": [
-            { "sTitle": "Name"},
-            { "sTitle": "Description" },
-            { "sTitle": "Zoom"}
-          ]
-      });
-    });
-   
-}
-
-//Setup Cooking Oil Table
-function cotd(){
-var CookingOilTableData = [];
-  for(each in cookingoil._layers){
-    var name = cookingoil._layers[each].feature.properties.Name;
-    var desc = cookingoil._layers[each].feature.properties.description; 
-    var lat = cookingoil._layers[each]._latlng.lat;
-    var lng = cookingoil._layers[each]._latlng.lng;
-    
-    CookingOilTableData.push([name,  desc, '<a href="../AshevilleGreenMap/map.html#18/' + lat + '/' + lng + '">Zoom to Map</a>']);
-  }
-    $(document).ready(function(){
-      $('#datatableCookiingOil').dataTable({
-        "sPaginationType": "bootstrap",
-          "aaData": CookingOilTableData,
-          "bProcessing":true,
-          "bDeferRender": true,
-          "bRetrieve": true,
-          "iDisplayLength": 5,
-          "aLengthMenu": [5, 10, 15],
-          "aoColumns": [
-            { "sTitle": "Name"},
-            { "sTitle": "Description" },
-            { "sTitle": "Zoom"}
-          ]
-      });
-    });
-   
-}
+var RA = L.geoJson(ReportingData, {style:reportstyle});
 
 
 //Legends
-var legendOverview = L.control({position: 'bottomleft'});
+var legendOverview = L.control({position: 'topleft'});
   legendOverview.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<i style="background: #ff9400"></i>' + '     ' + 'Bike Routes<br /><i style="background: #41db00"></i>' + '     ' + 'Greenways<br /><i style="background: #008F3E "></i>' + '     ' + 'Parks<br /><i style="background: #bf5b30; outline-color: #a63100; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #60b9ce; outline-color: #ff9f40; border-radius:50px "></i>' + '     ' + 'Bike Racks<br /><i style="background: #fdaf6b; outline-color: #f95897; border-radius:50px  "></i>' + '     ' + 'EV Charging Station<br /><i style="background: #67A126; outline-color: #ff9f40; border-radius:50px "></i>' + '     ' + 'Cooking Oil<br /><i style="background: #37869E; outline-color: #92ed6b; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #38A498; outline-color: #92ed6b; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #76A438; outline-color: #92ed6b; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #245D01; outline-color: #92ed6b; border-radius:50px "></i>' + '     ' + 'Energy<br />';
+      div.innerHTML = '<i style="background: #ff9400"></i>' + '     ' + 'Bike Routes<br /><i style="background: #41db00"></i>' + '     ' + 'Greenways<br /><i style="background: #008F3E "></i>' + '     ' + 'Parks<br /><i style="background: #DD502A; outline-color: #DD502A; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #0099CC; outline-color: #0099CC; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #D79D21; outline-color: #D79D21; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #63B355; outline-color: #63B355; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #EAC13A; outline-color: #EAC13A; border-radius:50px "></i>' + '     ' + 'Energy<br />';
     return div;
   }
 
   legendOverview.addTo(map);
 
-var legendFood = L.control({position: 'bottomleft'});
-  legendFood.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<i style="background: #bf5b30; outline-color: #a63100; border-radius:50px  "></i>' + '     ' + 'Food<br />';
-    return div;
-  }
+//Neighborhood Zoom Control
+var options = '<option value="Select">Select a Neighborhood</option>';
 
-var legendCookingOil = L.control({position: 'bottomleft'});
-  legendCookingOil.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<i class="icon-tint icon-white" style="background: #67A126; outline-color: #ff9f40; border-radius:50px "></i>' + '     ' + 'Cooking Oil<br />';
-    return div;
-  }
-//Master Control Functoin
-//The logic behind adding and removing all elements from the map
-//function MS(layer, group, legend){
- function setZoom(layer){
-  map.fitBounds(layer.getBounds());
-  }
+for (each in RA._layers) {
+      var name = RA._layers[each].feature.properties.name;
+      var swLat = RA._layers[each].getBounds()._southWest.lat;
+      var swLng = RA._layers[each].getBounds()._southWest.lng;
+      var neLat = RA._layers[each].getBounds()._northEast.lat;
+      var neLng = RA._layers[each].getBounds()._northEast.lng;
+      var bbox = swLat + "," + swLng + "," + neLat + "," + neLng;
 
-//Function for changing legends
-function getLegend(legend){
-  //list of all legend names
-  var legend_list = [legendOverview, legendFood, legendCookingOil];
-  //Finds the index of the legend
-  var lg = legend_list.indexOf(legend);
-  //Loop that checks to see which legend to add and which legend to remove
-  for(var i = 0; i <= legend_list.length; i++){
-    if(i === lg){
-      legend_list[i].addTo(map);
+      // Add states & bbox values to zoom select options
+      options += '<option value="' + bbox + '">' + RA._layers[each].feature.properties.name + '</option>';
     }
-    else{
-      map.removeControl(legend_list[i]);
-    }
-  }
-}
+        $("#zoom").html(options);
 
-//Layer Control
-var food1 = [food];
-var recycling = [cookingoil];
-var energy = [EV];
-var transportation = [sidewalk, bikeRack, bikes, greenway]
-//Takes func(null, list)
-var layerControl = function() {
-  var list = [parks, EV, bikes, greenway, sidewalk, bikeRack, food, cookingoil];
-  for(var i = 0; i < arguments.length; i++) {
-    for(var c = 0; c < list.length; c++){
-      if(list[c] === arguments[i]){
-        var a = arguments[i];    
-        list[c].addTo(map);
+    // Function call by "zoom" dropdown onSelect
+    function zoomToRA (RA, bbox) {
+      if (RA === "Select") {
+        map.fitBounds(RA.getBounds());
       }
-      else if(list[c] != arguments[i]){
-        map.removeLayer(list[c]);
-      }
+      else {
+        map.fitBounds([[parseFloat(bbox.split(",")[0]), parseFloat(bbox.split(",")[1])],[parseFloat(bbox.split(",")[2]), parseFloat(bbox.split(",")[3])]]);
+      };
     }
-  }
-}
-
-//Switch Control 
-function bswitch(value){
-  switch(value){
-    case "0": 
-      document.getElementById('intro').innerHTML = '<h1>Welcom to the grand Overview!</h1><br /><p>Hope you enjoy</p>';
-      setZoom(sidewalk);
-      getLegend(legendOverview);
-  
-    break;
-
-    case "1":
-      setZoom(sidewalk);
-      layerControl.apply(null, transportation);
-          
-    break;
-
-    case "2":
-      document.getElementById('intro').innerHTML = '<table id="datatableEnergy" class="table table-striped"></table>';
-      etd(); 
-      layerControl.apply(null, energy);
-      
-      
-    break;
-
-    case "3":
-      document.getElementById('intro').innerHTML = '<table id="datatableCookiingOil" class="table table-striped"></table>';
-      cotd();
-      setZoom(cookingoil);
-      //layerControl(cookingoil);
-      layerControl.apply(null, recycling);
-      getLegend(cookingoil);
-      
-                     
-    break;
-
-    case "4":
-      setZoom(sidewalk);
-      
-                    
-    break;
-
-    case "5":
-      document.getElementById('intro').innerHTML = '<table id="datatableFood" class="table table-striped"></table>';
-      ftd();
-      setZoom(food);
-      layerControl.apply(null, food1);
-      getLegend(legendFood);
-
-
-      
-
-    break;
-               
-      default:
-        alert("Oops;)");
-  }
-}
-
-
-
-
-	
 
    </script>
    <script src="../AshevilleGreenMap/js/holder.js"></script>

@@ -22,6 +22,15 @@ body {
    stroke: white;
    fill: steelblue;
  }
+
+ .info {
+      padding: 6px 8px;
+      font: 14px/16px Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 5px;
+    }
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
 
@@ -255,7 +264,8 @@ body {
     -------------------------------------------------- */
 
     .pos-search{
-        padding-top:12px;
+        padding-top: 2em;
+        padding-right: 1em;
         color: White;
         z-index: 12;
        }
