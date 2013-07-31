@@ -97,31 +97,31 @@
         <div id="intro">
           <!--<img src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Vertical_logos/HowLow_298-1_vert_white.jpg" />-->
   <ul class="info unstyled">
-    <!-- dropdown menu links -->
     <li class="nav-header"><p class="text-success">Transportation</p></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Biodiesel</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Greenway</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this.value)"><p class="text-info">Biodiesel</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Greenway" value="Greenway" onclick="check(this.value)"><p class="text-info">Greenway</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Bike Rack" value="Bike Rack" onclick="check(this.value)"><p class="text-info">Bike Rack</p></label></li>
     <li class="divider"></li>
     <li class="nav-header"><p class="text-success">Energy</p></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Solar Thermal</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Energy Feature</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">LEED Certification</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">EV Charging Station</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this.value)"><p class="text-info">Solar Thermal</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this.value)"><p class="text-info">Energy Feature</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this.value)"><p class="text-info">LEED Certification</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this.value)"><p class="text-info">EV Charging Station</p></label></li>
     <li class="divider"></li>
     <li class="nav-header"><p class="text-success">Waste</p></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Recycle</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Cooking Oil Drop-Off</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Recycle" value="Recycle" onclick="check(this.value)"><p class="text-info">Recycle</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this.value)"><p class="text-info">Cooking Oil Drop-Off</p></label></li>
     <li class="divider"></li>
     <li class="nav-header"><p class="text-success">Water</p></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Stormwater</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Feature</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this.value)"><p class="text-info">Stormwater</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this.value)">Feature</p></label></li>
     <li class="divider"></li>
     <li class="nav-header"><p class="text-success">Food</p></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Green Certified</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Community Garden</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Manna Agencies</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value="Tailgate Market" onclick="check(this.value)"><p class="text-info">Tailgate Market</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" value=""><p class="text-info">Grocery</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this.value)"><p class="text-info">Green Certified</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this.value)"><p class="text-info">Community Garden</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this.value)"><p class="text-info">Manna Agencies</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="TM" value="Tailgate Market" onclick="check(this.value)"><p class="text-info">Tailgate Market</p></label></li>
+    <li><label class="checkbox"><input type="checkbox" id="Grocery" value="Grocery" onclick="check(this.value)"><p class="text-info">Grocery</p></label></li>
   </ul>
   </ul>
 </div>
@@ -244,6 +244,9 @@ function LocationPopUp(feature, layer){
 }
 
 //Filters for GeoJson Layers
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function greenwayFilter(feature, layer){
   if(feature.properties.segmenttype === "GREENWAY"){
     return feature.properties.segmenttype;
@@ -253,6 +256,102 @@ function greenwayFilter(feature, layer){
 function sidewalkFilter(feature, layer){
   if(feature.properties.SEGMENTTYP !== "GREENWAY" && feature.properties.SEGMENTTYP !== "PROPOSED GREENWAY" && feature.properties.SEGMENTTYP !== "PROPOSED 2005 PED PLAN" && feature.properties.SEGMENTTYP !== "NEEDED LINKAGE" ){
     return feature.properties.SEGMENTTYP;
+  }
+}
+
+function BikeRackFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Bike Rack"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function SolarFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Solar Thermal"){
+    return feature.properties["Sub Category"];
+   }
+}
+
+function EnergyFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Energy Feature"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function LEEDFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "LEED Certification"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function RestaurantFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Green Certified Restaurant"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function GardenFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Community Garden"){
+    return feature.properties["Sub Category"];
+  }
+} 
+
+function BiodieselFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Biodiesel"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function Greenway1Filter(feature, layer){
+  if(feature.properties["Sub Category"] === "Greenway"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function RecycleFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Recycle"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function StormwaterFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Stormwater"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function FeatureFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Feature"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function TailgateFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Tailgate Market"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function MannaFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Manna Agencies"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function GroceryFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Grocery"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function EVFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "EV Charging Station"){
+    return feature.properties["Sub Category"];
+  }
+}
+
+function CookingOilFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Cooking Oil"){
+    return feature.properties["Sub Category"];
   }
 }
 
@@ -274,6 +373,12 @@ var bikestyle = {
   "weight": 3,
   "opacity": 0.65
   };
+
+var Transportation_Style = {fillColor: '#D79D21', color: "#D79D21", weight: 1, fillOpacity: 1};
+var Food_Style = {fillColor: '#DD502A', color: '#DD502A', weight: 1, fillOpacity: 1 };
+var Water_Style = {fillColor: '#0099CC', color: "#0099CC", weight: 1, fillOpacity: 1};
+var Waste_Style = {fillColor: '#63B355', color: "#63B355", weight: 1, fillOpacity: 1};
+var Energy_Style = {fillColor: '#EAC13A', color: "#EAC13A", weight: 1, fillOpacity: 1};
  
 function greenwayStyle(feature) {
   switch (feature.properties.segmenttype) {
@@ -296,45 +401,10 @@ function sidewalkStyle(feature) {
     }
 }
 
-function locationsStyle(feature){
-  switch (feature.properties["Big Group"]) {
-    case 'Food': return {fillColor: '#DD502A', color: '#DD502A', weight: 1, fillOpacity: 1 };
-    case 'Water': return {fillColor: '#0099CC', color: "#0099CC", weight: 2, fillOpacity: 1};
-    case 'Transportation': return {fillColor: '#D79D21', color: "#D79D21", weight: 2, fillOpacity: 1};
-    case 'Waste': return {fillColor: '#63B355', color: "#63B355", weight: 2, fillOpacity: 1};
-    case 'Energy': return {fillColor: '#EAC13A', color: "#EAC13A", weight: 2, fillOpacity: 1};
-  }
-}
 
-//TEST ZONE
-// function check(value, geojson){
-//   for (i in geojson._layers) {
-//     alert(value);
-//       if(geojson._layers[i].feature.properties["Sub Category"].value === value){
-//         alert('TRUE');
-//       }
-//       else{
-//         alert('FALSE');
-//         break;
-//       }
-//   }
-// }
 
-function check(value){
-  switch (value) {
-    case 'Tailgate Market':
-      for(i in locations._layers){
-        name = locations._layers[i].feature.properties["Sub Category"];
-        alert(name);
-        if (name === value){
-          alert('TRUE');
-        }
-      }
 
-    default:
-      alert("NO");
-  }
-}
+
 //Event Handleer set ups
 //Color toggle setup
 function locationsSelection(e){
@@ -349,7 +419,8 @@ function locationsSelection(e){
 
 //Resets item to original style
 function resetHighlight(e) {
-      locations.resetStyle(e.target);
+    var layer = e.target;
+      layer.resetStyle(e.target);
     }
 
 //Zoom to feature setup
@@ -359,11 +430,11 @@ function zoomToFeature(e) {
 
 //Set up for all options uses in geojson setup
 function onEachFeature(feature, layer) {
-  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<img src="' + feature.properties.Thumb_URL + '"/>');
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<br /><img style="width:200px; height:250px; border:0px;" src="' + feature.properties.URL + '"/>');
       layer.on({
-        mouseover: locationsSelection,
-        mouseout: resetHighlight,
-        click: zoomToFeature
+        //mouseover: locationsSelection,
+        //mouseout: resetHighlight,
+       click: zoomToFeature
       });
     }
 
@@ -381,14 +452,127 @@ function onEachFeature(feature, layer) {
 //         }).addTo(map);
 //     }
 // });
-   
+
+
 //GeoJson set Up
 var parks = L.geoJson(parks, {style:parkstyle, onEachFeature:parkPopUp});
 var bikes = L.geoJson(bikedata, {style:bikestyle, onEachFeature:bikeroutePopUp});
-var greenway = L.geoJson(greenwaydata, {style:greenwayStyle, filter:greenwayFilter});
+//var greenway = L.geoJson(greenwaydata, {style:greenwayStyle, filter:greenwayFilter});
 var sidewalk = L.geoJson(sidewalkdata, {style:sidewalkStyle, filter:sidewalkFilter, onEachFeature: sidewalkPopUp});
-var locations = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:locationsStyle}).addTo(map);
 var RA = L.geoJson(ReportingData, {style:reportstyle});
+var solar_thermal = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:SolarFilter}).addTo(map);
+var energy_feature = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:EnergyFilter}).addTo(map);
+var leed_certification = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:LEEDFilter}).addTo(map);
+var green_certified_restaurant = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:RestaurantFilter}).addTo(map);
+var communtiy_garden = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:GardenFilter}).addTo(map);
+var biodiesel = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:BiodieselFilter}).addTo(map);
+var greenway = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:Greenway1Filter}).addTo(map);
+var recycle = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Waste_Style, filter:RecycleFilter}).addTo(map);
+var stormwater = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Water_Style, filter:StormwaterFilter}).addTo(map);
+var feature = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Water_Style, filter:FeatureFilter}).addTo(map);
+var tailgate_market = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:TailgateFilter}).addTo(map);
+var manna_agencies = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:MannaFilter}).addTo(map);
+var grocery = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:GroceryFilter}).addTo(map);
+var ev_charging_station = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:EVFilter}).addTo(map);
+var bike_rack = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:BikeRackFilter}).addTo(map);
+var cooking_oil = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Waste_Style, filter:CookingOilFilter}).addTo(map);
+
+
+
+
+//Change layers
+//where id is the checkbox id, feature is a geojson leaflet layer, and style is a leaflet geojson style
+function checkSuccess(id, feature, style){
+  if(document.getElementById(id).checked === true){
+    feature.setStyle({
+      fillColor: '#5FDCFA',
+      color: '#5FDCFA',
+      weight: 10,
+      fillOpacity: 1,
+      zIndex: 1 
+    });
+  }
+  else{
+    feature.setStyle(style);
+  }
+}
+  
+    
+//Switch to activate layer selection
+function check(value){
+  switch (value) {
+     case "Biodiesel":
+      checkSuccess('Biodiesel', biodiesel, Transportation_Style);
+      break;
+
+    case "Greenway":
+      checkSuccess('Greenway', greenway, Transportation_Style);
+      break;
+
+    case "Bike Rack":
+      checkSuccess('Bike Rack', bike_rack, Transportation_Style);
+      break;
+
+    case "Solar Thermal":
+      checkSuccess('Solar Thermal', solar_thermal, Energy_Style);
+      break;
+
+    case "Energy Feature":
+      checkSuccess('Energy Feature', energy_feature, Energy_Style);
+      break;
+
+    case "LEED Certification":
+      checkSuccess('LEED Certification', leed_certification, Energy_Style);
+      break;
+
+    case "EV Charging Station":
+      checkSuccess('EV Charging Station', ev_charging_station, Energy_Style);
+      break;
+
+     case "Recycle":
+      checkSuccess('Recycle', recycle, Waste_Style);
+      break;
+
+    case "Cooking Oil Drop-Off":
+      checkSuccess('Cooking Oil Drop-Off', cooking_oil, Waste_Style);
+      break;
+
+    case "Stormwater":
+      checkSuccess('Stormwater', stormwater, Water_Style);
+      break;
+
+    case "Feature":
+      checkSuccess('Feature', feature, Water_Style);
+      break;
+
+    case "Green Certified":
+      checkSuccess('Green Certified', green_certified_restaurant, Food_Style);
+      break;
+
+    case "Community Garden":
+      checkSuccess('Community Garden', communtiy_garden, Food_Style);
+      break;
+
+    case "Manna Agencies":
+      checkSuccess('Manna Agencies', manna_agencies, Food_Style);
+      break;
+
+    case "Tailgate Market":
+      checkSuccess('TM', tailgate_market, Food_Style);
+      break;
+
+    case "Grocery":
+      checkSuccess('Grocery', grocery, Food_Style);
+      break;
+
+  default:
+      break;
+  }
+}
+
+
+
+
 
 
 //Legends

@@ -2,81 +2,541 @@ var locationsdata = {
 "type": "FeatureCollection",
                                                                                 
 "features": [
-{ "type": "Feature", "id": 1, "properties": { "Big Group": "Energy", "Sub Category": "Solar Thermal", "Name": "Fire Station 8", "Description": "Solar hot water is used in this fire station housed by 5 Asheville Firefighters.", "Address": "904 Tunnel Road Asheville NC 28805", "Long": "-82.502725", "Lat": "35.587625", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.502725, 35.587625 ] } }
+{ "type": "Feature", "id": 1, "properties": { "Big Group": "Energy", "Sub Category": "Solar Thermal", "Name": "Fire Station 8", "Description": "Solar hot water is used in this fire station housed by 5 Asheville Firefighters.", "Address": "904 Tunnel Road Asheville NC 28805", "Long": -82.502725, "Lat": 35.587625, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.502725, 35.587625 ] } }
 ,
-{ "type": "Feature", "id": 2, "properties": { "Big Group": "Energy", "Sub Category": "Solar Thermal", "Name": "Fire Station 6", "Description": "Solar hot water is used in this fire station housed by 5 Asheville Firefighters.", "Address": "970 Haywood Rd Asheville  NC 28806", "Long": "-82.602036", "Lat": "35.580911", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.602036, 35.580911 ] } }
+{ "type": "Feature", "id": 2, "properties": { "Big Group": "Energy", "Sub Category": "Solar Thermal", "Name": "Fire Station 6", "Description": "Solar hot water is used in this fire station housed by 5 Asheville Firefighters.", "Address": "970 Haywood Rd Asheville  NC 28806", "Long": -82.602036, "Lat": 35.580911, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.602036, 35.580911 ] } }
 ,
-{ "type": "Feature", "id": 3, "properties": { "Big Group": "Energy", "Sub Category": "Energy Feature", "Name": "Dr. Wesley Grant Sr. Southside Center (Living Roof)", "Description": "Living roof installed on Center bioswale on sight as well. LEED Platinum", "Address": "", "Long": "-82.561756", "Lat": "35.577692", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.561756, 35.577692 ] } }
+{ "type": "Feature", "id": 3, "properties": { "Big Group": "Energy", "Sub Category": "Energy Feature", "Name": "Dr. Wesley Grant Sr. Southside Center (Living Roof)", "Description": "Living roof installed on Center bioswale on sight as well. LEED Platinum", "Address": "", "Long": -82.561756, "Lat": 35.577692, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.561756, 35.577692 ] } }
 ,
-{ "type": "Feature", "id": 4, "properties": { "Big Group": "Energy", "Sub Category": "Energy Feature", "Name": "NC Arboretum", "Description": "Hosts sustainable gardening events Gardener’s Green Shed demonstrates methods to save water for later irrigation capture sunlight to create electricity and ways to make your gardening chores easier ", "Address": "", "Long": "-82.609892", "Lat": "35.498939", "URL": "http:\/\/www.ncarboretum.org\/", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.609892, 35.498939 ] } }
+{ "type": "Feature", "id": 4, "properties": { "Big Group": "Energy", "Sub Category": "Energy Feature", "Name": "NC Arboretum", "Description": "Hosts sustainable gardening events Gardener’s Green Shed demonstrates methods to save water for later irrigation capture sunlight to create electricity and ways to make your gardening chores easier ", "Address": "", "Long": -82.609892, "Lat": 35.498939, "URL": "http:\/\/www.ncarboretum.org\/" }, "geometry": { "type": "Point", "coordinates": [ -82.609892, 35.498939 ] } }
 ,
-{ "type": "Feature", "id": 5, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Blue Ridge Visitor Center", "Description": "LEED Gold interpretive center", "Address": "", "Long": "-82.486468", "Lat": "35.565371", "URL": "http:\/\/greenbuildingwire.com\/LEED-certified-building-NC", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.486468, 35.565371 ] } }
+{ "type": "Feature", "id": 5, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Blue Ridge Visitor Center", "Description": "LEED Gold interpretive center", "Address": "", "Long": -82.486468, "Lat": 35.565371, "URL": "http:\/\/greenbuildingwire.com\/LEED-certified-building-NC" }, "geometry": { "type": "Point", "coordinates": [ -82.486468, 35.565371 ] } }
 ,
-{ "type": "Feature", "id": 6, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Bent Creek Conference Center", "Description": "LEED Silver", "Address": "", "Long": "-82.596464", "Lat": "35.504425", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.596464, 35.504425 ] } }
+{ "type": "Feature", "id": 6, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Bent Creek Conference Center", "Description": "LEED Silver", "Address": "", "Long": -82.596464, "Lat": 35.504425, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.596464, 35.504425 ] } }
 ,
-{ "type": "Feature", "id": 7, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Biltmore Park Town Square Hilton Hotel", "Description": "LEED Silver Hotel", "Address": "", "Long": "-82.557189", "Lat": "35.484667", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.557189, 35.484667 ] } }
+{ "type": "Feature", "id": 7, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Biltmore Park Town Square Hilton Hotel", "Description": "LEED Silver Hotel", "Address": "", "Long": -82.557189, "Lat": 35.484667, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.557189, 35.484667 ] } }
 ,
-{ "type": "Feature", "id": 8, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Mission Outpatient Cancer Center", "Description": "LEED Gold", "Address": "", "Long": "-82.552236", "Lat": "35.579469", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552236, 35.579469 ] } }
+{ "type": "Feature", "id": 8, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Mission Outpatient Cancer Center", "Description": "LEED Gold", "Address": "", "Long": -82.552236, "Lat": 35.579469, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.552236, 35.579469 ] } }
 ,
-{ "type": "Feature", "id": 9, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "The Glen Rock Apartments", "Description": "LEED Gold and affordable housing", "Address": "", "Long": "-82.564228", "Lat": "35.580631", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.564228, 35.580631 ] } }
+{ "type": "Feature", "id": 9, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "The Glen Rock Apartments", "Description": "LEED Gold and affordable housing", "Address": "", "Long": -82.564228, "Lat": 35.580631, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.564228, 35.580631 ] } }
 ,
-{ "type": "Feature", "id": 10, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Biltmore Park Town Square Building 2B", "Description": "LEED Gold commercial office", "Address": "", "Long": "-82.554278", "Lat": "35.486194", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.554278, 35.486194 ] } }
+{ "type": "Feature", "id": 10, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Biltmore Park Town Square Building 2B", "Description": "LEED Gold commercial office", "Address": "", "Long": -82.554278, "Lat": 35.486194, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.554278, 35.486194 ] } }
 ,
-{ "type": "Feature", "id": 11, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Dr. Wesley Grant Sr. Southside Center", "Description": "LEED Platinum", "Address": "", "Long": "-82.561756", "Lat": "35.577692", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.561756, 35.577692 ] } }
+{ "type": "Feature", "id": 11, "properties": { "Big Group": "Energy", "Sub Category": "LEED Certification", "Name": "Dr. Wesley Grant Sr. Southside Center", "Description": "LEED Platinum", "Address": "", "Long": -82.561756, "Lat": 35.577692, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.561756, 35.577692 ] } }
 ,
-{ "type": "Feature", "id": 12, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Corner Kitchen", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.541256", "Lat": "35.56625", "URL": "http:\/\/www.dinegreenasheville.com\/", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.541256, 35.56625 ] } }
+{ "type": "Feature", "id": 12, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Corner Kitchen", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.541256, "Lat": 35.56625, "URL": "http:\/\/www.dinegreenasheville.com\/" }, "geometry": { "type": "Point", "coordinates": [ -82.541256, 35.56625 ] } }
 ,
-{ "type": "Feature", "id": 13, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "French Broad Chocolate Lounge", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.552451", "Lat": "35.594524", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552451, 35.594524 ] } }
+{ "type": "Feature", "id": 13, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "French Broad Chocolate Lounge", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.552451, "Lat": 35.594524, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.552451, 35.594524 ] } }
 ,
-{ "type": "Feature", "id": 14, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Laughing Seed Café", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.555797", "Lat": "35.594556", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.555797, 35.594556 ] } }
+{ "type": "Feature", "id": 14, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Laughing Seed Café", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.555797, "Lat": 35.594556, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.555797, 35.594556 ] } }
 ,
-{ "type": "Feature", "id": 15, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Luella’s Barbecue", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.554767", "Lat": "35.615265", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.554767, 35.615265 ] } }
+{ "type": "Feature", "id": 15, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Luella’s Barbecue", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.554767, "Lat": 35.615265, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.554767, 35.615265 ] } }
 ,
-{ "type": "Feature", "id": 16, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Neo Cantina", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.542278", "Lat": "35.566954", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.542278, 35.566954 ] } }
+{ "type": "Feature", "id": 16, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Neo Cantina", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.542278, "Lat": 35.566954, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.542278, 35.566954 ] } }
 ,
-{ "type": "Feature", "id": 17, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Plant", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.552836", "Lat": "35.604731", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552836, 35.604731 ] } }
+{ "type": "Feature", "id": 17, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Plant", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.552836, "Lat": 35.604731, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.552836, 35.604731 ] } }
 ,
-{ "type": "Feature", "id": 18, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Posana Café", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.551714", "Lat": "35.594573", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.551714, 35.594573 ] } }
+{ "type": "Feature", "id": 18, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Posana Café", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.551714, "Lat": 35.594573, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.551714, 35.594573 ] } }
 ,
-{ "type": "Feature", "id": 19, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Rosetta’s Kitchen", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.553858", "Lat": "35.59825", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.553858, 35.59825 ] } }
+{ "type": "Feature", "id": 19, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Rosetta’s Kitchen", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.553858, "Lat": 35.59825, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.553858, 35.59825 ] } }
 ,
-{ "type": "Feature", "id": 20, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Strada", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.552211", "Lat": "35.596203", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552211, 35.596203 ] } }
+{ "type": "Feature", "id": 20, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Strada", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.552211, "Lat": 35.596203, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.552211, 35.596203 ] } }
 ,
-{ "type": "Feature", "id": 21, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Bouchon Restaurant", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.553172", "Lat": "35.596933", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.553172, 35.596933 ] } }
+{ "type": "Feature", "id": 21, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Bouchon Restaurant", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.553172, "Lat": 35.596933, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.553172, 35.596933 ] } }
 ,
-{ "type": "Feature", "id": 22, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Homegrown", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.554922", "Lat": "35.611722", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.554922, 35.611722 ] } }
+{ "type": "Feature", "id": 22, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Homegrown", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.554922, "Lat": 35.611722, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.554922, 35.611722 ] } }
 ,
-{ "type": "Feature", "id": 23, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Green Sage (Broadway)", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.552081", "Lat": "35.595597", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552081, 35.595597 ] } }
+{ "type": "Feature", "id": 23, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Green Sage (Broadway)", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.552081, "Lat": 35.595597, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.552081, 35.595597 ] } }
 ,
-{ "type": "Feature", "id": 24, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Green Sage(South Asheville)", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.524847", "Lat": "35.50595", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.524847, 35.50595 ] } }
+{ "type": "Feature", "id": 24, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Green Sage(South Asheville)", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.524847, "Lat": 35.50595, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.524847, 35.50595 ] } }
 ,
-{ "type": "Feature", "id": 25, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Tupelo Honey (College st)", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.554841", "Lat": "35.594733", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.554841, 35.594733 ] } }
+{ "type": "Feature", "id": 25, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Tupelo Honey (College st)", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.554841, "Lat": 35.594733, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.554841, 35.594733 ] } }
 ,
-{ "type": "Feature", "id": 26, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Tupelo Honey (Hendersonville rd)", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.525528", "Lat": "35.503028", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.525528, 35.503028 ] } }
+{ "type": "Feature", "id": 26, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Tupelo Honey (Hendersonville rd)", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.525528, "Lat": 35.503028, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.525528, 35.503028 ] } }
 ,
-{ "type": "Feature", "id": 27, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Cedric's Tavern on the Biltmore Estate", "Description": "Green certified Restaurant-", "Address": "", "Long": "-82.580136", "Lat": "35.555314", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.580136, 35.555314 ] } }
+{ "type": "Feature", "id": 27, "properties": { "Big Group": "Food", "Sub Category": "Green Certified Restaurant", "Name": "Cedric's Tavern on the Biltmore Estate", "Description": "Green certified Restaurant-", "Address": "", "Long": -82.580136, "Lat": 35.555314, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.580136, 35.555314 ] } }
 ,
-{ "type": "Feature", "id": 28, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Claxton Community Garden", "Description": "Community garden located on the grounds of Merrimon Baptist.", "Address": "", "Long": "-82.552933", "Lat": "35.609736", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.552933, 35.609736 ] } }
+{ "type": "Feature", "id": 28, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Claxton Community Garden", "Description": "Community garden located on the grounds of Merrimon Baptist.", "Address": "", "Long": -82.552933, "Lat": 35.609736, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.552933, 35.609736 ] } }
 ,
-{ "type": "Feature", "id": 29, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Dr. George Washington Carver Edible Park", "Description": "Edible community garden at Stephens-Lee Community Center.", "Address": "", "Long": "-82.54716", "Lat": "35.594045", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.54716, 35.594045 ] } }
+{ "type": "Feature", "id": 29, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Dr. George Washington Carver Edible Park", "Description": "Edible community garden at Stephens-Lee Community Center.", "Address": "", "Long": -82.54716, "Lat": 35.594045, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54716, 35.594045 ] } }
 ,
-{ "type": "Feature", "id": 30, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Joyner Garden", "Description": "A community garden run by bountiful cities.", "Address": "", "Long": "-82.566347", "Lat": "35.569131", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.566347, 35.569131 ] } }
+{ "type": "Feature", "id": 30, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Joyner Garden", "Description": "A community garden run by bountiful cities.", "Address": "", "Long": -82.566347, "Lat": 35.569131, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.566347, 35.569131 ] } }
 ,
-{ "type": "Feature", "id": 31, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Eblen Short Stop #2 (217 Amboy Rd)", "Description": "Biodeisel fueling station. Blends: B20 on road", "Address": "", "Long": "-82.580025", "Lat": "35.578103", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.580025, 35.578103 ] } }
+{ "type": "Feature", "id": 31, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Eblen Short Stop #2 (217 Amboy Rd)", "Description": "Biodeisel fueling station. Blends: B20 on road", "Address": "", "Long": -82.580025, "Lat": 35.578103, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.580025, 35.578103 ] } }
 ,
-{ "type": "Feature", "id": 32, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Stanley's Citgo(479 Weaverville Hwy.)", "Description": "Biodeisel fueling station Blends: B20 on road", "Address": "", "Long": "-82.581833", "Lat": "35.672008", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.581833, 35.672008 ] } }
+{ "type": "Feature", "id": 32, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Stanley's Citgo(479 Weaverville Hwy.)", "Description": "Biodeisel fueling station Blends: B20 on road", "Address": "", "Long": -82.581833, "Lat": 35.672008, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.581833, 35.672008 ] } }
 ,
-{ "type": "Feature", "id": 33, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Eblen Short Stop #6 (425 Broadway)", "Description": "Biodeisel fueling station Blends: B20 on road", "Address": "", "Long": "-82.562075", "Lat": "35.606275", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.562075, 35.606275 ] } }
+{ "type": "Feature", "id": 33, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Eblen Short Stop #6 (425 Broadway)", "Description": "Biodeisel fueling station Blends: B20 on road", "Address": "", "Long": -82.562075, "Lat": 35.606275, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.562075, 35.606275 ] } }
 ,
-{ "type": "Feature", "id": 34, "properties": { "Big Group": "Transportation", "Sub Category": "Greenway", "Name": "Town Branch Greenway", "Description": "Town Branch takes the form of wide sidewalks and bike lanes and totals 0.2 miles.  The Town Branch corridor will eventually connect the new Livingston Recreation Center to McDowell Street", "Address": "", "Long": "-82.557825", "Lat": "35.580708", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.557825, 35.580708 ] } }
+{ "type": "Feature", "id": 34, "properties": { "Big Group": "Transportation", "Sub Category": "Greenway", "Name": "Town Branch Greenway", "Description": "Town Branch takes the form of wide sidewalks and bike lanes and totals 0.2 miles.  The Town Branch corridor will eventually connect the new Livingston Recreation Center to McDowell Street", "Address": "", "Long": -82.557825, "Lat": 35.580708, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.557825, 35.580708 ] } }
 ,
-{ "type": "Feature", "id": 35, "properties": { "Big Group": "Waste", "Sub Category": "Recycle", "Name": "Recycling Drop Off Center- Asheville Pizza and Brewing Company", "Description": "This recycling drop off center is open to the public and prepared to accept household recyclables from residents in Asheville. ", "Address": "", "Long": "-82.553608", "Lat": "35.622134", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.553608, 35.622134 ] } }
+{ "type": "Feature", "id": 35, "properties": { "Big Group": "Waste", "Sub Category": "Recycle", "Name": "Recycling Drop Off Center- Asheville Pizza and Brewing Company", "Description": "This recycling drop off center is open to the public and prepared to accept household recyclables from residents in Asheville. ", "Address": "", "Long": -82.553608, "Lat": 35.622134, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.553608, 35.622134 ] } }
 ,
-{ "type": "Feature", "id": 36, "properties": { "Big Group": "Water", "Sub Category": "Stormwater", "Name": "Carrier Park", "Description": "Carrier Park offers a wetland interpretive and education area. The wetland helps mitigate negative impacts from the river flooding. Carrier park also offers river overlooks and a boat landing.", "Address": "", "Long": "-82.579103", "Lat": "35.565922", "URL": "http:\/\/www.ashevillenc.gov\/Departments\/ParksRecreation\/ParksOverview\/Greenways.aspx", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.579103, 35.565922 ] } }
+{ "type": "Feature", "id": 36, "properties": { "Big Group": "Water", "Sub Category": "Stormwater", "Name": "Carrier Park", "Description": "Carrier Park offers a wetland interpretive and education area. The wetland helps mitigate negative impacts from the river flooding. Carrier park also offers river overlooks and a boat landing.", "Address": "", "Long": -82.579103, "Lat": 35.565922, "URL": "http:\/\/www.ashevillenc.gov\/Departments\/ParksRecreation\/ParksOverview\/Greenways.aspx" }, "geometry": { "type": "Point", "coordinates": [ -82.579103, 35.565922 ] } }
 ,
-{ "type": "Feature", "id": 37, "properties": { "Big Group": "Water", "Sub Category": "Stormwater", "Name": "Reed Creek Greenway", "Description": "Greenway containing bioinfiltration and wetlands systems that help slow and clean stormwater to reduce flooding.", "Address": "", "Long": "-82.562858", "Lat": "35.606106", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.562858, 35.606106 ] } }
+{ "type": "Feature", "id": 37, "properties": { "Big Group": "Water", "Sub Category": "Stormwater", "Name": "Reed Creek Greenway", "Description": "Greenway containing bioinfiltration and wetlands systems that help slow and clean stormwater to reduce flooding.", "Address": "", "Long": -82.562858, "Lat": 35.606106, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.562858, 35.606106 ] } }
 ,
-{ "type": "Feature", "id": 38, "properties": { "Big Group": "Water", "Sub Category": "Feature", "Name": "Splashville", "Description": "The recreational water fountains in front of city hall recycle and clean the water before circulating to be used again.  ", "Address": "", "Long": "-82.549439", "Lat": "35.595487", "URL": "", "Thumb_URL": "" }, "geometry": { "type": "Point", "coordinates": [ -82.549439, 35.595487 ] } }
+{ "type": "Feature", "id": 38, "properties": { "Big Group": "Water", "Sub Category": "Feature", "Name": "Splashville", "Description": "The recreational water fountains in front of city hall recycle and clean the water before circulating to be used again.  ", "Address": "", "Long": -82.549439, "Lat": 35.595487, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.549439, 35.595487 ] } }
+,
+{ "type": "Feature", "id": 39, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Asheville City Market", "Description": "", "Address": "161 South Charlotte Stree 28801", "Long": -82.54874061, "Lat": 35.5929925, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54874061, 35.5929925 ] } }
+,
+{ "type": "Feature", "id": 40, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Asheville City Market (South)", "Description": "", "Address": "31 Schenck Pkwy 28803", "Long": -82.55381346, "Lat": 35.4856446, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55381346, 35.4856446 ] } }
+,
+{ "type": "Feature", "id": 41, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Big Ivy Tailgate Market", "Description": "", "Address": "1679 Barnardsville Highwa 28709", "Long": -82.45517628, "Lat": 35.7776587, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.45517628, 35.7776587 ] } }
+,
+{ "type": "Feature", "id": 42, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Black Mountain Tailgate Market", "Description": "", "Address": "130 Montreat Road 28711", "Long": -82.32155322, "Lat": 35.6202853, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.32155322, 35.6202853 ] } }
+,
+{ "type": "Feature", "id": 43, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Downtown Farmers Market", "Description": "", "Address": "45 South French Broad 28806", "Long": -82.55921285, "Lat": 35.5921138, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55921285, 35.5921138 ] } }
+,
+{ "type": "Feature", "id": 44, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Greenlife Sunday Market", "Description": "", "Address": "70 Merrimon Ave 28801", "Long": -82.55461074, "Lat": 35.6018783, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55461074, 35.6018783 ] } }
+,
+{ "type": "Feature", "id": 45, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "North Asheville Tailgate Market", "Description": "", "Address": "1 University Heights 28804", "Long": -82.56307636, "Lat": 35.6184473, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56307636, 35.6184473 ] } }
+,
+{ "type": "Feature", "id": 46, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Riceville Tailgate Market", "Description": "", "Address": "2251 Riceville Road 28805", "Long": -82.47207539, "Lat": 35.6307765, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.47207539, 35.6307765 ] } }
+,
+{ "type": "Feature", "id": 47, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Victory Tailgate Market", "Description": "", "Address": "1329 Tunnel Road 28805", "Long": -82.46734478, "Lat": 35.5832632, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.46734478, 35.5832632 ] } }
+,
+{ "type": "Feature", "id": 48, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Weaverville Tailgate Market", "Description": "", "Address": "60 Lakeshore Drive 28787", "Long": -82.56901013, "Lat": 35.6906585, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56901013, 35.6906585 ] } }
+,
+{ "type": "Feature", "id": 49, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "West Asheville Tailgate Market", "Description": "", "Address": "718 Haywood Road 28806", "Long": -82.59232877, "Lat": 35.5771798, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.59232877, 35.5771798 ] } }
+,
+{ "type": "Feature", "id": 50, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "WNC Farmers Market", "Description": "", "Address": "570 Brevard Road 28806", "Long": -82.59849607, "Lat": 35.5554951, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.59849607, 35.5554951 ] } }
+,
+{ "type": "Feature", "id": 51, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "ARDEN MISSIONARY BAPTIST CHURCH", "Description": "", "Address": "2566 HENDERSONVILLE ROAD 28732", "Long": -82.50958824, "Lat": 35.4530415, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.50958824, 35.4530415 ] } }
+,
+{ "type": "Feature", "id": 52, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "ABCCM - SOUTH MINISTRY", "Description": "", "Address": "10 BUCK SHOALS ROAD 28704", "Long": -82.51278987, "Lat": 35.4624806, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.51278987, 35.4624806 ] } }
+,
+{ "type": "Feature", "id": 53, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "BETHEL SEVENTH DAY ADVENTIST CH", "Description": "", "Address": "238 S. FRENCH BROAD AVE. 28805", "Long": -82.55901832, "Lat": 35.5853658, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55901832, 35.5853658 ] } }
+,
+{ "type": "Feature", "id": 54, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "BILTMORE CHURCH OF CHRIST", "Description": "", "Address": "823 FAIRVIEW ST. 28803", "Long": -82.53397512, "Lat": 35.5515208, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.53397512, 35.5515208 ] } }
+,
+{ "type": "Feature", "id": 55, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "IRENE WORTHAM CENTER INC.", "Description": "", "Address": "916 WEST CHAPEL ROAD 28803", "Long": -82.53412954, "Lat": 35.5494344, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.53412954, 35.5494344 ] } }
+,
+{ "type": "Feature", "id": 56, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "MOUNT SHEBA BAPTIST CHURCH", "Description": "", "Address": "1008 NEW STOCK RD. 28787", "Long": -82.59460972, "Lat": 35.7124076, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.59460972, 35.7124076 ] } }
+,
+{ "type": "Feature", "id": 57, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "SALVATION ARMY OF ASHEVILLE", "Description": "", "Address": "204 HAYWOOD STREET 28802", "Long": -82.56024048, "Lat": 35.5954897, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56024048, 35.5954897 ] } }
+,
+{ "type": "Feature", "id": 58, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "FOSTER SEVENTH DAY ADVENTIST CH", "Description": "", "Address": "375 HENDERSONVILLE ROAD 28803", "Long": -82.53824179, "Lat": 35.5567355, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.53824179, 35.5567355 ] } }
+,
+{ "type": "Feature", "id": 59, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "SWANNANOA VALLEY CHRISTIAN MINI", "Description": "", "Address": "101 N. RIDGEWAY AVENUE 28711", "Long": -82.31888717, "Lat": 35.6199558, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.31888717, 35.6199558 ] } }
+,
+{ "type": "Feature", "id": 60, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "WESTERN CAROLINA RESCUE MINISTR", "Description": "", "Address": "225 PATTON AVE. 28802", "Long": -82.56135216, "Lat": 35.5933788, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56135216, 35.5933788 ] } }
+,
+{ "type": "Feature", "id": 61, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "ABCCM - CRISIS MINISTRY", "Description": "", "Address": "24 CUMBERLAND AVE. 28801", "Long": -82.55903692, "Lat": 35.5982634, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55903692, 35.5982634 ] } }
+,
+{ "type": "Feature", "id": 62, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "ABCCM - VETERANS RESTORATION QU", "Description": "", "Address": "1329 TUNNEL ROAD EAST 28805", "Long": -82.46734478, "Lat": 35.5832632, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.46734478, 35.5832632 ] } }
+,
+{ "type": "Feature", "id": 63, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "FREEDOM IN CHRIST CHURCH OF GOD", "Description": "", "Address": "1808 PISGAH HIGHWAY 28715", "Long": -82.7411355, "Lat": 35.4832049, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.7411355, 35.4832049 ] } }
+,
+{ "type": "Feature", "id": 64, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "CHILDREN FIRST - EMMA RESOURCE", "Description": "", "Address": "50 S. FRENCH BROAD AVE. SUITE 246 28806", "Long": -82.55857537, "Lat": 35.5917342, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55857537, 35.5917342 ] } }
+,
+{ "type": "Feature", "id": 65, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "CALVARY CHAPEL OF ASHEVILLE IN", "Description": "", "Address": "2 IRIS ST. 28815", "Long": -82.5373575, "Lat": 35.5626201, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5373575, 35.5626201 ] } }
+,
+{ "type": "Feature", "id": 66, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "ABCCM - HOMINY VALLEY", "Description": "", "Address": "155 CANDLER SCHOOL RD 28715", "Long": -82.70381746, "Lat": 35.539324, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.70381746, 35.539324 ] } }
+,
+{ "type": "Feature", "id": 67, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "RAYS CHAPEL BAPTIST CHURCH", "Description": "", "Address": "24 WOOTEN COVE RD 28787", "Long": -82.55016449, "Lat": 35.717293, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55016449, 35.717293 ] } }
+,
+{ "type": "Feature", "id": 68, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "LEICESTER COMMUNITY CENTER PROD", "Description": "", "Address": "2979 New Leicester Hwy. 28748", "Long": -82.71376357, "Lat": 35.6573447, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.71376357, 35.6573447 ] } }
+,
+{ "type": "Feature", "id": 69, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "BLUE RIDGE CHURCH OF CHRIST", "Description": "", "Address": "8 OLD LAKEY GAP ROAD 28711", "Long": -82.33416941, "Lat": 35.603183, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.33416941, 35.603183 ] } }
+,
+{ "type": "Feature", "id": 70, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "BIG IVY COMMUNITY CLUB", "Description": "", "Address": "111 POVERTY BRANCH RD. 28709", "Long": -82.45021051, "Lat": 35.7867426, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.45021051, 35.7867426 ] } }
+,
+{ "type": "Feature", "id": 71, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "FAMILY OF FAITH FELLOWSHIP", "Description": "", "Address": "213 LONG SHOALS RD. 28776", "Long": -82.53962536, "Lat": 35.4824194, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.53962536, 35.4824194 ] } }
+,
+{ "type": "Feature", "id": 72, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "GOD'S FILLING STATION-MUSTARD S", "Description": "", "Address": "503 JOHNSTON SCHOOL RD. 28806", "Long": -82.62566688, "Lat": 35.5915945, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.62566688, 35.5915945 ] } }
+,
+{ "type": "Feature", "id": 73, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "THE WELCOME TABLE - SWANNANOA", "Description": "", "Address": "216 WHITSON AVE. 28778", "Long": -82.39703221, "Lat": 35.5999742, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.39703221, 35.5999742 ] } }
+,
+{ "type": "Feature", "id": 74, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "FIRST BAPTIST CHURCH - HOMELESS", "Description": "", "Address": "5 OAK ST. 28801", "Long": -82.54779162, "Lat": 35.5990134, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54779162, 35.5990134 ] } }
+,
+{ "type": "Feature", "id": 75, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "LEAST OF THESE MINISTRIES", "Description": "", "Address": "396 GENEVA PLACE 28778", "Long": -82.29670412, "Lat": 35.6463825, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.29670412, 35.6463825 ] } }
+,
+{ "type": "Feature", "id": 76, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "ZEPHYR HILLS FREEWILL BAPTIST C", "Description": "", "Address": "283 SHELBURNE RD 28806", "Long": -82.6018765, "Lat": 35.5708409, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.6018765, 35.5708409 ] } }
+,
+{ "type": "Feature", "id": 77, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "GOSPEL TABERNACLE", "Description": "", "Address": "202 BRICKYARD ROAD 28806", "Long": -82.59762891, "Lat": 35.6037377, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.59762891, 35.6037377 ] } }
+,
+{ "type": "Feature", "id": 78, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "CHANNEL OF GRACE (FIRST CONGREG", "Description": "", "Address": "20 OAK ST 28805", "Long": -82.54802601, "Lat": 35.5977993, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54802601, 35.5977993 ] } }
+,
+{ "type": "Feature", "id": 79, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "OAKLEY BAPTIST CHURCH", "Description": "", "Address": "70 FAIRVIEW AVE. 28803", "Long": -82.51460495, "Lat": 35.5662545, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.51460495, 35.5662545 ] } }
+,
+{ "type": "Feature", "id": 80, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "TABERNACLE MISSIONARY BAPTIST C", "Description": "", "Address": "56 WALTON ST. 28801", "Long": -82.56077586, "Lat": 35.5754301, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56077586, 35.5754301 ] } }
+,
+{ "type": "Feature", "id": 81, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "CALVARY BAPTIST CHURCH - BRIAN'", "Description": "", "Address": "531 HAYWOOD ROAD 28806", "Long": -82.58517618, "Lat": 35.5790213, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.58517618, 35.5790213 ] } }
+,
+{ "type": "Feature", "id": 82, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "BEVERLY HILLS BAPTIST - FAMILY", "Description": "", "Address": "777 TUNNEL ROAD 28805", "Long": -82.50744261, "Lat": 35.5862245, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.50744261, 35.5862245 ] } }
+,
+{ "type": "Feature", "id": 83, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "HOMINY VALLEY WELCOME TABLE (AS", "Description": "", "Address": "725 ASBURY ROAD 28715", "Long": -82.67356217, "Lat": 35.5565462, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.67356217, 35.5565462 ] } }
+,
+{ "type": "Feature", "id": 84, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "CATHOLIC SOCIAL SERVICES - FOOD", "Description": "", "Address": "50 ORANGE STREET 28801", "Long": -82.5512485, "Lat": 35.6018502, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5512485, 35.6018502 ] } }
+,
+{ "type": "Feature", "id": 85, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "RIVERSIDE BAPTIST CHURCH", "Description": "", "Address": "871 RIVERSIDE DR 28804", "Long": -82.57487216, "Lat": 35.6192288, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.57487216, 35.6192288 ] } }
+,
+{ "type": "Feature", "id": 86, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "THE DOWNTOWN WELCOME TABLE", "Description": "", "Address": "297 HAYWOOD ST CENTRAL UMC 28801", "Long": -82.56314921, "Lat": 35.5932418, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56314921, 35.5932418 ] } }
+,
+{ "type": "Feature", "id": 87, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "BILTMORE CHURCH OF GOD - JUST A", "Description": "", "Address": "1390 SWEETEN CREEK ROAD 28803", "Long": -82.51801903, "Lat": 35.5344624, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.51801903, 35.5344624 ] } }
+,
+{ "type": "Feature", "id": 88, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "EAST ASHEVILLE WELCOME TABLE", "Description": "", "Address": "954 TUNNEL ROAD 28805", "Long": -82.50047886, "Lat": 35.5898403, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.50047886, 35.5898403 ] } }
+,
+{ "type": "Feature", "id": 89, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "Black Mountain Community PRODUC", "Description": "", "Address": "101 Carver Avenue 28711", "Long": -82.34021442, "Lat": 35.6148571, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.34021442, 35.6148571 ] } }
+,
+{ "type": "Feature", "id": 90, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "LOVING FOOD RESOURCES", "Description": "", "Address": "123 KENILWORTH ROAD 28813", "Long": -82.53872349, "Lat": 35.5766137, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.53872349, 35.5766137 ] } }
+,
+{ "type": "Feature", "id": 91, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "ABCCM - NORTH BUNCOMBE SAMARITA", "Description": "", "Address": "403 WEAVERVILLE HWY. 28787", "Long": -82.58302272, "Lat": 35.6646972, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.58302272, 35.6646972 ] } }
+,
+{ "type": "Feature", "id": 92, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "VICTORY FELLOWSHIP WORSHIP CENT", "Description": "", "Address": "450 AIKEN DRIVE 28787", "Long": -82.58205599, "Lat": 35.6832717, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.58205599, 35.6832717 ] } }
+,
+{ "type": "Feature", "id": 93, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "FOOD FOR FAIRVIEW INC.", "Description": "", "Address": "1357 CHARLOTTE HWY COMMUNITY CTR 28730", "Long": -82.41011718, "Lat": 35.5235106, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.41011718, 35.5235106 ] } }
+,
+{ "type": "Feature", "id": 94, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "GEORGETOWN MISSIONARY BAPTIST", "Description": "", "Address": "DIX CREEK ROAD #1 28748", "Long": -82.67864865, "Lat": 35.6063804, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.67864865, 35.6063804 ] } }
+,
+{ "type": "Feature", "id": 95, "properties": { "Big Group": "Food", "Sub Category": "Manna Agencies", "Name": "LEICESTER COMMUNITY WELCOME TAB", "Description": "", "Address": "17 MAYNARD ROAD 28748", "Long": -82.65110577, "Lat": 35.5150093, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.65110577, 35.5150093 ] } }
+,
+{ "type": "Feature", "id": 96, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Ingles", "Description": "", "Address": "1141 Tunnel Road 0", "Long": -82.48817194, "Lat": 35.585737, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.48817194, 35.585737 ] } }
+,
+{ "type": "Feature", "id": 97, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Ingles", "Description": "", "Address": "29 Tunnel Road 0", "Long": -82.53547328, "Lat": 35.595395, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.53547328, 35.595395 ] } }
+,
+{ "type": "Feature", "id": 98, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Ingles", "Description": "", "Address": "863 Brevard Road 0", "Long": -82.60736304, "Lat": 35.5305551, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.60736304, 35.5305551 ] } }
+,
+{ "type": "Feature", "id": 99, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Ingles", "Description": "", "Address": "669 Haywood Road 0", "Long": -82.59087122, "Lat": 35.5787606, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.59087122, 35.5787606 ] } }
+,
+{ "type": "Feature", "id": 100, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Ingles", "Description": "", "Address": "153 Smokey Park Highway 0", "Long": -82.62852132, "Lat": 35.5643691, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.62852132, 35.5643691 ] } }
+,
+{ "type": "Feature", "id": 101, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Ingles", "Description": "", "Address": "575 New Leicester Highway 0", "Long": -82.63162232, "Lat": 35.6145463, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.63162232, 35.6145463 ] } }
+,
+{ "type": "Feature", "id": 102, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Ingles", "Description": "", "Address": "1865 Hendersonville Road 0", "Long": -82.52394826, "Lat": 35.5002327, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.52394826, 35.5002327 ] } }
+,
+{ "type": "Feature", "id": 103, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Ingles", "Description": "", "Address": "780 Hendersonville Road 0", "Long": -82.53156917, "Lat": 35.5447468, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.53156917, 35.5447468 ] } }
+,
+{ "type": "Feature", "id": 104, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Wal-Mart", "Description": "", "Address": "60 Airport Road 0", "Long": -82.52297629, "Lat": 35.4563449, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.52297629, 35.4563449 ] } }
+,
+{ "type": "Feature", "id": 105, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Food Lion", "Description": "", "Address": "1350 Charlotte Highway 0", "Long": -82.41109522, "Lat": 35.52462, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.41109522, 35.52462 ] } }
+,
+{ "type": "Feature", "id": 106, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Wal-Mart", "Description": "", "Address": "146 Monticello Road 0", "Long": -82.58141783, "Lat": 35.7060147, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.58141783, 35.7060147 ] } }
+,
+{ "type": "Feature", "id": 107, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Bi-Lo", "Description": "", "Address": "801 Fairview Road 0", "Long": -82.50303412, "Lat": 35.5709081, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.50303412, 35.5709081 ] } }
+,
+{ "type": "Feature", "id": 108, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Food Lion", "Description": "", "Address": "1856 Hendersonville Road 0", "Long": -82.52126499, "Lat": 35.5011489, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.52126499, 35.5011489 ] } }
+,
+{ "type": "Feature", "id": 109, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Harris Teeter", "Description": "", "Address": "1378 Hendersonville Road 0", "Long": -82.52908463, "Lat": 35.5221175, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.52908463, 35.5221175 ] } }
+,
+{ "type": "Feature", "id": 110, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Wal-Mart", "Description": "", "Address": "437 Swannanoa River Road 0", "Long": -82.51342973, "Lat": 35.5790404, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.51342973, 35.5790404 ] } }
+,
+{ "type": "Feature", "id": 111, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Aldi", "Description": "", "Address": "470 Swannanoa River Rd 0", "Long": -82.51101443, "Lat": 35.5780149, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.51101443, 35.5780149 ] } }
+,
+{ "type": "Feature", "id": 112, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Aldi", "Description": "", "Address": "1344 Patton Ave 0", "Long": -82.6045027, "Lat": 35.5830719, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.6045027, 35.5830719 ] } }
+,
+{ "type": "Feature", "id": 113, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Amazing Savings", "Description": "", "Address": "45 S French Broad Ave 0", "Long": -82.55921285, "Lat": 35.5921138, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55921285, 35.5921138 ] } }
+,
+{ "type": "Feature", "id": 114, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Amazing Savings", "Description": "", "Address": "121 Sweeten Creek Road 0", "Long": -82.52775324, "Lat": 35.5627802, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.52775324, 35.5627802 ] } }
+,
+{ "type": "Feature", "id": 115, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Amazing Savings", "Description": "", "Address": "3018 US-70 Suite 1 0", "Long": -82.35063482, "Lat": 35.6086737, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.35063482, 35.6086737 ] } }
+,
+{ "type": "Feature", "id": 116, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Go Grocery Outlet", "Description": "", "Address": "121 New Leicester Hwy 0", "Long": -82.60590127, "Lat": 35.5928296, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.60590127, 35.5928296 ] } }
+,
+{ "type": "Feature", "id": 117, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Go Grocery Outlet", "Description": "", "Address": "1804 Hendersonville Rd 0", "Long": -82.52257742, "Lat": 35.5052395, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.52257742, 35.5052395 ] } }
+,
+{ "type": "Feature", "id": 118, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Go Grocery Outlet", "Description": "", "Address": "1380 Tunnel Rd 0", "Long": -82.46763604, "Lat": 35.5842345, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.46763604, 35.5842345 ] } }
+,
+{ "type": "Feature", "id": 119, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Sav-Mor", "Description": "", "Address": "891 Patton Ave 0", "Long": -82.58796427, "Lat": 35.5880976, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.58796427, 35.5880976 ] } }
+,
+{ "type": "Feature", "id": 120, "properties": { "Big Group": "Food", "Sub Category": "Grocery", "Name": "Sav-Mor", "Description": "", "Address": "842 Merrimon Ave 0", "Long": -82.5537977, "Lat": 35.6283707, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5537977, 35.6283707 ] } }
+,
+{ "type": "Feature", "id": 121, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "LOSRC Office at 339 New Leicester Hwy", "Description": " Land-of-Sky Regional Council Number of stations 3.  Stations are solar-supported and part of Chargepoint network.", "Address": "", "Long": -82.636047, "Lat": 35.728813, "URL": "\"https:\/\/lh5.googleusercontent.com\/-TSLHuYvPb_A\/Tzwcz9dwQYI\/AAAAAAAABw4\/9DK0SXZwnVY\/s903\/IMG_0434.JPG<img src=\"\"https\"" }, "geometry": { "type": "Point", "coordinates": [ -82.636047, 35.728813 ] } }
+,
+{ "type": "Feature", "id": 122, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Parking Deck 164 College St", "Description": " Buncombe County Number of stations 2.  Two Level 2 stations installed by Progress Energy in the College St. parking deck that you must pay to use", "Address": "", "Long": -82.495918, "Lat": 35.354435, "URL": "https:\/\/plus.google.com\/u\/0\/photos\/106842112091349178860\/albums\/5583945500985987921\/5727953468629316018?authkey=CJ6-gKGnpMzLkwE" }, "geometry": { "type": "Point", "coordinates": [ -82.495918, 35.354435 ] } }
+,
+{ "type": "Feature", "id": 123, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Haywood Community College Library", "Description": "  Haywood Community College Number of stations 1", "Address": "", "Long": -82.715607, "Lat": 35.806953, "URL": "https:\/\/lh6.googleusercontent.com\/-Umyy3Nr2fKs\/TzwcAnzOGuI\/AAAAAAAABwE\/_E98k8EBsCc\/s775\/Haywood+CC+Pic+1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.715607, 35.806953 ] } }
+,
+{ "type": "Feature", "id": 124, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "UNC-Asheville Reuters Center", "Description": " UNC-Asheville Number of stations 2.  Solar charging station built by Brightfield Transportation Solutions", "Address": "", "Long": -83.373367, "Lat": 35.19838, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -83.373367, 35.19838 ] } }
+,
+{ "type": "Feature", "id": 125, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Biltmore Park", "Description": " Biltmore Farms Existing charging stations", "Address": " Directly in front of Hilton hotelhttps", "Long": -82.706047, "Lat": 35.250851, "URL": "https:\/\/picasaweb.google.com\/wtbrian\/EVs?authkey=Gv1sRgCJ6-gKGnpMzLkwE#5583946361077102322" }, "geometry": { "type": "Point", "coordinates": [ -82.706047, 35.250851 ] } }
+,
+{ "type": "Feature", "id": 126, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Asheville Chamber of Commerce", "Description": " Asheville Area Chamber of Commerce Number of stations 2.  Installed by Progress Energyhttps", "Address": "", "Long": -82.943314, "Lat": 35.529617, "URL": "\"https:\/\/plus.google.com\/u\/0\/photos\/106842112091349178860\/albums\/5583945500985987921\/5737295144798887650?hl=en\"\" \"" }, "geometry": { "type": "Point", "coordinates": [ -82.943314, 35.529617 ] } }
+,
+{ "type": "Feature", "id": 127, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Eaton Plant", "Description": " EatonNumber of charging stations 7.  6 Level 2 and 1 DC Fast Charger. These stations are now open only to visitors at the plant", "Address": "", "Long": -82.553604, "Lat": 35.622131, "URL": "\"https:\/\/picasaweb.google.com\/106842112091349178860\/EVSEAtEaton#5592494398762185362\"\" style=\"\"font-weight\"" }, "geometry": { "type": "Point", "coordinates": [ -82.553604, 35.622131 ] } }
+,
+{ "type": "Feature", "id": 128, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "A-Loft Parking Deck at 51 Biltmore Ave", "Description": " City of Asheville Possible number of stations 2", "Address": " ", "Long": -82.678307, "Lat": 35.814442, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.678307, 35.814442 ] } }
+,
+{ "type": "Feature", "id": 129, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Public Works Lot at 161 S Charlotte St", "Description": " City of Asheville Number of charging stations 3.  BioWheels RTS Brightfield solar charging stations", "Address": "", "Long": -82.56398, "Lat": 35.58123, "URL": "https:\/\/lh6.googleusercontent.com\/-ygRQ-XmP30o\/Tzwb_9DLO1I\/AAAAAAAABv8\/cw7Nw-oBhoY\/s578\/Brightfields+Grand+Opening+at++Public+Works+024.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.56398, 35.58123 ] } }
+,
+{ "type": "Feature", "id": 130, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Buncombe County DSS", "Description": " Buncombe County Number of stations 2.   Free and open to public40 Coxe AveAsheville NC 28801", "Address": "", "Long": -82.567757, "Lat": 35.606621, "URL": "http:\/\/maps.google.com\/maps\/place?ftid=0x8859f356ce62e435" }, "geometry": { "type": "Point", "coordinates": [ -82.567757, 35.606621 ] } }
+,
+{ "type": "Feature", "id": 131, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Consolidated Electrical Distributors", "Description": " Consolidated Electrical Distributors Number of stations 1", "Address": " 343 Hilliard Ave Asheville NCAsheville NC 28801", "Long": -82.570152, "Lat": 35.595181, "URL": "http:\/\/maps.google.com\/maps\/place?ftid=0x8859f353495d05bb" }, "geometry": { "type": "Point", "coordinates": [ -82.570152, 35.595181 ] } }
+,
+{ "type": "Feature", "id": 132, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Ingles Market at 1865 Hendersonville Rd", "Description": " Ingles Number of stations 2", "Address": "1865 Hendersonville RdAsheville NC 28803", "Long": -82.559669, "Lat": 35.588383, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.559669, 35.588383 ] } }
+,
+{ "type": "Feature", "id": 133, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Anderson Nissan", "Description": " Anderson Nissan Number of stations 1. Stations will charge Nissan LEAFs on lot for test drives.", "Address": " 629 Brevard RdAsheville NC 28806", "Long": -82.617233, "Lat": 35.581078, "URL": "http:\/\/maps.google.com\/maps\/place?ftid=0x88598d05c484012b" }, "geometry": { "type": "Point", "coordinates": [ -82.617233, 35.581078 ] } }
+,
+{ "type": "Feature", "id": 134, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Asheville Chevrolet", "Description": " Asheville Chevrolet Number of stations 1", "Address": "  SPX Level 2 open for public charging", "Long": -82.518845, "Lat": 35.569351, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.518845, 35.569351 ] } }
+,
+{ "type": "Feature", "id": 135, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Downtown Black Mountain", "Description": " Town of Black Mountain Number of stations 1 dual cord", "Address": "106 Montreat RdBlack Mountain NC 28711", "Long": -82.557205, "Lat": 35.577572, "URL": "https:\/\/lh3.googleusercontent.com\/-HGfMyINpw3w\/TzwbVtWEu3I\/AAAAAAAABvk\/rPCsDJJWVdo\/s903\/jpg_00000521.jpghttps" }, "geometry": { "type": "Point", "coordinates": [ -82.557205, 35.577572 ] } }
+,
+{ "type": "Feature", "id": 136, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Hendersonville - Dogwood Parking Lot", "Description": " Town of Hendersonville Number of stations 2", "Address": "200 4th Ave W Hendersonville NC 28739", "Long": -82.554077, "Lat": 35.58477, "URL": "https:\/\/lh4.googleusercontent.com\/-xtN5dYX18bo\/TzwgoYD44MI\/AAAAAAAAByc\/DWxIuYUXCEY\/s485\/Hendersonville+EV+Grand+Opening+001.jpghttps" }, "geometry": { "type": "Point", "coordinates": [ -82.554077, 35.58477 ] } }
+,
+{ "type": "Feature", "id": 137, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Town of Montreat", "Description": " Town of Montreat Number of stations 1", "Address": "310 Appalachian Way Montreat NC 28757", "Long": -82.58223, "Lat": 35.569046, "URL": "https:\/\/lh3.googleusercontent.com\/-8G0UhWdmHi0\/TzwbL0a8TBI\/AAAAAAAABvc\/ja3Smh0u910\/s826\/jpg_00000533.jpghttps" }, "geometry": { "type": "Point", "coordinates": [ -82.58223, 35.569046 ] } }
+,
+{ "type": "Feature", "id": 138, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "BioWheels RTS", "Description": " BioWheels RTS Number of Stations 2.  Two Coulomb stations that are part of Chargepoint network.Stations were installed by BioWheels RTS", "Address": "", "Long": -82.522423, "Lat": 35.457706, "URL": "https:\/\/lh3.googleusercontent.com\/-P9dxTEy8Wr4\/Tp7shF6MHFI\/AAAAAAAABks\/IdymeX46mkc\/s550\/BioWheels+Wall+Mount+Coulomb.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.522423, 35.457706 ] } }
+,
+{ "type": "Feature", "id": 139, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Skyland Automotive", "Description": " Skyland Automotive Number of charging stations 3.  Open to public from 8am to 7pm", "Address": "", "Long": -82.594147, "Lat": 35.578613, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.594147, 35.578613 ] } }
+,
+{ "type": "Feature", "id": 140, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Blue Ridge Community College", "Description": " Blue Ridge Community  CollegeNumber of stations 2.  2 public stations are located at the Spearman Building.  Another private station is located in the Alternative Fuel Vehicle Lab ", "Address": "", "Long": -82.043152, "Lat": 35.939098, "URL": "https:\/\/docs.google.com\/open?id=0B4F17y41WO22dTRHcHp3VVdSaTA" }, "geometry": { "type": "Point", "coordinates": [ -82.043152, 35.939098 ] } }
+,
+{ "type": "Feature", "id": 141, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Boyd Chevrolet Cadillac Buick", "Description": "  Boyd Automotive Number of stations 2. SPX Level 2 open to the public for charging between 8am and 7pm ", "Address": " ", "Long": -82.521439, "Lat": 35.497604, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.521439, 35.497604 ] } }
+,
+{ "type": "Feature", "id": 142, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Cherokee Welcome Center at 498 Tsali Blvd", "Description": " Eastern Band of Cherokee Indians Number of stations 2.  2 Schneider Level 2 station that will be solar supported.", "Address": "", "Long": -82.416084, "Lat": 35.522953, "URL": "https:\/\/docs.google.com\/open?id=0B4F17y41WO22a3dMWWtIbUFrYnc" }, "geometry": { "type": "Point", "coordinates": [ -82.416084, 35.522953 ] } }
+,
+{ "type": "Feature", "id": 143, "properties": { "Big Group": "Energy", "Sub Category": "EV Charging Station", "Name": "Buncombe County Interchange Building", "Description": " Buncombe County Number of stations 2. Both stations are open to the public but one will be regularly by Buncombe County's Chevy Volt", "Address": " 59 Woodfin PlAsheville  NC 28801", "Long": -82.550636, "Lat": 35.59182, "URL": "https:\/\/maps.google.com\/maps\/place?ftid=0x8859f4a731b3ab75" }, "geometry": { "type": "Point", "coordinates": [ -82.550636, 35.59182 ] } }
+,
+{ "type": "Feature", "id": 144, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "West side of  O. Henery north of entrance to Citizen Times curbside", "Address": "", "Long": -82.55726499, "Lat": 35.59528007, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55726499, 35.59528007 ] } }
+,
+{ "type": "Feature", "id": 145, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "North side of Battery Park west of Centura Bank next to building", "Address": "", "Long": -82.55732523, "Lat": 35.59479199, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55732523, 35.59479199 ] } }
+,
+{ "type": "Feature", "id": 146, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East side of Page south of National Mortage Co.next to parking lot", "Address": "", "Long": -82.55629403, "Lat": 35.59571492, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55629403, 35.59571492 ] } }
+,
+{ "type": "Feature", "id": 147, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East Side of Page in Front of UC Lending need to move Urban Trail Marker", "Address": "", "Long": -82.55646476, "Lat": 35.59621361, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55646476, 35.59621361 ] } }
+,
+{ "type": "Feature", "id": 148, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East side  of Haywood Street in front of Vanderbilt north of entrance curbsid", "Address": "", "Long": -82.55564517, "Lat": 35.59680312, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55564517, 35.59680312 ] } }
+,
+{ "type": "Feature", "id": 149, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East side of Haywood between O'Henry's and Discount Phar curbside", "Address": "", "Long": -82.5552294, "Lat": 35.59628312, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5552294, 35.59628312 ] } }
+,
+{ "type": "Feature", "id": 150, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "North side of Battery park in front of Value Home Furniture curbside", "Address": "", "Long": -82.55520261, "Lat": 35.5951876, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55520261, 35.5951876 ] } }
+,
+{ "type": "Feature", "id": 151, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "North side of Wall Street on city leased land across from Turtle Creek Gallery", "Address": "", "Long": -82.5556736, "Lat": 35.59473683, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5556736, 35.59473683 ] } }
+,
+{ "type": "Feature", "id": 152, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "South side  of Wall Street behind bench", "Address": "", "Long": -82.55494807, "Lat": 35.59493036, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55494807, 35.59493036 ] } }
+,
+{ "type": "Feature", "id": 153, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "West side of Broadway in front of antiques on Broadway curbside", "Address": "", "Long": -82.55231885, "Lat": 35.59597308, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55231885, 35.59597308 ] } }
+,
+{ "type": "Feature", "id": 154, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "West side of Broadway in front of Graphics 4 curbside", "Address": "", "Long": -82.55227099, "Lat": 35.5958085, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55227099, 35.5958085 ] } }
+,
+{ "type": "Feature", "id": 155, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "South side of Patton Ave in Front of Pack Place next to Art Museum", "Address": "", "Long": -82.55149979, "Lat": 35.59470474, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55149979, 35.59470474 ] } }
+,
+{ "type": "Feature", "id": 156, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "South side of Patton in front of Leader Buildingcurbside", "Address": "", "Long": -82.55251648, "Lat": 35.59472007, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55251648, 35.59472007 ] } }
+,
+{ "type": "Feature", "id": 157, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "South side Patton across from Kress Building west of Urban Trail Markerbefor", "Address": "", "Long": -82.55311464, "Lat": 35.59459113, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55311464, 35.59459113 ] } }
+,
+{ "type": "Feature", "id": 158, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East side of Biltmore in front of Barley's create bulb on street at crosswalk", "Address": "", "Long": -82.55124203, "Lat": 35.59312834, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55124203, 35.59312834 ] } }
+,
+{ "type": "Feature", "id": 159, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East side of Biltmore south of American Folk on building side move USA today b", "Address": "", "Long": -82.55103737, "Lat": 35.59249885, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55103737, 35.59249885 ] } }
+,
+{ "type": "Feature", "id": 160, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East side of Biltmore across from Laurey's curbside", "Address": "", "Long": -82.55094809, "Lat": 35.59218372, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55094809, 35.59218372 ] } }
+,
+{ "type": "Feature", "id": 161, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "West side of South Market front of proposed Police substation Eagle Street", "Address": "", "Long": -82.55049874, "Lat": 35.59226325, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55049874, 35.59226325 ] } }
+,
+{ "type": "Feature", "id": 162, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "North west corner next to entrance of Court House", "Address": "", "Long": -82.54881427, "Lat": 35.59615613, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54881427, 35.59615613 ] } }
+,
+{ "type": "Feature", "id": 163, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "North side of City Hall Entrance", "Address": "", "Long": -82.5488875, "Lat": 35.59565463, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5488875, 35.59565463 ] } }
+,
+{ "type": "Feature", "id": 164, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "South side of City Hall Entrance", "Address": "", "Long": -82.54881604, "Lat": 35.59541485, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54881604, 35.59541485 ] } }
+,
+{ "type": "Feature", "id": 165, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "In front of Public Works", "Address": "", "Long": -82.54849553, "Lat": 35.59354021, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54849553, 35.59354021 ] } }
+,
+{ "type": "Feature", "id": 166, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Eagle Street Park Parks And Rec", "Address": "", "Long": -82.55050894, "Lat": 35.59283649, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55050894, 35.59283649 ] } }
+,
+{ "type": "Feature", "id": 167, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "FBFC Private Land", "Address": "", "Long": -82.5507834, "Lat": 35.59163202, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5507834, 35.59163202 ] } }
+,
+{ "type": "Feature", "id": 168, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Asheville Savings Bank Private land", "Address": "", "Long": -82.5533826, "Lat": 35.59440712, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5533826, 35.59440712 ] } }
+,
+{ "type": "Feature", "id": 169, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Pritchard Park Parks and Rec", "Address": "", "Long": -82.55446701, "Lat": 35.59461724, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55446701, 35.59461724 ] } }
+,
+{ "type": "Feature", "id": 170, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Post office", "Address": "", "Long": -82.55551336, "Lat": 35.59289377, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55551336, 35.59289377 ] } }
+,
+{ "type": "Feature", "id": 171, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Bus Station Bruce Black bike racks on buses and bicycle storage(lockers?)", "Address": "", "Long": -82.55551888, "Lat": 35.5926645, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55551888, 35.5926645 ] } }
+,
+{ "type": "Feature", "id": 172, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Upper lot under eaves Human Services Building Martha McFalls", "Address": "", "Long": -82.55475805, "Lat": 35.59308134, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55475805, 35.59308134 ] } }
+,
+{ "type": "Feature", "id": 173, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Civic Center", "Address": "", "Long": -82.55583857, "Lat": 35.59711, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55583857, 35.59711 ] } }
+,
+{ "type": "Feature", "id": 174, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "City County Plaza Parks and Rec", "Address": "", "Long": -82.54973214, "Lat": 35.59573575, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54973214, 35.59573575 ] } }
+,
+{ "type": "Feature", "id": 175, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "City County Plaza Parks and Rec", "Address": "", "Long": -82.54954592, "Lat": 35.59539753, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54954592, 35.59539753 ] } }
+,
+{ "type": "Feature", "id": 176, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Tenative to Streetscape Design  Possible Location on College between trees curb", "Address": "", "Long": -82.55047333, "Lat": 35.59579092, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55047333, 35.59579092 ] } }
+,
+{ "type": "Feature", "id": 177, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Buildingside close to tree near Plaza entrance", "Address": "", "Long": -82.55077253, "Lat": 35.59695146, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55077253, 35.59695146 ] } }
+,
+{ "type": "Feature", "id": 178, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Northside of Plaza sign on brick walkway", "Address": "", "Long": -82.55054575, "Lat": 35.59706953, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55054575, 35.59706953 ] } }
+,
+{ "type": "Feature", "id": 179, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Building Corner of Cinjades curbside", "Address": "", "Long": -82.55112832, "Lat": 35.59636532, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55112832, 35.59636532 ] } }
+,
+{ "type": "Feature", "id": 180, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Between trees parking lot side south of Vincenzo's", "Address": "", "Long": -82.55097406, "Lat": 35.59589079, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55097406, 35.59589079 ] } }
+,
+{ "type": "Feature", "id": 181, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Between two trees pathway side curbside", "Address": "", "Long": -82.55153911, "Lat": 35.59755646, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55153911, 35.59755646 ] } }
+,
+{ "type": "Feature", "id": 182, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Chamber of Commerce", "Address": "", "Long": -82.55875191, "Lat": 35.59642658, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55875191, 35.59642658 ] } }
+,
+{ "type": "Feature", "id": 183, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Grove Arcade", "Address": "", "Long": -82.55679637, "Lat": 35.59549435, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55679637, 35.59549435 ] } }
+,
+{ "type": "Feature", "id": 184, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Parking Lot Needs exploration", "Address": "", "Long": -82.55385991, "Lat": 35.59735344, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55385991, 35.59735344 ] } }
+,
+{ "type": "Feature", "id": 185, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Parking Lot Owner\/possible development", "Address": "", "Long": -82.55430718, "Lat": 35.59849723, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55430718, 35.59849723 ] } }
+,
+{ "type": "Feature", "id": 186, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Possible bulbout from Perri's with mid block intersection.", "Address": "", "Long": -82.55356758, "Lat": 35.59672409, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55356758, 35.59672409 ] } }
+,
+{ "type": "Feature", "id": 187, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Bulbout north of Max and Rosie's", "Address": "", "Long": -82.55335038, "Lat": 35.5966007, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55335038, 35.5966007 ] } }
+,
+{ "type": "Feature", "id": 188, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Widest part of Top's Sidewalk", "Address": "", "Long": -82.55314298, "Lat": 35.59549314, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55314298, 35.59549314 ] } }
+,
+{ "type": "Feature", "id": 189, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "YMI no room Possible part of reconstruction", "Address": "", "Long": -82.55021987, "Lat": 35.59403251, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55021987, 35.59403251 ] } }
+,
+{ "type": "Feature", "id": 190, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "YMCA", "Address": "", "Long": -82.55100147, "Lat": 35.59886982, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55100147, 35.59886982 ] } }
+,
+{ "type": "Feature", "id": 191, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Buncombe County Health", "Address": "", "Long": -82.54922455, "Lat": 35.59786765, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54922455, 35.59786765 ] } }
+,
+{ "type": "Feature", "id": 192, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Amboy Road Riverfont Park", "Address": "", "Long": -82.57001141, "Lat": 35.5670998, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.57001141, 35.5670998 ] } }
+,
+{ "type": "Feature", "id": 193, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Stephens-Lee Community Playground", "Address": "", "Long": -82.54754566, "Lat": 35.59265624, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54754566, 35.59265624 ] } }
+,
+{ "type": "Feature", "id": 194, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Stephens-Lee Community Playground", "Address": "", "Long": -82.54769272, "Lat": 35.59278021, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54769272, 35.59278021 ] } }
+,
+{ "type": "Feature", "id": 195, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Kenilworth Neighborhood Playground", "Address": "", "Long": -82.54242489, "Lat": 35.57760902, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54242489, 35.57760902 ] } }
+,
+{ "type": "Feature", "id": 196, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Shiloh Community Playground and Center", "Address": "", "Long": -82.52894749, "Lat": 35.54826652, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.52894749, 35.54826652 ] } }
+,
+{ "type": "Feature", "id": 197, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Shiloh Community Playground and Center", "Address": "", "Long": -82.52835334, "Lat": 35.54810474, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.52835334, 35.54810474 ] } }
+,
+{ "type": "Feature", "id": 198, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Magnolia Playground", "Address": "", "Long": -82.56078661, "Lat": 35.6031787, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56078661, 35.6031787 ] } }
+,
+{ "type": "Feature", "id": 199, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Haw Creek Park", "Address": "", "Long": -82.50443196, "Lat": 35.59060197, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.50443196, 35.59060197 ] } }
+,
+{ "type": "Feature", "id": 200, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Zealandia Bridge", "Address": "", "Long": -82.53829096, "Lat": 35.59528054, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.53829096, 35.59528054 ] } }
+,
+{ "type": "Feature", "id": 201, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Burton Street Center", "Address": "", "Long": -82.58414815, "Lat": 35.58282631, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.58414815, 35.58282631 ] } }
+,
+{ "type": "Feature", "id": 202, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Walton Street Pool", "Address": "", "Long": -82.56248181, "Lat": 35.5737467, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56248181, 35.5737467 ] } }
+,
+{ "type": "Feature", "id": 203, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Malvern Hills Park and Pool", "Address": "", "Long": -82.60955938, "Lat": 35.57569439, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.60955938, 35.57569439 ] } }
+,
+{ "type": "Feature", "id": 204, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Malvern Hills Park and Pool", "Address": "", "Long": -82.60944921, "Lat": 35.57525378, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.60944921, 35.57525378 ] } }
+,
+{ "type": "Feature", "id": 205, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Montford Complex", "Address": "", "Long": -82.56566375, "Lat": 35.60038903, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56566375, 35.60038903 ] } }
+,
+{ "type": "Feature", "id": 206, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Montford Complex", "Address": "", "Long": -82.56565737, "Lat": 35.6000088, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56565737, 35.6000088 ] } }
+,
+{ "type": "Feature", "id": 207, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Weaver Park", "Address": "", "Long": -82.55441596, "Lat": 35.61415875, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55441596, 35.61415875 ] } }
+,
+{ "type": "Feature", "id": 208, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Glenn's Creek Greenway", "Address": "", "Long": -82.55584108, "Lat": 35.6154198, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55584108, 35.6154198 ] } }
+,
+{ "type": "Feature", "id": 209, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Grove Park", "Address": "", "Long": -82.54596488, "Lat": 35.61175686, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54596488, 35.61175686 ] } }
+,
+{ "type": "Feature", "id": 210, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Murphy-Oakley Center", "Address": "", "Long": -82.51193244, "Lat": 35.5557684, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.51193244, 35.5557684 ] } }
+,
+{ "type": "Feature", "id": 211, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Roger Farmer Park", "Address": "", "Long": -82.61246168, "Lat": 35.58343374, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.61246168, 35.58343374 ] } }
+,
+{ "type": "Feature", "id": 212, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Roger Farmer Park", "Address": "", "Long": -82.61200648, "Lat": 35.58109983, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.61200648, 35.58109983 ] } }
+,
+{ "type": "Feature", "id": 213, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "West Asheville Park", "Address": "", "Long": -82.59868349, "Lat": 35.57110469, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.59868349, 35.57110469 ] } }
+,
+{ "type": "Feature", "id": 214, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Livingston Street Park", "Address": "", "Long": -82.5615055, "Lat": 35.57758306, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5615055, 35.57758306 ] } }
+,
+{ "type": "Feature", "id": 215, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Martin Luther King Park", "Address": "", "Long": -82.5444451, "Lat": 35.59660565, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.5444451, 35.59660565 ] } }
+,
+{ "type": "Feature", "id": 216, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Memorial Stadium", "Address": "", "Long": -82.55113134, "Lat": 35.58721579, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55113134, 35.58721579 ] } }
+,
+{ "type": "Feature", "id": 217, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Montford Park", "Address": "", "Long": -82.56662696, "Lat": 35.60701852, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56662696, 35.60701852 ] } }
+,
+{ "type": "Feature", "id": 218, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "North Asheville Center", "Address": "", "Long": -82.55232486, "Lat": 35.62303966, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55232486, 35.62303966 ] } }
+,
+{ "type": "Feature", "id": 219, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East Asheville Center", "Address": "", "Long": -82.50359003, "Lat": 35.58769233, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.50359003, 35.58769233 ] } }
+,
+{ "type": "Feature", "id": 220, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East Asheville Center", "Address": "", "Long": -82.50276127, "Lat": 35.58808277, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.50276127, 35.58808277 ] } }
+,
+{ "type": "Feature", "id": 221, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "West Asheville Center", "Address": "", "Long": -82.60222909, "Lat": 35.58066157, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.60222909, 35.58066157 ] } }
+,
+{ "type": "Feature", "id": 222, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Meadow Park", "Address": "", "Long": -82.54411702, "Lat": 35.57313971, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54411702, 35.57313971 ] } }
+,
+{ "type": "Feature", "id": 223, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "William Reid", "Address": "", "Long": -82.55767718, "Lat": 35.57786831, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55767718, 35.57786831 ] } }
+,
+{ "type": "Feature", "id": 224, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Ray Kisiah Park", "Address": "", "Long": -82.51302285, "Lat": 35.54371354, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.51302285, 35.54371354 ] } }
+,
+{ "type": "Feature", "id": 225, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Ray Kisiah Park", "Address": "", "Long": -82.51762668, "Lat": 35.54916791, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.51762668, 35.54916791 ] } }
+,
+{ "type": "Feature", "id": 226, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Charlie Bullman Park", "Address": "", "Long": -82.50197803, "Lat": 35.60264308, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.50197803, 35.60264308 ] } }
+,
+{ "type": "Feature", "id": 227, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Valley Springs Middle School", "Address": "", "Long": -82.54041383, "Lat": 35.48365954, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54041383, 35.48365954 ] } }
+,
+{ "type": "Feature", "id": 228, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Valley Springs Middle School", "Address": "", "Long": -82.54055854, "Lat": 35.48293404, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54055854, 35.48293404 ] } }
+,
+{ "type": "Feature", "id": 229, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Boston and Kitchen 8' from Tree", "Address": "", "Long": -82.54287211, "Lat": 35.56665238, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54287211, 35.56665238 ] } }
+,
+{ "type": "Feature", "id": 230, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Mid-block kitchen 19' from Tree", "Address": "", "Long": -82.54291186, "Lat": 35.56631197, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54291186, 35.56631197 ] } }
+,
+{ "type": "Feature", "id": 231, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Angle will include  Public Art", "Address": "", "Long": -82.54235451, "Lat": 35.56555868, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54235451, 35.56555868 ] } }
+,
+{ "type": "Feature", "id": 232, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "29 Montford Ave behind Historic Marker", "Address": "", "Long": -82.55992804, "Lat": 35.59698087, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55992804, 35.59698087 ] } }
+,
+{ "type": "Feature", "id": 233, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "233 Montford", "Address": "", "Long": -82.56475424, "Lat": 35.6026588, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56475424, 35.6026588 ] } }
+,
+{ "type": "Feature", "id": 234, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "233 Montford", "Address": "", "Long": -82.56489063, "Lat": 35.60280347, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56489063, 35.60280347 ] } }
+,
+{ "type": "Feature", "id": 235, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "East Corner of Village Plaza", "Address": "", "Long": -82.54253346, "Lat": 35.56725493, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54253346, 35.56725493 ] } }
+,
+{ "type": "Feature", "id": 236, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "West corner of Village Plaza", "Address": "", "Long": -82.54274415, "Lat": 35.56727451, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54274415, 35.56727451 ] } }
+,
+{ "type": "Feature", "id": 237, "properties": { "Big Group": "Transportation", "Sub Category": "Bike Rack", "Name": "", "Description": "Corner of Swan and Boston", "Address": "", "Long": -82.54194219, "Lat": 35.56644918, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54194219, 35.56644918 ] } }
+,
+{ "type": "Feature", "id": 238, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Buncombe County Landfill", "Description": "828-250-5462 Mon – Fri: 8am - 4:30pm Sat: 8am - 4pm", "Address": "81 Panther Branch Rd.Alexander NC 28701", "Long": -82.636047, "Lat": 35.728813, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/Buncombe-County-Landfi-2.jp" }, "geometry": { "type": "Point", "coordinates": [ -82.636047, 35.728813 ] } }
+,
+{ "type": "Feature", "id": 239, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Henderson County Landfill", "Description": "828-697-4505 Mon- Sat: 8am -4:30pm", "Address": "806 Stoney Mountain RdHendersonville NC 28791", "Long": -82.495918, "Lat": 35.354435, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.495918, 35.354435 ] } }
+,
+{ "type": "Feature", "id": 240, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Madison County Landfill", "Description": "\"828-649-2311  \t\t\t\t\tMon - Fri: 8am - 4:30pm \t\t\t\t\tSat: 8am - 12:00pm\"", "Address": "271 Craig Rudisill Rd.Marshall NC 28753", "Long": -82.715607, "Lat": 35.806953, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.715607, 35.806953 ] } }
+,
+{ "type": "Feature", "id": 241, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Macon County Landfill", "Description": "", "Address": "1448 Lakeside DriveFranklin NC", "Long": -83.373367, "Lat": 35.19838, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -83.373367, 35.19838 ] } }
+,
+{ "type": "Feature", "id": 242, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Transylvania County Landfill", "Description": "", "Address": "1767 Old Hendersonville Highway Brevard NC 28712", "Long": -82.706047, "Lat": 35.250851, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.706047, 35.250851 ] } }
+,
+{ "type": "Feature", "id": 243, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Haywood County Landfill", "Description": "", "Address": "278 Recycle Road Clyde NC 28721", "Long": -82.943314, "Lat": 35.529617, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.943314, 35.529617 ] } }
+,
+{ "type": "Feature", "id": 244, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "North Asheville Recycling Center", "Description": "Behind Asheville Pizza  Brewing", "Address": "675 Merrimon AveAsheville NC 28804", "Long": -82.553604, "Lat": 35.622131, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/NorthAsheville1 " }, "geometry": { "type": "Point", "coordinates": [ -82.553604, 35.622131 ] } }
+,
+{ "type": "Feature", "id": 245, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Marshall Recycling Center", "Description": " It is located just west of Madison High School before Walnut Creek Road on the right.Mon Tue Thurs  Fri: 7am - 6pmWeds: 7am - 1pmSat: 8am - 5pm", "Address": "Near the intersection of Hwy 25\/70 and Walnut Creek Rd.", "Long": -82.678307, "Lat": 35.814442, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.678307, 35.814442 ] } }
+,
+{ "type": "Feature", "id": 246, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Bartlett Arms Apartments", "Description": "Bin located near rear enterance.", "Address": "121 Barlett St.Asheville NC 28801", "Long": -82.56398, "Lat": 35.58123, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/Bartlett-Arms-1 " }, "geometry": { "type": "Point", "coordinates": [ -82.56398, 35.58123 ] } }
+,
+{ "type": "Feature", "id": 247, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Klondyke Housing Community", "Description": "", "Address": "500 Montford AvenueAsheville NC 28801", "Long": -82.567757, "Lat": 35.606621, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/Klondyke.jpg " }, "geometry": { "type": "Point", "coordinates": [ -82.567757, 35.606621 ] } }
+,
+{ "type": "Feature", "id": 248, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Hillcrest Apartments", "Description": "One at Carl E Johnson Center.One at the back of the development.", "Address": "100 Atkinson St.Asheville NC 28801", "Long": -82.570152, "Lat": 35.595181, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/Hillcrest-2.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.570152, 35.595181 ] } }
+,
+{ "type": "Feature", "id": 249, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Aston Towers and Garden Apartments", "Description": "", "Address": "165 South French Broad Ave.Asheville NC 28801", "Long": -82.559669, "Lat": 35.588383, "URL": " http:\/\/www.cookingoilrecycling.org\/bin-locations\/AstonTowers12.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.559669, 35.588383 ] } }
+,
+{ "type": "Feature", "id": 250, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Deaverview Apartments", "Description": "", "Address": "275 Deaverview RoadAsheville NC 28806", "Long": -82.617233, "Lat": 35.581078, "URL": "http:\/\/cookingoilrecycling.org\/bin-locations\/Deaverview1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.617233, 35.581078 ] } }
+,
+{ "type": "Feature", "id": 251, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Ledgewood Apartments", "Description": "", "Address": "15 Future Dr Asheville NC 28803", "Long": -82.518845, "Lat": 35.569351, "URL": "http:\/\/cookingoilrecycling.org\/bin-locations\/Ledgewood2.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.518845, 35.569351 ] } }
+,
+{ "type": "Feature", "id": 252, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Erskine-Walton-Livingston Apartments", "Description": "", "Address": "133 Livingston St Asheville NC 28801", "Long": -82.557205, "Lat": 35.577572, "URL": "http:\/\/cookingoilrecycling.org\/bin-locations\/Erskine1.jpg " }, "geometry": { "type": "Point", "coordinates": [ -82.557205, 35.577572 ] } }
+,
+{ "type": "Feature", "id": 253, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Lee Walker Heights", "Description": "", "Address": "Wilbar AvenueAsheville 28801", "Long": -82.554077, "Lat": 35.58477, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/leewalkerheights.jpg " }, "geometry": { "type": "Point", "coordinates": [ -82.554077, 35.58477 ] } }
+,
+{ "type": "Feature", "id": 254, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Pisgah View Apartments", "Description": "", "Address": "Granada Street Asheville NC", "Long": -82.58223, "Lat": 35.569046, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/Pisgah-View-9.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.58223, 35.569046 ] } }
+,
+{ "type": "Feature", "id": 255, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Wellington Community Estates", "Description": "", "Address": " Avalon Dr. Arden NC 28704 ", "Long": -82.522423, "Lat": 35.457706, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/Wellington2.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.522423, 35.457706 ] } }
+,
+{ "type": "Feature", "id": 256, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "West Village Market", "Description": "", "Address": "771 Haywood Rd.Asheville NC 28806", "Long": -82.594147, "Lat": 35.578613, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/Westvillage-2.jpg " }, "geometry": { "type": "Point", "coordinates": [ -82.594147, 35.578613 ] } }
+,
+{ "type": "Feature", "id": 257, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "The Pizza Shop & Dry County Brewing Co.", "Description": "The bin is located behind the building and open for community drop offs.", "Address": "585 Oak AvenueSpruce Pine NC 28777", "Long": -82.043152, "Lat": 35.939098, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.043152, 35.939098 ] } }
+,
+{ "type": "Feature", "id": 258, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Self Help Credit Union", "Description": "", "Address": "1911 Hendersonville RoadAsheville NC 28803", "Long": -82.521439, "Lat": 35.497604, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/selfhelp2.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.521439, 35.497604 ] } }
+,
+{ "type": "Feature", "id": 259, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Trout Lily Market #8206", "Description": "", "Address": "1297 Charlotte Highway Fairview NC 28730", "Long": -82.416084, "Lat": 35.522953, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/Troutlily-3.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.416084, 35.522953 ] } }
+,
+{ "type": "Feature", "id": 260, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "French Broad Food Coop", "Description": "", "Address": "90 Biltmore Ave Asheville NC 28801", "Long": -82.550636, "Lat": 35.59182, "URL": "http:\/\/cookingoilrecycling.org\/bin-locations\/frenchbroadfoodcoop3.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.550636, 35.59182 ] } }
+,
+{ "type": "Feature", "id": 261, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Curbside Management", "Description": "", "Address": "116 N. Woodfin Ave Asheville NC 28804", "Long": -82.579788, "Lat": 35.638554, "URL": "http:\/\/cookingoilrecycling.org\/bin-locations\/Curbside.jpg " }, "geometry": { "type": "Point", "coordinates": [ -82.579788, 35.638554 ] } }
+,
+{ "type": "Feature", "id": 262, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "WNC Agriculture Center", "Description": "", "Address": "1301 Fanning Bridge Rd Fletcher NC 28732 ", "Long": -82.533066, "Lat": 35.430088, "URL": "http:\/\/cookingoilrecycling.org\/bin-locations\/Ag Center1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.533066, 35.430088 ] } }
+,
+{ "type": "Feature", "id": 263, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Swannanoa Volunteer Fire Department and Rescue", "Description": "", "Address": "103 South AveSwannanoa NC 28778", "Long": -82.396538, "Lat": 35.598957, "URL": "http:\/\/cookingoilrecycling.org\/bin-locations\/SVFD.jpg " }, "geometry": { "type": "Point", "coordinates": [ -82.396538, 35.598957 ] } }
+,
+{ "type": "Feature", "id": 264, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Broad River Volunteer Fire & Rescue", "Description": "", "Address": "44 Broad River VFD Road Black Mountain NC 28711", "Long": -82.257881, "Lat": 35.510082, "URL": "http:\/\/cookingoilrecycling.org\/bin-locations\/BRVFD.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.257881, 35.510082 ] } }
+,
+{ "type": "Feature", "id": 265, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Black Mountain Natural Foods", "Description": "", "Address": "Black Mountain AvenueBlack Mountain NC ", "Long": -82.320686, "Lat": 35.614864, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/BMNF5.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.320686, 35.614864 ] } }
+,
+{ "type": "Feature", "id": 266, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Downtown Food Truck Lot", "Description": "", "Address": "South French Broad AvenueAsheville NC 28801", "Long": -82.559067, "Lat": 35.592621, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/FoodtruckLot2web.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.559067, 35.592621 ] } }
+,
+{ "type": "Feature", "id": 267, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "Asheville Pizza and Brewing", "Description": "", "Address": "675 Merrimon Avenue Asheville NC", "Long": -82.553703, "Lat": 35.622051, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/ashevillepizza1.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.553703, 35.622051 ] } }
+,
+{ "type": "Feature", "id": 268, "properties": { "Big Group": "Waste", "Sub Category": "Cooking Oil", "Name": "ABCCM", "Description": "", "Address": "21401 Tunnel RdAsheville NC 288052", "Long": -82.467346, "Lat": 35.583233, "URL": "http:\/\/www.cookingoilrecycling.org\/bin-locations\/ABCCMVRQweb.jpg" }, "geometry": { "type": "Point", "coordinates": [ -82.467346, 35.583233 ] } }
 
 ]
 }
