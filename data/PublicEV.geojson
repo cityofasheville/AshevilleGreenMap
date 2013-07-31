@@ -1,4 +1,4 @@
-var publicEV = {
+var EVdata = {
 "type": "FeatureCollection",
  
 "features": [

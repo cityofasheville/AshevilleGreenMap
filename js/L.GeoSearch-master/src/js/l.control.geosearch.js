@@ -28,7 +28,7 @@ L.Control.GeoSearch = L.Control.extend({
             'country': options.country || '',
             'provider': options.provider,
             
-            'searchLabel': options.searchLabel || 'search for address...',
+            'searchLabel': options.searchLabel || 'search your address here',
             'notFoundMessage' : options.notFoundMessage || 'Sorry, that address could not be found.',
             'messageHideDelay': options.messageHideDelay || 3000,
             'zoomLevel': options.zoomLevel || 18
