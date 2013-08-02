@@ -172,17 +172,24 @@ atr.addAttribution('&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> 
 
             
 //base map from cloudmade   
-var cloudmade = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-	  zIndex: 2
-	}).addTo(map);
+// var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+// 	  zIndex: 2
+// 	}).addTo(map);
+
+var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+  key: 'BC9A493B41014CAABB98F0471D759707',
+  styleId: 22677,
+  zIndex: 2
+}).addTo(map);
 
 var wmssidewalks =  L.tileLayer.wms("http://opendataserver.ashevillenc.gov:80/geoserver/wms", {
-         layers: 'coa_sidewalks',
-         format: 'image/png',
-         maxZoom: 25,
-         transparent: true,
-         zIndex: 4
-        }).addTo(map);
+  layers: 'coa_sidewalks',
+  format: 'image/png',
+  maxZoom: 25,
+  transparent: true,
+  zIndex: 4
+}).addTo(map);
 
 		
 //point to layer for Geojson layers           
@@ -431,11 +438,11 @@ function zoomToFeature(e) {
 //Set up for all options uses in geojson setup
 function onEachFeature(feature, layer) {
   layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<br /><img style="width:200px; height:250px; border:0px;" src="' + feature.properties.URL + '"/>');
-      layer.on({
+      // layer.on({
         //mouseover: locationsSelection,
         //mouseout: resetHighlight,
-       click: zoomToFeature
-      });
+      //  click: zoomToFeature
+      // });
     }
 
 
