@@ -35,7 +35,7 @@
                                    <link rel="shortcut icon" href="../AshevilleGreenMap/ico/favicon.png">
   </head>
 
-  <body style="background: url('../AshevilleGreenMap/img/grey.png');">
+  <body style="background: url('../AshevilleGreenMap/img/smallGrey.png'); background-size: cover;">
 
 
 <!-- NAVBAR
@@ -54,25 +54,12 @@
         </button>
             <a class="brand" href="#"><img style="width:auto; height:auto; border:0px;" src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" /></a>
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-           
-            
-          
             <div class="nav-collapse collapse">
               <ul class="nav pull-right">
                   
               <li class="pos-button"><strong class="text-success">Your Sustainable Backyard:</strong>
                 <p><select class="text-info" id="zoom" onchange="zoomToRA(this.options[this.selectedIndex].text, this.value)"></select></p>
               </li>
-            
-
-                <!--<li class="pos-button"><div class='btn-group'>
-                <button class="btn btn-success" id="Overview" value="0" onclick="bswitch(this.value);">Overview</button>
-                <button class="btn btn-success" id="Transportation" value="1" onclick="bswitch(this.value);">Transportation</button>
-                <button class="btn btn-success" id="Energy" value="2" onclick="bswitch(this.value);">Energy</button>
-                <button class="btn btn-success" value="3" onclick="bswitch(this.value);">Recycling</button>
-                <button class="btn btn-success" value="4" onclick="bswitch(this.value);">Water</button>
-                <button class="btn btn-success" id="Food" value="5" onclick="bswitch(this.value);">Food</button>
-              </div></li>-->
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
                
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Info <b class="caret"></b></a>
@@ -88,7 +75,7 @@
 					          <li><a href="https://github.com/cityofasheville/AshevilleGreenMap.git">Fork us on Github</a></li>
                   </ul>
                 </li>
-            
+                </ul>
             </div><!--/.nav-collapse -->
       </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
@@ -97,41 +84,15 @@
         <div id="map"></div>
       </div>
       <div class="span2">
-       
-        <div id="intro">
-          <!--<img src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Vertical_logos/HowLow_298-1_vert_white.jpg" />-->
-    <ul class="info unstyled">
-      <li><h3>This is were the intro goes. </h3></li>
-      <li><img src="http://farm8.staticflickr.com/7368/9401788588_76ef4b276e_n.jpg" /></li>
-      <li>BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah BLah</li>
-    <!--<li class="nav-header"><p class="text-success">Transportation</p></li>
-    <li><label class="checkbox"><input type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this.value)"><p class="text-info">Biodiesel</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="Greenway" value="Greenway" onclick="check(this.value)"><p class="text-info">Greenway</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="Bike Rack" value="Bike Rack" onclick="check(this.value)"><p class="text-info">Bike Rack</p></label></li>
-    <li class="divider"></li>
-    <li class="nav-header"><p class="text-success">Energy</p></li>
-    <li><label class="checkbox"><input type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this.value)"><p class="text-info">Solar Thermal</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this.value)"><p class="text-info">Energy Feature</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this.value)"><p class="text-info">LEED Certification</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this.value)"><p class="text-info">EV Charging Station</p></label></li>
-    <li class="divider"></li>
-    <li class="nav-header"><p class="text-success">Waste</p></li>
-    <li><label class="checkbox"><input type="checkbox" id="Recycle" value="Recycle" onclick="check(this.value)"><p class="text-info">Recycle</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this.value)"><p class="text-info">Cooking Oil Drop-Off</p></label></li>
-    <li class="divider"></li>
-    <li class="nav-header"><p class="text-success">Water</p></li>
-    <li><label class="checkbox"><input type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this.value)"><p class="text-info">Stormwater</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this.value)">Feature</p></label></li>
-    <li class="divider"></li>
-    <li class="nav-header"><p class="text-success">Food</p></li>
-    <li><label class="checkbox"><input type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this.value)"><p class="text-info">Green Certified</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this.value)"><p class="text-info">Community Garden</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this.value)"><p class="text-info">Manna Agencies</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="TM" value="Tailgate Market" onclick="check(this.value)"><p class="text-info">Tailgate Market</p></label></li>
-    <li><label class="checkbox"><input type="checkbox" id="Grocery" value="Grocery" onclick="check(this.value)"><p class="text-info">Grocery</p></label></li>-->
-  </ul>
-  </ul>
-</div>
+       <div id="intro">
+         <ul class="info unstyled">
+          <li><h5 class="text-success">Sustainability Map</h5></li>
+          <li><p class="text-info">Explore some of what Asheville is doing to maintain a sustainable community</p></li>
+          
+        </ul>
+       </div>
+       <a class="twitter-timeline" href="https://twitter.com/VisitAsheville/favorites" data-widget-id="363304453849354241">Favorite Tweets by @VisitAsheville</a><br />
+  <p><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
 
         </div>
       </div>
@@ -214,6 +175,15 @@ atr.addAttribution('&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> 
 var cloudmade = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	  zIndex: 2
 	}).addTo(map);
+
+var wmssidewalks =  L.tileLayer.wms("http://opendataserver.ashevillenc.gov:80/geoserver/wms", {
+         layers: 'coa_sidewalks',
+         format: 'image/png',
+         maxZoom: 25,
+         transparent: true,
+         zIndex: 4
+        }).addTo(map);
+
 		
 //point to layer for Geojson layers           
 function locationPoints (feature, latlng) {
@@ -486,7 +456,7 @@ function onEachFeature(feature, layer) {
 
 //GeoJson set Up
 var parks = L.geoJson(parks, {style:parkstyle, onEachFeature:parkPopUp});
-var bikes = L.geoJson(bikedata, {style:bikestyle, onEachFeature:bikeroutePopUp});
+var bikes = L.geoJson(bikedata, {style:bikestyle, onEachFeature:bikeroutePopUp}).addTo(map);
 //var greenway = L.geoJson(greenwaydata, {style:greenwayStyle, filter:greenwayFilter});
 var sidewalk = L.geoJson(sidewalkdata, {style:sidewalkStyle, filter:sidewalkFilter, onEachFeature: sidewalkPopUp});
 var RA = L.geoJson(ReportingData, {style:reportstyle}).addTo(map);
@@ -504,7 +474,7 @@ var tailgate_market = L.geoJson(locationsdata, {pointToLayer: locationPoints, on
 var manna_agencies = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:MannaFilter}).addTo(map);
 //var grocery = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:GroceryFilter}).addTo(map);
 var ev_charging_station = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:EVFilter}).addTo(map);
-var bike_rack = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:BikeRackFilter}).addTo(map);
+//var bike_rack = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:BikeRackFilter}).addTo(map);
 var cooking_oil = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Waste_Style, filter:CookingOilFilter}).addTo(map);
 var cng = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:CNGFilter}).addTo(map);
 var compost = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Waste_Style, filter:CompostFilter}).addTo(map);
@@ -527,7 +497,7 @@ function checkSuccess(id, feature, style){
   }
 }
   
-    
+  
 //Switch to activate layer selection
 function check(value){
   switch (value) {
@@ -543,7 +513,7 @@ function check(value){
       checkSuccess('Greenway', greenway, Transportation_Style);
       break;
 
-    case "Bike Rack":
+    case "Bike Rack":  
       checkSuccess('Bike Rack', bike_rack, Transportation_Style);
       break;
 
@@ -617,7 +587,7 @@ function check(value){
 var legendOverview = L.control({position: 'topright'});
   legendOverview.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<i style="background: #ff9400"></i>' + '     ' + 'Bike Routes<br /><i style="background: #41db00"></i>' + '     ' + 'Greenways<br /><i style="background: #008F3E "></i>' + '     ' + 'Parks<br /><i style="background: #DD502A; outline-color: #DD502A; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #0099CC; outline-color: #0099CC; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #D79D21; outline-color: #D79D21; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #63B355; outline-color: #63B355; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #EAC13A; outline-color: #EAC13A; border-radius:50px "></i>' + '     ' + 'Energy<br />';
+      div.innerHTML = '<i style="background: #DD502A; outline-color: #DD502A; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #0099CC; outline-color: #0099CC; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #D79D21; outline-color: #D79D21; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #63B355; outline-color: #63B355; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #EAC13A; outline-color: #EAC13A; border-radius:50px "></i>' + '     ' + 'Energy<br /><i style="color:#ff9400; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Bike Routes<br /><i style="color:#41db00; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Greenways<br /><i style="color:#6997D3; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Sidewalks<br /><i style="color:#92ed6b; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Park Path<br /><i style="color:#5FD2B5; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Facility Walkway<br />';
     return div;
   }
 
