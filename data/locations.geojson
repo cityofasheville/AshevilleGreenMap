@@ -66,7 +66,7 @@ var locationsdata = {
 ,
 { "type": "Feature", "id": 32, "properties": { "Big Group": "Food", "Sub Category": "Community Garden", "Name": "Pisgah View", "Description": "A community garden using organic practices", "Address": "1 Granada Street Asheville NC", "Long": -82.582181, "Lat": 35.569197, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.582181, 35.569197 ] } }
 ,
-{ "type": "Feature", "id": 33, "properties": { "Big Group": "Transportation", "Sub Category": "CNG ", "Name": "Asheville CNG Station", "Description": "Compressed natural gas fueling station", "Address": "", "Long": -82.550903, "Lat": 35.588161, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.550903, 35.588161 ] } }
+{ "type": "Feature", "id": 33, "properties": { "Big Group": "Transportation", "Sub Category": "CNG", "Name": "Asheville CNG Station", "Description": "Compressed natural gas fueling station", "Address": "", "Long": -82.550903, "Lat": 35.588161, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.550903, 35.588161 ] } }
 ,
 { "type": "Feature", "id": 34, "properties": { "Big Group": "Transportation", "Sub Category": "Biodiesel", "Name": "Eblen Short Stop #2 (217 Amboy Rd)", "Description": "Biodeisel fueling station. Blends: B20 on road", "Address": "", "Long": -82.580025, "Lat": 35.578103, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.580025, 35.578103 ] } }
 ,
