@@ -80,14 +80,14 @@
       </div><!-- /.navbar-inner -->
     </div><!-- /.navbar -->
      <div class="row-fluid">
-      <div class="span10">   
+      <div class="span9">   
         <div id="map"></div>
       </div>
-      <div class="span2">
+      <div class="span3">
        <div id="intro">
          <ul class="info unstyled">
           <li><h5 class="text-success">Sustainability Map</h5></li>
-          <li><p class="text-info">Explore some of what Asheville is doing to maintain a sustainable community</p></li>
+          <li><p class="text-info">The City of Asheville is a proud leader in civic sustainability in North Carolina.  Use this interactive map to learn about sustainable resources in your own backyard.  Chose your neighborhood or search your address, and discover sustainability near you!</p></li>
           
         </ul>
        </div>
@@ -169,7 +169,7 @@ atr = new L.Control.Attribution({
   }).addTo(map);
 
 atr.addAttribution('&copy; <a href="http://www.ashevillenc.gov/Departments/Sustainability.aspx">City of Asheville</a>');
-atr.addAttribution('&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors');
+atr.addAttribution('Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade');
 
 
             
@@ -179,7 +179,6 @@ atr.addAttribution('&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> 
 // 	}).addTo(map);
 
 var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
-  attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
   key: 'BC9A493B41014CAABB98F0471D759707',
   styleId: 22677,
   zIndex: 2
@@ -610,7 +609,7 @@ var legendOverview = L.control({position: 'topright'});
 
 // <li><label class="checkbox"><input type="checkbox" id="Bike Rack" value="Bike Rack" onclick="check(this.value)"><p class="text-info">Bike Rack</p></label></li>
     return div;
-    
+
   }
 
   checkbox.addTo(map);
