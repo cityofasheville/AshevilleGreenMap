@@ -12,20 +12,21 @@
     <link href="../AshevilleGreenMap/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="SHORTCUT ICON" href="http://ashevillenc.gov/Portals/0/favicon.ico" />
     <link type="text/css" rel="stylesheet" href="../AshevilleGreenMap/css/stylesheet.css"/>
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.css" />
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+ <!--[if lte IE 8]>
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+ <![endif]-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" /> 
     <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.css" />
     <link rel="stylesheet" href="../AshevilleGreenMap/js/L.GeoSearch-master/src/css/l.geosearch.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="../dist/MarkerCluster.Default.ie.css" /><![endif]-->
-    <!--<script src="../new/leafletajax/dist/leaflet.ajax.js"></script>-->
+   
 
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../TESTSITE/js/html5shiv.js"></script>
-    <![endif]-->
+   
+   
+  
+    
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../AshevilleGreenMap/ico/apple-touch-icon-144-precomposed.png">
@@ -91,10 +92,8 @@
           
         </ul>
        </div>
-      
-
-<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/CityofAsheville"  data-widget-id="364394638934671360">Tweets by @CityofAsheville</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/CityofAsheville"  data-widget-id="364394638934671360">Tweets by @CityofAsheville</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
         </div>
       </div>
@@ -466,7 +465,7 @@ function onEachFeature(feature, layer) {
 var parks = L.geoJson(parks, {style:parkstyle, onEachFeature:parkPopUp});
 var bikes = L.geoJson(bikedata, {style:bikestyle, onEachFeature:bikeroutePopUp}).addTo(map);
 //var greenway = L.geoJson(greenwaydata, {style:greenwayStyle, filter:greenwayFilter});
-var sidewalk = L.geoJson(sidewalkdata, {style:sidewalkStyle, filter:sidewalkFilter, onEachFeature: sidewalkPopUp});
+// var sidewalk = L.geoJson(sidewalkdata, {style:sidewalkStyle, filter:sidewalkFilter, onEachFeature: sidewalkPopUp});
 var RA = L.geoJson(ReportingData, {style:reportstyle}).addTo(map);
 var solar_thermal = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:SolarFilter}).addTo(map);
 var energy_feature = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:EnergyFilter}).addTo(map);
