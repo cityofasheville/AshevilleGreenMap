@@ -433,6 +433,7 @@ function resetHighlight(e) {
 //Zoom to feature setup
 function zoomToFeature(e) {
       map.fitBounds(e.target.getBounds());
+      map.zoomOut(1);
     }
 
 //Set up for all options uses in geojson setup
@@ -633,9 +634,11 @@ for (each in RA._layers) {
     function zoomToRA (RA, bbox) {
       if (RA === "Select") {
         map.fitBounds(RA.getBounds());
+        map.zoomOut(1);
       }
       else {
         map.fitBounds([[parseFloat(bbox.split(",")[0]), parseFloat(bbox.split(",")[1])],[parseFloat(bbox.split(",")[2]), parseFloat(bbox.split(",")[3])]]);
+        map.zoomOut(1);
       };
     }
 
