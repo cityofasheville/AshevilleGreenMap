@@ -410,8 +410,6 @@ function sidewalkStyle(feature) {
 
 
 
-
-
 //Event Handleer set ups
 //Color toggle setup
 function locationsSelection(e){
@@ -439,27 +437,8 @@ function zoomToFeature(e) {
 //Set up for all options uses in geojson setup
 function onEachFeature(feature, layer) {
   layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<br /><img style="width:200px; height:250px; border:0px;" src="' + feature.properties.URL + '"/>');
-      // layer.on({
-        //mouseover: locationsSelection,
-        //mouseout: resetHighlight,
-      //  click: zoomToFeature
-      // });
     }
 
-
-//Ajax Call for geojson data
-// $.ajax({
-//     type: "POST",
-//     url: "../AshevilleGreenMap/data/locations.geojson",
-//     dataType: 'json',
-//     success: function (response) {
-//         locations = L.geoJson(response, {
-//           pointToLayer: locationPoints,
-//           style: locationsStyle,
-//           onEachFeature:onEachFeature
-//         }).addTo(map);
-//     }
-// });
 
 
 //GeoJson set Up
@@ -505,89 +484,75 @@ function checkSuccess(id, feature, style){
   }
 }
   
-  
-//Switch to activate layer selection
+//toggle layer 
 function check(value){
-  switch (value) {
-     case "Biodiesel":
-      checkSuccess('Biodiesel', biodiesel, Transportation_Style);
-      break;
-
-    case "CNG":
-      checkSuccess('CNG', cng, Transportation_Style);
-      break;
-
-    case "Greenway":
-      checkSuccess('Greenway', greenway, Transportation_Style);
-      break;
-
-    case "Bike Rack":  
-      checkSuccess('Bike Rack', bike_rack, Transportation_Style);
-      break;
-
-    case "Solar Thermal":
-      checkSuccess('Solar Thermal', solar_thermal, Energy_Style);
-      break;
-
-    case "Energy Feature":
-      checkSuccess('Energy Feature', energy_feature, Energy_Style);
-      break;
-
-    case "LEED Certification":
-      checkSuccess('LEED Certification', leed_certification, Energy_Style);
-      break;
-
-    case "EV Charging Station":
-      checkSuccess('EV Charging Station', ev_charging_station, Energy_Style);
-      break;
-
-     case "Recycle":
-      checkSuccess('Recycle', recycle, Waste_Style);
-      break;
-
-    case "Cooking Oil Drop-Off":
-      checkSuccess('Cooking Oil Drop-Off', cooking_oil, Waste_Style);
-      break;
-
-    case "Compost":
-      checkSuccess('Compost', compost, Waste_Style);
-      break;
-
-    case "Stormwater":
-      checkSuccess('Stormwater', stormwater, Water_Style);
-      break;
-
-    case "Feature":
-      checkSuccess('Feature', feature, Water_Style);
-      break;
-
-    case "Green Certified":
-      checkSuccess('Green Certified', green_certified_restaurant, Food_Style);
-      break;
-
-    case "Community Garden":
-      checkSuccess('Community Garden', communtiy_garden, Food_Style);
-      break;
-
-    case "Manna Agencies":
-      checkSuccess('Manna Agencies', manna_agencies, Food_Style);
-      break;
-
-    case "Tailgate Market":
-      checkSuccess('TM', tailgate_market, Food_Style);
-      break;
-
-    // case "Grocery":
-    //   checkSuccess('Grocery', grocery, Food_Style);
-    //   break;
-
-  default:
-      break;
+  val = value.value
+  geoJsonLayer = getGeojson(val);
+  if(value.checked){
+    geoJsonLayer.addTo(map);
+  }else{
+    map.removeLayer(geoJsonLayer);
   }
 }
 
 
-
+function getGeojson(value){
+    switch (value) {
+     case "Biodiesel":
+       return  biodiesel;
+      break;
+    case "CNG":
+      return cng;
+      break;
+    case "Greenway":
+      return greenway;
+      break;
+    case "Bike Rack":  
+      return bike_rack;
+      break;
+    case "Solar Thermal":
+      return  solar_thermal;
+      break;
+    case "Energy Feature":
+      return energy_feature;
+      break;
+    case "LEED Certification":
+      return  leed_certification;
+      break;
+    case "EV Charging Station":
+      return ev_charging_station
+      break;
+     case "Recycle":
+      return  recycle;
+      break;
+    case "Cooking Oil Drop-Off":
+      return  cooking_oil;
+      break;
+    case "Compost":
+      return compost;
+      break;
+    case "Stormwater":
+      return stormwater;
+      break;
+    case "Feature":
+      return  feature;
+      break;
+    case "Green Certified":
+      return green_certified_restaurant;
+      break;
+    case "Community Garden":
+      return communtiy_garden;
+      break;
+    case "Manna Agencies":
+      return manna_agencies;
+      break;
+    case "Tailgate Market":
+      return tailgate_market;
+      break;
+  default:
+      break;
+  }
+}
 
 
 
@@ -605,9 +570,8 @@ var legendOverview = L.control({position: 'topright'});
     var checkbox = L.control({position: 'topleft'});
   checkbox.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<ul class="info unstyled"><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this.value)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input type="checkbox" id="CNG" value="CNG" onclick="check(this.value)"><p class="text-info">CNG</p></label></li><li><label class="checkbox"><input type="checkbox" id="Greenway" value="Greenway" onclick="check(this.value)"><p class="text-info">Greenway</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this.value)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this.value)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this.value)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this.value)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input type="checkbox" id="Recycle" value="Recycle" onclick="check(this.value)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this.value)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input type="checkbox" id="Compost" value="Compost" onclick="check(this.value)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this.value)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this.value)">Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this.value)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this.value)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this.value)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input type="checkbox" id="TM" value="Tailgate Market" onclick="check(this.value)"><p class="text-info">Tailgate Market</p></label></li></ul>';
+      div.innerHTML = '<ul class="info unstyled"><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this)">Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul>';
 
-// <li><label class="checkbox"><input type="checkbox" id="Bike Rack" value="Bike Rack" onclick="check(this.value)"><p class="text-info">Bike Rack</p></label></li>
     return div;
 
   }
