@@ -111,13 +111,11 @@
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/leaflet.markercluster-src.js"></script>
 <script src="../AshevilleGreenMap/js/leaflet-hash.js"></script>
-<!--<script src="../AshevilleGreenMap/js/barchart.js"></script>-->
+
 <script src="../AshevilleGreenMap/js/azgs-leaflet-master/js/azgs-leaflet/TileLayer.ESRI.js"></script>
 <script src="../AshevilleGreenMap/data/parks.js"></script>
 <script src="../AshevilleGreenMap/data/RA.geojson"></script>
-<script src="../AshevilleGreenMap/data/greenwaydata.js"></script>
-<script src="../AshevilleGreenMap/data/sidewalkdata.geojson"></script>
-<script src="../AshevilleGreenMap/data/bikedata.js"></script>
+
 <script src="../AshevilleGreenMap/data/locations.geojson"></script>
 <script src="../AshevilleGreenMap/js/jquery.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-transition.js"></script>
@@ -138,7 +136,6 @@
 <script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.control.geosearch.js"></script>
 <script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.geosearch.provider.openstreetmap.js"></script>
 <script src="../AshevilleGreenMap/js/bouncemarker.js"></script>
-<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>	
 <script type="text/javascript">
  
@@ -172,10 +169,6 @@ atr.addAttribution('Map data &copy; 2011 OpenStreetMap contributors, Imagery &co
 
 
             
-//base map from cloudmade   
-// var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-// 	  zIndex: 2
-// 	}).addTo(map);
 
 var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{z}/{x}/{y}.png', {
   key: 'BC9A493B41014CAABB98F0471D759707',
@@ -183,8 +176,36 @@ var cloudmade = L.tileLayer('http://{s}.tile.cloudmade.com/{key}/{styleId}/256/{
   zIndex: 2
 }).addTo(map);
 
+
+
 var wmssidewalks =  L.tileLayer.wms("http://opendataserver.ashevillenc.gov:80/geoserver/wms", {
-  layers: 'coa_sidewalks',
+  layers: 'coa_sidewalkonly_view',
+  format: 'image/png',
+  maxZoom: 25,
+  transparent: true,
+  zIndex: 4
+}).addTo(map);
+
+
+var wmsgreenways =  L.tileLayer.wms("http://opendataserver.ashevillenc.gov:80/geoserver/wms", {
+  layers: 'coa_greenways_simple_view',
+  format: 'image/png',
+  maxZoom: 25,
+  transparent: true,
+  zIndex: 4
+}).addTo(map);
+
+var wmsbikes =  L.tileLayer.wms("http://opendataserver.ashevillenc.gov:80/geoserver/wms", {
+  layers: 'coa_bicycle_routes_simple',
+  format: 'image/png',
+  maxZoom: 25,
+  transparent: true,
+  zIndex: 4
+}).addTo(map);
+
+
+var wmsart =  L.tileLayer.wms("http://opendataserver.ashevillenc.gov:80/geoserver/wms", {
+  layers: 'coa_transit_bus_routes_simple',
   format: 'image/png',
   maxZoom: 25,
   transparent: true,
@@ -218,18 +239,8 @@ var OilMarker = L.AwesomeMarkers.icon({
 });
 
 //popups for GeoJson layers   
-function sidewalkPopUp(feature, layer) {
-  layer.bindPopup('<h4>Sidewalk</h4><strong>Segment Type: </strong>' + feature.properties.SEGMENTTYP );
-}
-
 function parkPopUp(feature, layer) {
   layer.bindPopup('<h4>Park</h4><strong>Park: </strong>' + feature.properties.parkname + '<br />' + '<strong>Acres: </strong>' + feature.properties.acres);
-}
-
-
-
-function bikeroutePopUp(feature, layer) {
-  layer.bindPopup('<h4>Bike Infrastructure</h4><strong>Type: </stong>' + feature.properties.fac_rec + '<br />' + '<strong>Safety: </strong>' + feature.properties.suitability);
 }
 
 
@@ -241,18 +252,6 @@ function LocationPopUp(feature, layer){
 //Filters for GeoJson Layers
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-function greenwayFilter(feature, layer){
-  if(feature.properties.segmenttype === "GREENWAY"){
-    return feature.properties.segmenttype;
-  }
-}   
-
-function sidewalkFilter(feature, layer){
-  if(feature.properties.SEGMENTTYP !== "GREENWAY" && feature.properties.SEGMENTTYP !== "PROPOSED GREENWAY" && feature.properties.SEGMENTTYP !== "PROPOSED 2005 PED PLAN" && feature.properties.SEGMENTTYP !== "NEEDED LINKAGE" ){
-    return feature.properties.SEGMENTTYP;
-  }
-}
 
 function BikeRackFilter(feature, layer){
   if(feature.properties["Sub Category"] === "Bike Rack"){
@@ -296,12 +295,6 @@ function BiodieselFilter(feature, layer){
   }
 }
 
-function Greenway1Filter(feature, layer){
-  if(feature.properties["Sub Category"] === "Greenway"){
-    return feature.properties["Sub Category"];
-  }
-}
-
 function RecycleFilter(feature, layer){
   if(feature.properties["Sub Category"] === "Recycle"){
     return feature.properties["Sub Category"];
@@ -332,11 +325,6 @@ function MannaFilter(feature, layer){
   }
 }
 
-// function GroceryFilter(feature, layer){
-//   if(feature.properties["Sub Category"] === "Grocery"){
-//     return feature.properties["Sub Category"];
-//   }
-// }
 
 function EVFilter(feature, layer){
   if(feature.properties["Sub Category"] === "EV Charging Station"){
@@ -375,39 +363,12 @@ var reportstyle = {
   "opacity": 1
 }
 
-var bikestyle = {
-  "color": "#ff9400",
-  "weight": 3,
-  "opacity": 0.65
-  };
-
 var Transportation_Style = {fillColor: '#D79D21', color: "#D79D21", weight: 1, fillOpacity: 1};
 var Food_Style = {fillColor: '#DD502A', color: '#DD502A', weight: 1, fillOpacity: 1 };
 var Water_Style = {fillColor: '#0099CC', color: "#0099CC", weight: 1, fillOpacity: 1};
 var Waste_Style = {fillColor: '#63B355', color: "#63B355", weight: 1, fillOpacity: 1};
 var Energy_Style = {fillColor: '#EAC13A', color: "#EAC13A", weight: 1, fillOpacity: 1};
  
-function greenwayStyle(feature) {
-  switch (feature.properties.segmenttype) {
-    case 'GREENWAY': return {color: "#41db00","weight": 2,"opacity": 0.65};
-    case 'PROPOSED GREENWAY': return {color: "#92ed6b","weight": 2,"opacity": 0.65,dashArray: '3'};
-    }
-}
-
-function sidewalkStyle(feature) {
-  switch (feature.properties.SEGMENTTYP) {
-    case 'SIDEWALK': return {color: "#6997D3","weight": 2,"opacity": 0.65};
-    case 'PARK PATH': return {color: "#92ed6b","weight": 2,"opacity": 0.65,dashArray: '3'};
-    case 'CROSSWALK': return {color: "#6997D3","weight": 2,"opacity": 0.65,dashArray: '3'};
-    case 'CONNECTOR CROSSWALK': return {color: "#6997D3","weight": 2,"opacity": 0.65,dashArray: '3'};
-    case 'FACILITY WALKWAY': return {color: "#5FD2B5","weight": 2,"opacity": 0.65,dashArray: '3'};
-    case 'PED BRIDGE': return {color: "#6997D3","weight": 2,"opacity": 0.65,dashArray: '3'};
-    case 'CONNECTOR DRIVEWAY': return {color: "#6997D3","weight": 2,"opacity": 0.65,dashArray: '3'};
-    case 'CONNECTOR OPEN PARKING': return {color: "#6997D3","weight": 2,"opacity": 0.65,dashArray: '3'};
-    case 'CONNECTOR SIDEWALK': return {color: "#6997D3","weight": 2,"opacity": 0.65,dashArray: '3'};
-    }
-}
-
 
 
 //Event Handleer set ups
@@ -442,10 +403,6 @@ function onEachFeature(feature, layer) {
 
 
 //GeoJson set Up
-var parks = L.geoJson(parks, {style:parkstyle, onEachFeature:parkPopUp});
-var bikes = L.geoJson(bikedata, {style:bikestyle, onEachFeature:bikeroutePopUp}).addTo(map);
-//var greenway = L.geoJson(greenwaydata, {style:greenwayStyle, filter:greenwayFilter});
-// var sidewalk = L.geoJson(sidewalkdata, {style:sidewalkStyle, filter:sidewalkFilter, onEachFeature: sidewalkPopUp});
 var RA = L.geoJson(ReportingData, {style:reportstyle}).addTo(map);
 var solar_thermal = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:SolarFilter}).addTo(map);
 var energy_feature = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:EnergyFilter}).addTo(map);
@@ -453,15 +410,12 @@ var leed_certification = L.geoJson(locationsdata, {pointToLayer: locationPoints,
 var green_certified_restaurant = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:RestaurantFilter}).addTo(map);
 var communtiy_garden = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:GardenFilter}).addTo(map);
 var biodiesel = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:BiodieselFilter}).addTo(map);
-var greenway = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:Greenway1Filter}).addTo(map);
 var recycle = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Waste_Style, filter:RecycleFilter}).addTo(map);
 var stormwater = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Water_Style, filter:StormwaterFilter}).addTo(map);
 var feature = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Water_Style, filter:FeatureFilter}).addTo(map);
 var tailgate_market = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:TailgateFilter}).addTo(map);
 var manna_agencies = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:MannaFilter}).addTo(map);
-//var grocery = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:GroceryFilter}).addTo(map);
 var ev_charging_station = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:EVFilter}).addTo(map);
-//var bike_rack = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:BikeRackFilter}).addTo(map);
 var cooking_oil = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Waste_Style, filter:CookingOilFilter}).addTo(map);
 var cng = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:CNGFilter}).addTo(map);
 var compost = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Waste_Style, filter:CompostFilter}).addTo(map);
@@ -501,11 +455,20 @@ function getGeojson(value){
      case "Biodiesel":
        return  biodiesel;
       break;
+     case "ART":
+       return  wmsart;
+      break;      
     case "CNG":
       return cng;
       break;
+    case "Bikes":
+      return wmsbikes;
+      break;
+    case "Sidewalks":
+      return wmssidewalks;
+      break;      
     case "Greenway":
-      return greenway;
+      return wmsgreenways;
       break;
     case "Bike Rack":  
       return bike_rack;
@@ -557,20 +520,21 @@ function getGeojson(value){
 
 
 //Legends
-var legendOverview = L.control({position: 'topright'});
-  legendOverview.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<i style="background: #DD502A; outline-color: #DD502A; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #0099CC; outline-color: #0099CC; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #D79D21; outline-color: #D79D21; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #63B355; outline-color: #63B355; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #EAC13A; outline-color: #EAC13A; border-radius:50px "></i>' + '     ' + 'Energy<br /><i style="color:#ff9400; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Bike Routes<br /><i style="color:#41db00; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Greenways<br /><i style="color:#6997D3; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Sidewalks<br /><i style="color:#92ed6b; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Park Path<br /><i style="color:#5FD2B5; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Facility Walkway<br />';
-    return div;
-  }
+// var legendOverview = L.control({position: 'topright'});
+//   legendOverview.onAdd = function (map) {
+//     var div = L.DomUtil.create('div', 'info legend');
+//       div.innerHTML = '<i style="background: #DD502A; outline-color: #DD502A; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #0099CC; outline-color: #0099CC; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #D79D21; outline-color: #D79D21; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #63B355; outline-color: #63B355; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #EAC13A; outline-color: #EAC13A; border-radius:50px "></i>' + '     ' + 'Energy<br /><i style="color:#ff9400; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Bike Routes<br /><i style="color:#41db00; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Greenways<br /><i style="color:#6997D3; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Sidewalks<br /><i style="color:#92ed6b; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Park Path<br /><i style="color:#5FD2B5; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Facility Walkway<br />';
+//     return div;
+//   }
 
-  legendOverview.addTo(map);
+//   legendOverview.addTo(map);
 
 
     var checkbox = L.control({position: 'topleft'});
   checkbox.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<ul class="info unstyled"><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this)">Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul>';
+      div.innerHTML = '<ul class="info unstyled"><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="ART" value="ART" onclick="check(this)"><p class="text-info">Transit(ART) Routes</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="Sidewalks" value="Sidewalks" onclick="check(this)"><p class="text-info">Sidewalks</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="Bikes" value="Bikes" onclick="check(this)"><p class="text-info">Bikes</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this)">Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul>';
+
 
     return div;
 
