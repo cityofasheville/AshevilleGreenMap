@@ -17,16 +17,11 @@
      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
  <![endif]-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" /> 
-    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
+    <!--<link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.css" />-->
     <link rel="stylesheet" href="../AshevilleGreenMap/js/L.GeoSearch-master/src/css/l.geosearch.css" />
    
-
-   
-   
-  
-    
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../AshevilleGreenMap/ico/apple-touch-icon-144-precomposed.png">
@@ -108,14 +103,8 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/leaflet.markercluster-src.js"></script>
 <script src="../AshevilleGreenMap/js/leaflet-hash.js"></script>
-
-<script src="../AshevilleGreenMap/js/azgs-leaflet-master/js/azgs-leaflet/TileLayer.ESRI.js"></script>
-<script src="../AshevilleGreenMap/data/parks.js"></script>
 <script src="../AshevilleGreenMap/data/RA.geojson"></script>
-
 <script src="../AshevilleGreenMap/data/locations.geojson"></script>
 <script src="../AshevilleGreenMap/js/jquery.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-transition.js"></script>
@@ -130,9 +119,6 @@
 <script src="../AshevilleGreenMap/js/bootstrap-collapse.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-carousel.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-typeahead.js"></script>
-<script src="../AshevilleGreenMap/js/jquery.dataTables.js"></script>
-<script src="../AshevilleGreenMap/js/datatable.bootstrap.js"></script>
-<script src="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.js"></script>
 <script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.control.geosearch.js"></script>
 <script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.geosearch.provider.openstreetmap.js"></script>
 <script src="../AshevilleGreenMap/js/bouncemarker.js"></script>
@@ -147,8 +133,7 @@ var map = L.map('map', {
   attributionControl: false
 });
 
-// var zoom = new L.control.zoom();
-//           zoom.setPosition('topright').addTo(map);
+
 //Adds hash to url          
 var hash = new L.Hash(map);
 
@@ -226,23 +211,21 @@ function locationPoints (feature, latlng) {
 
 
 function cookingoilpoint (feature, latlng) {
-  return L.marker(latlng, {
-    icon: OilMarker
+   return L.circleMarker(latlng, {
+    fillColor: '#63B355',
+    radius: 4,
+    color: '#63B355',
+    weight: 1,
+    fillOpacity: 1
   });
 }
 
-//Set New Icon
-var OilMarker = L.AwesomeMarkers.icon({
-  icon: 'icon-tint', 
-  color: 'green',
-  iconColor: 'white'
-});
+
 
 //popups for GeoJson layers   
 function parkPopUp(feature, layer) {
   layer.bindPopup('<h4>Park</h4><strong>Park: </strong>' + feature.properties.parkname + '<br />' + '<strong>Acres: </strong>' + feature.properties.acres);
 }
-
 
 
 function LocationPopUp(feature, layer){
@@ -253,11 +236,6 @@ function LocationPopUp(feature, layer){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function BikeRackFilter(feature, layer){
-  if(feature.properties["Sub Category"] === "Bike Rack"){
-    return feature.properties["Sub Category"];
-  }
-}
 
 function SolarFilter(feature, layer){
   if(feature.properties["Sub Category"] === "Solar Thermal"){
@@ -351,12 +329,6 @@ function CompostFilter(feature, layer){
 }
 
 //Styles for Geojson layers
-var parkstyle = {
-  "color": "#008F3E",
-  "weight": 1,
-  "opacity": 0.65
-  };
-
 var reportstyle = {
   "color": '#CBCCB8',
   "weight": 2,
@@ -469,9 +441,6 @@ function getGeojson(value){
       break;      
     case "Greenway":
       return wmsgreenways;
-      break;
-    case "Bike Rack":  
-      return bike_rack;
       break;
     case "Solar Thermal":
       return  solar_thermal;
