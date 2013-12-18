@@ -229,7 +229,8 @@ function parkPopUp(feature, layer) {
 
 
 function LocationPopUp(feature, layer){
-  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<img src="' + feature.properties.Thumb_URL + '"/>');
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' );
+  //+ '<img src="' + feature.properties.Thumb_URL + '"/>'
 }
 
 //Filters for GeoJson Layers
@@ -369,8 +370,9 @@ function zoomToFeature(e) {
 
 //Set up for all options uses in geojson setup
 function onEachFeature(feature, layer) {
-  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<br /><img style="width:200px; height:250px; border:0px;" src="' + feature.properties.URL + '"/>');
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<br />');
     }
+    //<img style="width:200px; height:250px; border:0px;" src="' + feature.properties.URL + '"/>
 
 
 
