@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
     <!-- Le styles -->
     <link href="../AshevilleGreenMap/css/bootstrap.css" rel="stylesheet">
@@ -17,7 +18,9 @@
      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
  <![endif]-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" /> 
-
+    <!--<link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.css" />-->
     <link rel="stylesheet" href="../AshevilleGreenMap/js/L.GeoSearch-master/src/css/l.geosearch.css" />
    
 
@@ -66,7 +69,7 @@
                     <li><a href="http://asapconnections.org/" target="_blank">ASAP</a></li>
                     <li><a href="http://www.usgbc.org/leed/certification" target="_blank">LEED Certification</a></li>
                     <li><a href="http://dinegreen.com/default.asp" target="_blank">Green Restaurants Certification</a></li>
-					          <li><a href="https://github.com/cityofasheville/AshevilleGreenMap.git" target="_blank">Fork us on Github</a></li>
+                     <li><a href="https://github.com/cityofasheville/AshevilleGreenMap.git" target="_blank">Fork us on Github</a></li>
                   </ul>
                 </li>
                 </ul>
@@ -120,9 +123,9 @@
 <script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.control.geosearch.js"></script>
 <script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.geosearch.provider.openstreetmap.js"></script>
 <script src="../AshevilleGreenMap/js/bouncemarker.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>	
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>        
 <script type="text/javascript">
- 
+
 //map set up
 var map = L.map('map', {
   center: [35.583427, -82.554519],
@@ -195,7 +198,7 @@ var wmsart =  L.tileLayer.wms("http://opendataserver.ashevillenc.gov:80/geoserve
   zIndex: 4
 }).addTo(map);
 
-		
+                
 //point to layer for Geojson layers           
 function locationPoints (feature, latlng) {
    return L.circleMarker(latlng, {
@@ -227,8 +230,7 @@ function parkPopUp(feature, layer) {
 
 
 function LocationPopUp(feature, layer){
-  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' );
-  //+ '<img src="' + feature.properties.Thumb_URL + '"/>'
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<img src="' + feature.properties.Thumb_URL + '"/>');
 }
 
 //Filters for GeoJson Layers
@@ -368,9 +370,8 @@ function zoomToFeature(e) {
 
 //Set up for all options uses in geojson setup
 function onEachFeature(feature, layer) {
-  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<br />');
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<br /><img style="width:200px; height:250px; border:0px;" src="' + feature.properties.URL + '"/>');
     }
-    //<img style="width:200px; height:250px; border:0px;" src="' + feature.properties.URL + '"/>
 
 
 
@@ -543,4 +544,3 @@ for (each in RA._layers) {
    <script src="../AshevilleGreenMap/js/holder.js"></script>
   </body>
 </html>
- 
