@@ -3,7 +3,7 @@ L.GeoSearch = {};
 L.GeoSearch.Provider = {};
 
 // MSIE needs cors support
-$.support.cors = true;
+jQuery.support.cors = true;
 
 L.GeoSearch.Result = function (x, y, label) {
     this.X = x;
@@ -84,7 +84,7 @@ L.Control.GeoSearch = L.Control.extend({
             else {
                 var url = provider.GetServiceUrl(qry);
 
- $.getJSON(url, $.proxy(function (data) {
+                $.getJSON(url, function (data) {
                     try {
                         var results = provider.ParseJSON(data);
                         this._processResults(results);
@@ -92,8 +92,7 @@ L.Control.GeoSearch = L.Control.extend({
                     catch (error) {
                         this._printError(error);
                     }
-                }, this));
-
+                }.bind(this));
             }
         }
         catch (error) {
