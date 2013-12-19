@@ -86,7 +86,7 @@ L.Control.GeoSearch = L.Control.extend({
 
                 
                 var url = provider.GetServiceUrl(qry);
-                
+                $.ajaxSetup({ cache: false });
                 $.getJSON(url, function (data) {
 
                    try {
