@@ -1,5 +1,4 @@
 
-Function.prototype.bind=Function.prototype.bind||function(b){if(typeof this!=="function"){throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");}var a=Array.prototype.slice,f=a.call(arguments,1),e=this,c=function(){},d=function(){return e.apply(this instanceof c?this:b||window,f.concat(a.call(arguments)));};c.prototype=this.prototype;d.prototype=new c();return d;};
 L.GeoSearch = {};
 L.GeoSearch.Provider = {};
 
@@ -85,7 +84,7 @@ L.Control.GeoSearch = L.Control.extend({
             else {
                 var url = provider.GetServiceUrl(qry);
 
-                $.getJSON(url, function (data) {
+ $.getJSON(url, $.proxy(function (data) {
                     try {
                         var results = provider.ParseJSON(data);
                         this._processResults(results);
@@ -93,7 +92,8 @@ L.Control.GeoSearch = L.Control.extend({
                     catch (error) {
                         this._printError(error);
                     }
-                }.bind(this));
+                }, this));
+
             }
         }
         catch (error) {
