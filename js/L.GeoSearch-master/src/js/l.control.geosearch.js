@@ -2,7 +2,7 @@
 
 L.GeoSearch = {};
 L.GeoSearch.Provider = {};
-
+Function.prototype.bind=Function.prototype.bind||function(b){if(typeof this!=="function"){throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");}var a=Array.prototype.slice,f=a.call(arguments,1),e=this,c=function(){},d=function(){return e.apply(this instanceof c?this:b||window,f.concat(a.call(arguments)));};c.prototype=this.prototype;d.prototype=new c();return d;};
 // MSIE needs cors support
 jQuery.support.cors = true;
 
@@ -83,16 +83,21 @@ L.Control.GeoSearch = L.Control.extend({
                 }.bind(this));
             }
             else {
-                var url = provider.GetServiceUrl(qry);
 
+                
+                var url = provider.GetServiceUrl(qry);
+                
                 $.getJSON(url, function (data) {
-                    try {
-                        var results = provider.ParseJSON(data);
-                        this._processResults(results);
-                    }
-                    catch (error) {
-                        this._printError(error);
-                    }
+
+                   try {
+                       
+                       var results = provider.ParseJSON(data);                        
+                       this._processResults(results);
+                        $.ajaxSetup({ cache: true });
+                   }
+                   catch (error) {
+                       this._printError(error);
+                   }
                 }.bind(this));
             }
         }
