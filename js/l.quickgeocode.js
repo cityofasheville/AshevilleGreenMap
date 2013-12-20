@@ -9,10 +9,7 @@ L.QuickGeocode.Result = function (x, y, label) {
 
 
 L.Control.QuickGeocode = L.Control.extend({
-    agsServerGeocode:'gis.ashevillenc.gov', //ArcGIS  server name for geocoding
-    agsServerInstanceNameGeocode:'COA_ArcGIS_Server', //ArcGIS  server instance for geocoding
-    geocdingLayerName:'Buncombe_Street_Address', //geocoding service to use.        
-    mySRID:2264, //your projection id	
+
     options: {
         position: 'topcenter'
     },
@@ -28,7 +25,11 @@ L.Control.QuickGeocode = L.Control.extend({
             'searchLabel': options.searchLabel || 'search your address here',
             'notFoundMessage' : options.notFoundMessage || 'Sorry, that address could not be found.',
             'messageHideDelay': options.messageHideDelay || 3000,
-            'zoomLevel': options.zoomLevel || 16
+            'zoomLevel': options.zoomLevel || 16,
+		    'agsServerGeocode': options.agsServerGeocode || 'gis.ashevillenc.gov', //ArcGIS  server name for geocoding
+		    'agsServerInstanceNameGeocode': options.agsServerInstanceNameGeocode || 'COA_ArcGIS_Server', //ArcGIS  server instance for geocoding
+		    'geocdingLayerName': options.geocdingLayerName || 'Buncombe_Street_Address', //geocoding service to use.        
+		    'mySRID': options.mySRID  || 2264, //your projection id	            
         };
     },
 
@@ -72,7 +73,7 @@ L.Control.QuickGeocode = L.Control.extend({
 
     geocode: function (qry) {
 		addressStr = qry;
-		var urlStr = 'http://'+this.agsServerGeocode+'/'+this.agsServerInstanceNameGeocode+'/rest/services/'+this.geocdingLayerName+'/GeocodeServer/findAddressCandidates';
+		var urlStr = 'http://'+this._config.agsServerGeocode+'/'+this._config.agsServerInstanceNameGeocode+'/rest/services/'+this._config.geocdingLayerName+'/GeocodeServer/findAddressCandidates';
 		var sData={f:"json",Street:addressStr};
 
 		$.ajax({
@@ -91,10 +92,10 @@ L.Control.QuickGeocode = L.Control.extend({
 		xStr=someData.x;
 		yStr=someData.y;
 
-		var urlStr = 'http://'+this.agsServerGeocode+'/'+this.agsServerInstanceNameGeocode+'/rest/services/Geometry/GeometryServer/project';
+		var urlStr = 'http://'+this._config.agsServerGeocode+'/'+this._config.agsServerInstanceNameGeocode+'/rest/services/Geometry/GeometryServer/project';
 		var aPt=JSON.stringify({geometryType:"esriGeometryPoint",geometries : [{"x":xStr,"y":yStr}]});
 
-		var sData={f:"json",inSR:this.mySRID,outSR:4326,geometries:aPt};
+		var sData={f:"json",inSR:this._config.mySRID,outSR:4326,geometries:aPt};
 
 		 $.ajax({
 		    url: urlStr,
@@ -121,13 +122,6 @@ L.Control.QuickGeocode = L.Control.extend({
 		//this.clearMap();
 		GJfeatObject=JSON.parse(GJfeat);
 
-		L.geoJson(GJfeatObject, {
-		    style: function (feature) {
-		    	alert('here')
-		        return {color: feature.properties.color};
-		    }
-		}).addTo(map);
-
 
 		var geojsonMarkerOptions = {
 		  radius: 10,
@@ -143,8 +137,9 @@ L.Control.QuickGeocode = L.Control.extend({
 		    return L.circleMarker(latlng, geojsonMarkerOptions);
 		  }
 		});
-		L.geoJson(GJfeatObject).addTo(map);
+		
 		gjPT.addTo(map);
+		gjPT.bringToFront();
 	},
 	clearMap:function() {
 		for(i in map._layers) {
