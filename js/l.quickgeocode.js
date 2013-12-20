@@ -25,11 +25,11 @@ L.Control.QuickGeocode = L.Control.extend({
             'searchLabel': options.searchLabel || 'search your address here',
             'notFoundMessage' : options.notFoundMessage || 'Sorry, that address could not be found.',
             'messageHideDelay': options.messageHideDelay || 3000,
-            'zoomLevel': options.zoomLevel || 17,
+            'zoomLevel': options.zoomLevel || 16,
 		    'agsServerGeocode': options.agsServerGeocode || 'gis.ashevillenc.gov', //ArcGIS  server name for geocoding
 		    'agsServerInstanceNameGeocode': options.agsServerInstanceNameGeocode || 'COA_ArcGIS_Server', //ArcGIS  server instance for geocoding
 		    'geocdingLayerName': options.geocdingLayerName || 'Buncombe_Street_Address', //geocoding service to use.        
-		    'mySRID': options.mySRID  || 2264, //your projection id	            
+		    'mySRID': options.mySRID  || 2264 //your projection id	            
         };
     },
 
@@ -81,15 +81,10 @@ L.Control.QuickGeocode = L.Control.extend({
 		dataType: "jsonp",
 		data: sData,
 		success: $.proxy(function(data) {
-			try{
-				if (data.candidates) {
-				  it = data.candidates[0];
-				  this.getLatLong({ label: it.address, value: it.address, x:it.location.x,y:it.location.y } );
-				}
+			if (data.candidates) {
+			  it = data.candidates[0];
+			  this.getLatLong({ label: it.address, value: it.address, x:it.location.x,y:it.location.y } );
 			}
- 			catch (error) {
-            	this._printError(error);
-            }			
 		},this)
 		});
     },
@@ -107,16 +102,20 @@ L.Control.QuickGeocode = L.Control.extend({
 		    dataType: "jsonp",
 		    data: sData,
 		     crossDomain: true,
-		     success:$.proxy(function(data){this.zoomMap(data,this._config.zoomLevel,true);},this),
+		     success:$.proxy(function(data){this.zoomMap(data,17,true);},this),
 		     error:function(x,t,m){console.log('fail');}//updateResultsFail(t,'Error with transforming to WGS84!')
 		 });
 	},
 	zoomMap :function(data,zlevel,isDrawPts){
 		if(typeof(data) =='string'){var obj = JSON.parse(data);}else{var obj = data}
-
+		this.clearMap();
 		xStr=obj.geometries[0].x;
 		yStr=obj.geometries[0].y;
 		map.setView(new L.LatLng(yStr, xStr), zlevel);
+		this._map.setView([yStr, xStr], this._config.zoomLevel, false);
+		this._positionMarker = L.marker([yStr, xStr]).addTo(map);;
+		//bounceOnAdd: true, bounceOnAddOptions: {duration: 500, height: 100}, bounceOnAddCallback: function() {console.log("done");} 
+
 		var startPt = '[{"type": "Point","coordinates":['+xStr+','+yStr+']}]';
 		
 		if(isDrawPts){this.drawPoints(startPt);}
@@ -147,23 +146,14 @@ L.Control.QuickGeocode = L.Control.extend({
 		gjPT.bringToFront();
 	},
 	clearMap:function() {
-		for(i in map._layers) {
-		    if(map._layers[i]._path != undefined) {
-		        try {
-		            map.removeLayer(map._layers[i]);
-		        }
-		        catch(e) {
-		            //do nothing....
-		        }
-		    }
-		};
+ 		try {
+			map.removeLayer(this._positionMarker);
+		}
+		catch(e) {
+			//do nothing....
+		}
+		
 	},
-   _printError: function(message) {
-        $(this._resultslist)
-            .html('<li>'+message+'</li>')
-            .fadeIn('slow').delay(this._config.messageHideDelay).fadeOut('slow',
-                    function () { $(this).html(''); });
-    },
    _onKeyUp: function (e) {
         var escapeKey = 27;
         var enterKey = 13;
