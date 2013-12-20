@@ -25,7 +25,7 @@ L.Control.QuickGeocode = L.Control.extend({
             'searchLabel': options.searchLabel || 'search your address here',
             'notFoundMessage' : options.notFoundMessage || 'Sorry, that address could not be found.',
             'messageHideDelay': options.messageHideDelay || 3000,
-            'zoomLevel': options.zoomLevel || 16,
+            'zoomLevel': options.zoomLevel || 17,
 		    'agsServerGeocode': options.agsServerGeocode || 'gis.ashevillenc.gov', //ArcGIS  server name for geocoding
 		    'agsServerInstanceNameGeocode': options.agsServerInstanceNameGeocode || 'COA_ArcGIS_Server', //ArcGIS  server instance for geocoding
 		    'geocdingLayerName': options.geocdingLayerName || 'Buncombe_Street_Address', //geocoding service to use.        
@@ -81,10 +81,15 @@ L.Control.QuickGeocode = L.Control.extend({
 		dataType: "jsonp",
 		data: sData,
 		success: $.proxy(function(data) {
-			if (data.candidates) {
-			  it = data.candidates[0];
-			  this.getLatLong({ label: it.address, value: it.address, x:it.location.x,y:it.location.y } );
+			try{
+				if (data.candidates) {
+				  it = data.candidates[0];
+				  this.getLatLong({ label: it.address, value: it.address, x:it.location.x,y:it.location.y } );
+				}
 			}
+ 			catch (error) {
+            	this._printError(error);
+            }			
 		},this)
 		});
     },
@@ -102,7 +107,7 @@ L.Control.QuickGeocode = L.Control.extend({
 		    dataType: "jsonp",
 		    data: sData,
 		     crossDomain: true,
-		     success:$.proxy(function(data){this.zoomMap(data,17,true);},this),
+		     success:$.proxy(function(data){this.zoomMap(data,this._config.zoomLevel,true);},this),
 		     error:function(x,t,m){console.log('fail');}//updateResultsFail(t,'Error with transforming to WGS84!')
 		 });
 	},
@@ -153,6 +158,12 @@ L.Control.QuickGeocode = L.Control.extend({
 		    }
 		};
 	},
+   _printError: function(message) {
+        $(this._resultslist)
+            .html('<li>'+message+'</li>')
+            .fadeIn('slow').delay(this._config.messageHideDelay).fadeOut('slow',
+                    function () { $(this).html(''); });
+    },
    _onKeyUp: function (e) {
         var escapeKey = 27;
         var enterKey = 13;
