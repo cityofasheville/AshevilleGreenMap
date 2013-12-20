@@ -16,7 +16,7 @@ L.GeoSearch.Provider.OpenStreetMap = L.Class.extend({
     GetServiceUrl: function (qry) {
         var parameters = L.Util.extend({
             q: qry,
-            format: 'json'
+            format: 'jsonp'
         }, this.options);
 
         return 'http://nominatim.openstreetmap.org/search'
@@ -28,6 +28,7 @@ L.GeoSearch.Provider.OpenStreetMap = L.Class.extend({
             return [];
 
         var results = [];
+
         for (var i = 0; i < data.length; i++) 
             results.push(new L.GeoSearch.Result(
                 data[i].lon, 
