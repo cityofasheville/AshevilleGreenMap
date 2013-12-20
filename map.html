@@ -9,19 +9,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
     <!-- Le styles -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
     <link href="../AshevilleGreenMap/css/bootstrap.css" rel="stylesheet">
     <link href="../AshevilleGreenMap/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="SHORTCUT ICON" href="http://ashevillenc.gov/Portals/0/favicon.ico" />
     <link type="text/css" rel="stylesheet" href="../AshevilleGreenMap/css/stylesheet.css"/>
-     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
  <!--[if lte IE 8]>
      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
  <![endif]-->
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" /> 
     <!--<link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.css" />-->
-    <link rel="stylesheet" href="../AshevilleGreenMap/js/L.GeoSearch-master/src/css/l.geosearch.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/js/L.GeoSearch-master/src/css/l.geosearch.css" />-->
+    <link rel="stylesheet" href="../AshevilleGreenMap/css/l.quickgeocode.css" />
    
 
     <!-- Fav and touch icons -->
@@ -120,8 +121,9 @@
 <script src="../AshevilleGreenMap/js/bootstrap-collapse.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-carousel.js"></script>
 <script src="../AshevilleGreenMap/js/bootstrap-typeahead.js"></script>
-<script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.control.geosearch.js"></script>
-<script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.geosearch.provider.openstreetmap.js"></script>
+<!--<script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.control.geosearch.js"></script>
+<script src="../AshevilleGreenMap/js/L.GeoSearch-master/src/js/l.geosearch.provider.openstreetmap.js"></script>-->
+<script src="../AshevilleGreenMap/js/l.quickgeocode.js"></script>
 <script src="../AshevilleGreenMap/js/bouncemarker.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>        
 <script type="text/javascript">
@@ -140,8 +142,8 @@ var hash = new L.Hash(map);
 
 //Adds OpenStreetMap search option
 //Added in custom bouncing option
-new L.Control.GeoSearch({
-    provider: new L.GeoSearch.Provider.OpenStreetMap()
+new L.Control.QuickGeocode({
+    searchLabel:'search for address'
 }).addTo(map); 
 
 //Setup for attribution

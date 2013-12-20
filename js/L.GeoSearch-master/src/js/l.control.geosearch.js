@@ -5,6 +5,7 @@ L.GeoSearch.Provider = {};
 // MSIE needs cors support
 jQuery.support.cors = true;
 
+
 L.GeoSearch.Result = function (x, y, label) {
     this.X = x;
     this.Y = y;
@@ -84,15 +85,34 @@ L.Control.GeoSearch = L.Control.extend({
             else {
                 var url = provider.GetServiceUrl(qry);
 
-                $.getJSON(url, function (data) {
-                    try {
-                        var results = provider.ParseJSON(data);
-                        this._processResults(results);
-                    }
-                    catch (error) {
-                        this._printError(error);
-                    }
-                }.bind(this));
+                $.ajax({
+                    url: url,
+                    dataType: "jsonp",
+                    crossDomain: true,
+                    data:'',
+                    success:$.proxy(function(data){
+
+                        try {
+                            var results = provider.ParseJSON(data);
+                            this._processResults(results);
+                        }
+                        catch (error) {
+                            this._printError(error);
+                        }
+
+                    }, this),
+                    error:function(x,t,m){alert(t); return ''}  
+                })
+
+                // $.getJSON(url, $.proxy(function (data) {
+                //     try {
+                //         var results = provider.ParseJSON(data);
+                //         this._processResults(results);
+                //     }
+                //     catch (error) {
+                //         this._printError(error);
+                //     }
+                // }, this));
             }
         }
         catch (error) {
