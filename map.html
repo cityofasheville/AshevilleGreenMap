@@ -520,7 +520,7 @@ function getGeojson(value){
 var options = '<option value="Select">Select a Neighborhood</option>';
 
 for (each in RA._layers) {
-      var name = RA._layers[each].feature.properties.NAME;
+      var name = RA._layers[each].feature.properties.name;
       var swLat = RA._layers[each].getBounds()._southWest.lat;
       var swLng = RA._layers[each].getBounds()._southWest.lng;
       var neLat = RA._layers[each].getBounds()._northEast.lat;
@@ -528,7 +528,7 @@ for (each in RA._layers) {
       var bbox = swLat + "," + swLng + "," + neLat + "," + neLng;
 
       // Add states & bbox values to zoom select options
-      options += '<option value="' + bbox + '">' + RA._layers[each].feature.properties.NAME + '</option>';
+      options += '<option value="' + bbox + '">' + RA._layers[each].feature.properties.name + '</option>';
     }
         $("#zoom").html(options);
 
