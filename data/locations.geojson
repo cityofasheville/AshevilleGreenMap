@@ -102,8 +102,6 @@ var locationsdata = {
 ,
 { "type": "Feature", "id": 50, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Black Mountain Tailgate Market", "Description": "", "Address": "130 Montreat Road 28711", "Long": -82.32155322, "Lat": 35.6202853, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.32155322, 35.6202853 ] } }
 ,
-{ "type": "Feature", "id": 51, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Downtown Market", "Description": "", "Address": "45 South French Broad 28806", "Long": -82.55921285, "Lat": 35.5921138, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55921285, 35.5921138 ] } }
-,
 { "type": "Feature", "id": 52, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Greenlife Sunday Market", "Description": "", "Address": "70 Merrimon Ave 28801", "Long": -82.55461074, "Lat": 35.6018783, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.55461074, 35.6018783 ] } }
 ,
 { "type": "Feature", "id": 53, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "North Asheville Tailgate Market", "Description": "", "Address": "1 University Heights 28804", "Long": -82.56307636, "Lat": 35.6184473, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.56307636, 35.6184473 ] } }
