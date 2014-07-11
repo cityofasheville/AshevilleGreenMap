@@ -8,7 +8,8 @@
     <meta name="author" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-    <!-- Le styles -->
+    <link rel="stylesheet" href="../AshevilleGreenMap/css/leaflet.label.css" />
+
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
     <link href="../AshevilleGreenMap/css/bootstrap.css" rel="stylesheet">
     <link href="../AshevilleGreenMap/css/bootstrap-responsive.css" rel="stylesheet">
@@ -24,6 +25,7 @@
     <link rel="stylesheet" href="../AshevilleGreenMap/js/L.GeoSearch-master/src/css/l.geosearch.css" />-->
     <link rel="stylesheet" href="../AshevilleGreenMap/css/l.quickgeocode.css" />
    
+    
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../AshevilleGreenMap/ico/apple-touch-icon-144-precomposed.png">
@@ -31,6 +33,7 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../AshevilleGreenMap/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="../AshevilleGreenMap/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="../AshevilleGreenMap/ico/favicon.png">
+      
   </head>
 
   <body style="background: url('../AshevilleGreenMap/img/smallGrey.png'); background-size: cover;">
@@ -105,6 +108,7 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.js"></script>
+<script src="../AshevilleGreenMap/js/leaflet.label.js"></script> 
 <script src="../AshevilleGreenMap/js/leaflet-hash.js"></script>
 <script src="../AshevilleGreenMap/data/RA.geojson"></script>
 <script src="../AshevilleGreenMap/data/locations.geojson"></script>
@@ -380,6 +384,7 @@ function onEachFeature(feature, layer) {
 
 //GeoJson set Up
 var RA = L.geoJson(ReportingData, {style:reportstyle}).addTo(map);
+
 var solar_thermal = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:SolarFilter}).addTo(map);
 var energy_feature = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:EnergyFilter}).addTo(map);
 var leed_certification = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:LEEDFilter}).addTo(map);
@@ -506,7 +511,7 @@ function getGeojson(value){
     var checkbox = L.control({position: 'topleft'});
   checkbox.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<ul class="info unstyled"><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="ART" value="ART" onclick="check(this)"><p class="text-info">Transit(ART) Routes</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="Sidewalks" value="Sidewalks" onclick="check(this)"><p class="text-info">Sidewalks</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li><label checked="true" class="checkbox"><input checked="true" type="checkbox" id="Bikes" value="Bikes" onclick="check(this)"><p class="text-info">Bikes</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this)">Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul>';
+      div.innerHTML = '<ul class="info unstyled"><li><label class="checkbox"><input class="check" checked="false" type="checkbox" id="toggleall" value="Turn All Off"><p class="text-info">Toggle All Layers</p></label></li><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="ART" value="ART" onclick="check(this)"><p class="text-info">Transit(ART) Routes</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Sidewalks" value="Sidewalks" onclick="check(this)"><p class="text-info">Sidewalks</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Bikes" value="Bikes" onclick="check(this)"><p class="text-info">Bikes</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this)">Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul>';
 
 
     return div;
@@ -514,6 +519,13 @@ function getGeojson(value){
   }
 
   checkbox.addTo(map);
+
+    $('.check:checkbox').click(function(){
+          var checked = !$(this).data('checked');
+          $('input.layerchk:checkbox').prop('checked', checked);
+          $('input.layerchk:checkbox').click();
+          $(this).data('checked', checked);
+    });
 
 //Neighborhood Zoom Control
 var options = '<option value="Select">Select a Neighborhood</option>';
@@ -528,6 +540,8 @@ for (each in RA._layers) {
 
       // Add states & bbox values to zoom select options
       options += '<option value="' + bbox + '">' + RA._layers[each].feature.properties.name + '</option>';
+      
+    
     }
         $("#zoom").html(options);
 
@@ -543,7 +557,12 @@ for (each in RA._layers) {
       };
     }
 
+ 
+
+
+
    </script>
    <script src="../AshevilleGreenMap/js/holder.js"></script>
+
   </body>
 </html>
