@@ -500,14 +500,14 @@ function getGeojson(value){
 
 
 //Legends
-// var legendOverview = L.control({position: 'topright'});
-//   legendOverview.onAdd = function (map) {
-//     var div = L.DomUtil.create('div', 'info legend');
-//       div.innerHTML = '<i style="background: #DD502A; outline-color: #DD502A; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #0099CC; outline-color: #0099CC; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #D79D21; outline-color: #D79D21; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #63B355; outline-color: #63B355; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #EAC13A; outline-color: #EAC13A; border-radius:50px "></i>' + '     ' + 'Energy<br /><i style="color:#ff9400; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Bike Routes<br /><i style="color:#41db00; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Greenways<br /><i style="color:#6997D3; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Sidewalks<br /><i style="color:#92ed6b; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Park Path<br /><i style="color:#5FD2B5; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Facility Walkway<br />';
-//     return div;
-//   }
+var legendOverview = L.control({position: 'topright'});
+  legendOverview.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'info legend');
+      div.innerHTML = '<i style="background: #DD502A; outline-color: #DD502A; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #0099CC; outline-color: #0099CC; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #D79D21; outline-color: #D79D21; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #63B355; outline-color: #63B355; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #EAC13A; outline-color: #EAC13A; border-radius:50px "></i>' + '     ' + 'Energy<br /><i style="color:#ff9400; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Bike Routes<br /><i style="color:#41db00; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Greenways<br /><i style="color:#6997D3; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Sidewalks<br /><i style="color:#92ed6b; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Park Path<br /><i style="color:#5FD2B5; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Facility Walkway<br />';
+    return div;
+  }
 
-//   legendOverview.addTo(map);
+  legendOverview.addTo(map);
 
 
     var checkbox = L.control({position: 'topleft'});
