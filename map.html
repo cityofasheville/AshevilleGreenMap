@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
     <link rel="stylesheet" href="../AshevilleGreenMap/css/leaflet.label.css" />
+    <link rel="stylesheet" href="../AshevilleGreenMap/css/leaflet-label.css" />
 
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
     <link href="../AshevilleGreenMap/css/bootstrap.css" rel="stylesheet">
@@ -130,6 +131,7 @@
 <script src="../AshevilleGreenMap/js/l.quickgeocode.js"></script>
 <script src="../AshevilleGreenMap/js/bouncemarker.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>        
+<script src="../AshevilleGreenMap/js/leaflet-label.js"></script>
 <script type="text/javascript">
 
 //map set up
@@ -292,8 +294,8 @@ function StormwaterFilter(feature, layer){
   }
 }
 
-function FeatureFilter(feature, layer){
-  if(feature.properties["Sub Category"] === "Feature"){
+function WaterFeatureFilter(feature, layer){
+  if(feature.properties["Sub Category"] === "Water Feature"){
     return feature.properties["Sub Category"];
   }
 }
@@ -393,7 +395,7 @@ var communtiy_garden = L.geoJson(locationsdata, {pointToLayer: locationPoints, o
 var biodiesel = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Transportation_Style, filter:BiodieselFilter}).addTo(map);
 var recycle = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Waste_Style, filter:RecycleFilter}).addTo(map);
 var stormwater = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Water_Style, filter:StormwaterFilter}).addTo(map);
-var feature = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Water_Style, filter:FeatureFilter}).addTo(map);
+var waterFeature = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Water_Style, filter:WaterFeatureFilter}).addTo(map);
 var tailgate_market = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:TailgateFilter}).addTo(map);
 var manna_agencies = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Food_Style, filter:MannaFilter}).addTo(map);
 var ev_charging_station = L.geoJson(locationsdata, {pointToLayer: locationPoints, onEachFeature:onEachFeature, style:Energy_Style, filter:EVFilter}).addTo(map);
@@ -475,8 +477,8 @@ function getGeojson(value){
     case "Stormwater":
       return stormwater;
       break;
-    case "Feature":
-      return  feature;
+    case "Water Feature":
+      return  waterFeature;
       break;
     case "Green Certified":
       return green_certified_restaurant;
@@ -511,7 +513,7 @@ function getGeojson(value){
     var checkbox = L.control({position: 'topleft'});
   checkbox.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<ul class="info unstyled"><li><label class="checkbox"><input class="check" checked="false" type="checkbox" id="toggleall" value="Turn All Off"><p class="text-info">Toggle All Layers</p></label></li><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="ART" value="ART" onclick="check(this)"><p class="text-info">Transit(ART) Routes</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Sidewalks" value="Sidewalks" onclick="check(this)"><p class="text-info">Sidewalks</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Bikes" value="Bikes" onclick="check(this)"><p class="text-info">Bikes</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Feature" value="Feature"><p class="text-info" onclick="check(this)">Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul>';
+      div.innerHTML = '<ul class="info unstyled"><li><label class="checkbox"><input class="check" checked="false" type="checkbox" id="toggleall" value="Turn All Off"><p class="text-info">Toggle All Layers</p></label></li><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="ART" value="ART" onclick="check(this)"><p class="text-info">Transit(ART) Routes</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Sidewalks" value="Sidewalks" onclick="check(this)"><p class="text-info">Sidewalks</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Bikes" value="Bikes" onclick="check(this)"><p class="text-info">Bikes</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Water Feature" value="Water Feature" onclick="check(this)" ><p class="text-info" ">Water Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul>';
 
 
     return div;
@@ -539,9 +541,13 @@ for (each in RA._layers) {
       var bbox = swLat + "," + swLng + "," + neLat + "," + neLng;
 
       // Add states & bbox values to zoom select options
-      options += '<option value="' + bbox + '">' + RA._layers[each].feature.properties.name + '</option>';
+      options += '<option value="' + bbox + '">' + name + '</option>';
       
-    
+        var labelLocation = new L.LatLng((swLat+neLat)/2,(swLng+neLng)/2);
+        var labelTitle = new L.LabelOverlay(labelLocation, name);
+        map.addLayer(labelTitle)
+
+
     }
         $("#zoom").html(options);
 
@@ -559,6 +565,11 @@ for (each in RA._layers) {
 
  
 
+    map.on('zoomend ', function(e) {
+       if ( map.getZoom() > 14 ){$('.leaflet-label-overlay').css('font-size','10px');}
+       else if ( map.getZoom() <= 14 && map.getZoom() > 12 ){$('.leaflet-label-overlay').css('font-size','6px')}
+       else if ( map.getZoom() <= 12 ){$('.leaflet-label-overlay').css('font-size','0px')}
+    });
 
 
    </script>

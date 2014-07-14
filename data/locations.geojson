@@ -92,7 +92,7 @@ var locationsdata = {
 ,
 { "type": "Feature", "id": 45, "properties": { "Big Group": "Water", "Sub Category": "Stormwater", "Name": "Reed Creek Greenway", "Description": "Greenway containing bioinfiltration and wetlands systems that help slow and clean stormwater to reduce flooding.", "Address": "", "Long": -82.562858, "Lat": 35.606106, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.562858, 35.606106 ] } }
 ,
-{ "type": "Feature", "id": 46, "properties": { "Big Group": "Water", "Sub Category": "Feature", "Name": "Splashville", "Description": "The recreational water fountains in front of city hall recycle and clean the water before circulating to be used again.  ", "Address": "", "Long": -82.549439, "Lat": 35.595487, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.549439, 35.595487 ] } }
+{ "type": "Feature", "id": 46, "properties": { "Big Group": "Water", "Sub Category": "Water Feature", "Name": "Splashville", "Description": "The recreational water fountains in front of city hall recycle and clean the water before circulating to be used again.  ", "Address": "", "Long": -82.549439, "Lat": 35.595487, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.549439, 35.595487 ] } }
 ,
 { "type": "Feature", "id": 47, "properties": { "Big Group": "Food", "Sub Category": "Tailgate Market", "Name": "Asheville City Market", "Description": "", "Address": "161 South Charlotte Stree 28801", "Long": -82.54874061, "Lat": 35.5929925, "URL": null }, "geometry": { "type": "Point", "coordinates": [ -82.54874061, 35.5929925 ] } }
 ,
