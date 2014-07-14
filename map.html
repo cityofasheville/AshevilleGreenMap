@@ -344,11 +344,11 @@ var reportstyle = {
   "opacity": 1
 }
 
-var Transportation_Style = {fillColor: '#D79D21', color: "#D79D21", weight: 1, fillOpacity: 1};
-var Food_Style = {fillColor: '#DD502A', color: '#DD502A', weight: 1, fillOpacity: 1 };
-var Water_Style = {fillColor: '#0099CC', color: "#0099CC", weight: 1, fillOpacity: 1};
-var Waste_Style = {fillColor: '#63B355', color: "#63B355", weight: 1, fillOpacity: 1};
-var Energy_Style = {fillColor: '#EAC13A', color: "#EAC13A", weight: 1, fillOpacity: 1};
+var Transportation_Style = {fillColor: '#e41a1c', color: "#e41a1c", weight: 2, fillOpacity: 1};
+var Food_Style = {fillColor: '#4daf4a', color: '#4daf4a', weight: 2, fillOpacity: 1 };
+var Water_Style = {fillColor: '#377eb8', color: "#377eb8", weight: 2, fillOpacity: 1};
+var Waste_Style = {fillColor: '#984ea3', color: "#984ea3", weight: 2, fillOpacity: 1};
+var Energy_Style = {fillColor: '#ff7f00', color: "#ff7f00", weight: 2, fillOpacity: 1};
  
 
 
@@ -499,11 +499,12 @@ function getGeojson(value){
 
 
 
+
 //Legends
 var legendOverview = L.control({position: 'topright'});
   legendOverview.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<i style="background: #DD502A; outline-color: #DD502A; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #0099CC; outline-color: #0099CC; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #D79D21; outline-color: #D79D21; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #63B355; outline-color: #63B355; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #EAC13A; outline-color: #EAC13A; border-radius:50px "></i>' + '     ' + 'Energy<br /><i style="color:#ff9400; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Bike Routes<br /><i style="color:#41db00; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Greenways<br /><i style="color:#6997D3; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Sidewalks<br /><i style="color:#92ed6b; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Park Path<br /><i style="color:#5FD2B5; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Facility Walkway<br />';
+      div.innerHTML = '<i style="background: #4daf4a; outline-color: #4daf4a; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #377eb8; outline-color: #377eb8; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #e41a1c; outline-color: #e41a1c; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #984ea3; outline-color: #984ea3; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #ff7f00; outline-color: #ff7f00; border-radius:50px "></i>' + '     ' + 'Energy<br /><i style="color:#00FF40; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Greenways<br /><i style="color:#6997D3; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Sidewalks<br /><i style="color:#ff9400; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Bikes<br /><i style="color:#8bb35b; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Transit (ART)<br />';
     return div;
   }
 
