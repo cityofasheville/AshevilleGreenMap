@@ -16,93 +16,80 @@
     <link href="../AshevilleGreenMap/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="SHORTCUT ICON" href="http://ashevillenc.gov/Portals/0/favicon.ico" />
     <link type="text/css" rel="stylesheet" href="../AshevilleGreenMap/css/stylesheet.css"/>
- <!--[if lte IE 8]>
+     <!--[if lte IE 8]>
      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
- <![endif]-->
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" /> 
-    <!--<link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.markercluster-master/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="../AshevilleGreenMap/js/Leaflet.awesome-markers-master/dist/leaflet.awesome-markers.css" />
-    <link rel="stylesheet" href="../AshevilleGreenMap/js/L.GeoSearch-master/src/css/l.geosearch.css" />-->
-    <link rel="stylesheet" href="../AshevilleGreenMap/css/l.quickgeocode.css" />
-   
-    
+     <![endif]-->
+     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" /> 
+     <link rel="stylesheet" href="../AshevilleGreenMap/css/l.quickgeocode.css" />
 
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../AshevilleGreenMap/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../AshevilleGreenMap/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../AshevilleGreenMap/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../AshevilleGreenMap/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../AshevilleGreenMap/ico/favicon.png">
-      
+     <!-- Fav and touch icons -->
+     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../AshevilleGreenMap/ico/apple-touch-icon-144-precomposed.png">
+     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../AshevilleGreenMap/ico/apple-touch-icon-114-precomposed.png">
+     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../AshevilleGreenMap/ico/apple-touch-icon-72-precomposed.png">
+     <link rel="apple-touch-icon-precomposed" href="../AshevilleGreenMap/ico/apple-touch-icon-57-precomposed.png">
+     <link rel="shortcut icon" href="../AshevilleGreenMap/ico/favicon.png">
+
   </head>
 
   <body style="background: url('../AshevilleGreenMap/img/smallGrey.png'); background-size: cover;">
 
-
-<!-- NAVBAR
-================================================== -->
-<div class="navbar-wrapper">
-<!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    <div class="navbar-wrapper">
   <div class="container">
     <div class="container-fluid">
-    <div class="navbar">
-      <div class="navbar-inner">
-      <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-            <a class="brand" href="#"><img style="width:auto; height:auto; border:0px;" src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" /></a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav pull-right">
-                  
+      <div class="navbar">
+        <div class="navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <h2 class="text-success">Sustainability Map</h2>
+          <p class="text-muted">The City of Asheville is a proud leader in civic sustainability in North Carolina.  Use this interactive map to learn about sustainable resources in your own backyard.  Chose your neighborhood or search your address, and discover sustainability near you!</p>
+          <a class="brand" href="#"><img style="width:50%; height:50%; border:0px;" src="../AshevilleGreenMap/img/HowLowCanYouGo/HowLow_Horizontal_logos/HowLow_290-2_horiz_small.compressed.jpg" /></a>
+
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+
               <li class="pos-button"><strong class="text-success">Your Sustainable Backyard:</strong>
                 <p><select class="text-info" id="zoom" onchange="zoomToRA(this.options[this.selectedIndex].text, this.value)"></select></p>
-              </li>
-                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-               
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Info <b class="caret"></b></a>
-                  <ul class="dropdown-menu drop-index" role="menu" aria-labelledby="dLabel">
-                    <li><a href="http://www.ashevillenc.gov/" target="_blank">City of Asheville</a></li>
-                    <li><a href="http://opendatacatalog.ashevillenc.gov/" target="_blank">Open Data Asheville</a></li>
-                    <li><a href="" target="_blank">Sustainability Flickr</a></li>
-                    <li><a href="http://www.curbie.com/Curbie/Home.html" target="_blank">Curbside Management</a></li>
-                    <li><a href="http://dannysdumpster.com/" target="_blank">Danny’s Dumpsters</a></li>
-                    <li><a href="http://asapconnections.org/" target="_blank">ASAP</a></li>
-                    <li><a href="http://www.usgbc.org/leed/certification" target="_blank">LEED Certification</a></li>
-                    <li><a href="http://dinegreen.com/default.asp" target="_blank">Green Restaurants Certification</a></li>
-                     <li><a href="https://github.com/cityofasheville/AshevilleGreenMap.git" target="_blank">Fork us on Github</a></li>
-                  </ul>
-                </li>
-                </ul>
-            </div><!--/.nav-collapse -->
-      </div><!-- /.navbar-inner -->
-    </div><!-- /.navbar -->
-     <div class="row-fluid">
-      <div class="span9">   
-        <div id="map"></div>
-      </div>
-      <div class="span3">
-       <div id="intro">
-         <ul class="info unstyled">
-          <li><h5 class="text-success">Sustainability Map</h5></li>
-          <li><p class="text-info">The City of Asheville is a proud leader in civic sustainability in North Carolina.  Use this interactive map to learn about sustainable resources in your own backyard.  Chose your neighborhood or search your address, and discover sustainability near you!</p></li>
-          
-        </ul>
-       </div>
-          <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/CityofAsheville"  data-widget-id="364394638934671360">Tweets by @CityofAsheville</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-        </div>
+              </li>
+              <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Info <b class="caret"></b></a>
+                <ul class="dropdown-menu drop-index" role="menu" aria-labelledby="dLabel">
+                  <li><a href="http://www.ashevillenc.gov/" target="_blank">City of Asheville</a></li>
+                  <li><a href="http://opendatacatalog.ashevillenc.gov/" target="_blank">Open Data Asheville</a></li>
+                  <li><a href="" target="_blank">Sustainability Flickr</a></li>
+                  <li><a href="http://www.curbie.com/Curbie/Home.html" target="_blank">Curbside Management</a></li>
+                  <li><a href="http://dannysdumpster.com/" target="_blank">Danny’s Dumpsters</a></li>
+                  <li><a href="http://asapconnections.org/" target="_blank">ASAP</a></li>
+                  <li><a href="http://www.usgbc.org/leed/certification" target="_blank">LEED Certification</a></li>
+                  <li><a href="http://dinegreen.com/default.asp" target="_blank">Green Restaurants Certification</a></li>
+                  <li><a href="https://github.com/cityofasheville/AshevilleGreenMap.git" target="_blank">Fork us on Github</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+
+        </div> 
+
+        <div class="row-fluid">
+
+
+
+
+          <div class="span12"> 
+            <div class="well">  
+              <div id="map"></div>
+            </div>
+          </div>
+
+        </div>  
       </div>
     </div>
-
-  </div><!--container fluid-->
-  </div> <!-- /.container -->
-</div><!-- /.navbar-wrapper -->
 
 
 <!-- Le javascript
@@ -514,7 +501,7 @@ var legendOverview = L.control({position: 'topright'});
     var checkbox = L.control({position: 'topleft'});
   checkbox.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<ul class="info unstyled"><li><label class="checkbox"><input class="check" checked="false" type="checkbox" id="toggleall" value="Turn All Off"><p class="text-info">Toggle All Layers</p></label></li><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="ART" value="ART" onclick="check(this)"><p class="text-info">Transit(ART) Routes</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Sidewalks" value="Sidewalks" onclick="check(this)"><p class="text-info">Sidewalks</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Bikes" value="Bikes" onclick="check(this)"><p class="text-info">Bikes</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Water Feature" value="Water Feature" onclick="check(this)" ><p class="text-info" ">Water Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul>';
+      div.innerHTML = '<div><ul class="info unstyled"><li><label class="checkbox"><input class="check" checked="false" type="checkbox" id="toggleall" value="Turn All Off"><p class="text-info">Toggle All Layers</p></label></li><li class="nav-header"><p class="text-success">Transportation</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Biodiesel" value="Biodiesel" onclick="check(this)"><p class="text-info">Biodiesel</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="CNG" value="CNG" onclick="check(this)"><p class="text-info">CNG</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="ART" value="ART" onclick="check(this)"><p class="text-info">Transit(ART) Routes</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Sidewalks" value="Sidewalks" onclick="check(this)"><p class="text-info">Sidewalks</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Greenway" value="Greenway" onclick="check(this)"><p class="text-info">Greenway</p></label></li><li><label checked="true" class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Bikes" value="Bikes" onclick="check(this)"><p class="text-info">Bikes</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Energy</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Solar Thermal" value="Solar Thermal" onclick="check(this)"><p class="text-info">Solar Thermal</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Energy Feature" value="Energy Feature" onclick="check(this)"><p class="text-info">Energy Feature</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="LEED Certification" value="LEED Certification" onclick="check(this)"><p class="text-info">LEED Certification</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="EV Charging Station" value="EV Charging Station" onclick="check(this)"><p class="text-info">EV Charging Station</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Waste</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Recycle" value="Recycle" onclick="check(this)"><p class="text-info">Recycle</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Cooking Oil Drop-Off" value="Cooking Oil Drop-Off" onclick="check(this)"><p class="text-info">Cooking Oil Drop-Off</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Compost" value="Compost" onclick="check(this)"><p class="text-info">Compost</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Water</p></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="Stormwater" value="Stormwater" onclick="check(this)"><p class="text-info">Stormwater</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Water Feature" value="Water Feature" onclick="check(this)" ><p class="text-info" ">Water Feature</p></label></li><li class="divider"></li><li class="nav-header"><p class="text-success">Food</p></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Green Certified" value="Green Certified" onclick="check(this)"><p class="text-info">Green Certified</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Community Garden" value="Community Garden" onclick="check(this)"><p class="text-info">Community Garden</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true" type="checkbox" id="Manna Agencies" value="Manna Agencies" onclick="check(this)"><p class="text-info">Manna Agencies</p></label></li><li><label class="checkbox"><input class="layerchk" checked="true"  type="checkbox" id="TM" value="Tailgate Market" onclick="check(this)"><p class="text-info">Tailgate Market</p></label></li></ul></div>';
 
 
     return div;
