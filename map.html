@@ -552,8 +552,8 @@ for (each in RA._layers) {
 
     map.on('zoomend ', function(e) {
        if ( map.getZoom() > 14 ){$('.leaflet-label-overlay').css('font-size','10px');}
-       else if ( map.getZoom() => 13 && map.getZoom() <= 14 ){$('.leaflet-label-overlay').css('font-size','6px')}
-       else if ( map.getZoom() <= 13 ){$('.leaflet-label-overlay').css('font-size','0px')}
+       else if ( map.getZoom() <= 14 && map.getZoom() > 12 ){$('.leaflet-label-overlay').css('font-size','6px')}
+       else if ( map.getZoom() <= 12 ){$('.leaflet-label-overlay').css('font-size','0px')}
     });
 
 
