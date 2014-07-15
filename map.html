@@ -505,7 +505,7 @@ var mapDesc = L.control({position: 'topright'});
   mapDesc.addTo(map);
 
 //Legends
-var legendOverview = L.control({position: 'topright'});
+var legendOverview = L.control({position: 'bottomright'});
   legendOverview.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend');
       div.innerHTML = '<i style="background: #4daf4a; outline-color: #4daf4a; border-radius:50px  "></i>' + '     ' + 'Food<br /><i style="background: #377eb8; outline-color: #377eb8; border-radius:50px "></i>' + '     ' + 'Water<br /><i style="background: #e41a1c; outline-color: #e41a1c; border-radius:50px "></i>' + '     ' + 'Transportation<br /><i style="background: #984ea3; outline-color: #984ea3; border-radius:50px "></i>' + '     ' + 'Waste<br /><i style="background: #ff7f00; outline-color: #ff7f00; border-radius:50px "></i>' + '     ' + 'Energy<br /><i style="color:#e41a1c; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Transit (ART)<br /><i style="color:#377eb8; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Sidewalks<br /><i style="color:#4daf4a; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Greenways<br /><i style="color:#ff7f00; font-size:16px;"><strong>&mdash;</strong></i>' + '     ' + 'Bikes<br />';
