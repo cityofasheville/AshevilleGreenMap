@@ -144,7 +144,7 @@ var hash = new L.Hash(map);
 //Adds OpenStreetMap search option
 //Added in custom bouncing option
 new L.Control.QuickGeocode({
-    searchLabel:'search for address'
+    searchLabel:'Search for Address'
 }).addTo(map); 
 
 //Setup for attribution
@@ -232,7 +232,8 @@ function parkPopUp(feature, layer) {
 
 
 function LocationPopUp(feature, layer){
-  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />');
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address +  '<br />' + 
+    '  <a href="http://maps.google.com/maps?daddr='+feature.properties.Address+',+NC" target="_blank">Get directions to this location</a>' + '<br />' + '<br />');
   //' + '<img src="' + feature.properties.Thumb_URL + '"/>
 }
 
@@ -373,7 +374,8 @@ function zoomToFeature(e) {
 
 //Set up for all options uses in geojson setup
 function onEachFeature(feature, layer) {
-  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address + '<br />' + '<br />');
+  layer.bindPopup('<ul class="unstyled"><li><h4>' + feature.properties["Big Group"] + '</h4></li><li><h5>' + feature.properties["Sub Category"] + '</h5></li></ul><strong>Name: </strong>' + feature.properties.Name + '<br />' + '<strong>Description: </strong>' + feature.properties.Description + '<br />' + '<strong>Address: </strong>' + feature.properties.Address  + '<br />' + 
+    '  <a href="http://maps.google.com/maps?daddr='+feature.properties.Address+',+NC" target="_blank">Get directions to this location</a>' + '<br />' + '<br />' );
   //<img style="width:200px; height:250px; border:0px;" src="' + feature.properties.URL + '"/>'
     }
 
